@@ -7,48 +7,47 @@
 <title>決算セール｜うなぎ屋かわすい</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#1d2c48;
-  --navy-d:#14203a;
-  --navy-l:#2c3f63;
-  --yellow:#f6d33c;
-  --cream:#f5efe2;
-  --paper:#fbf8f1;
-  --shu:#c8321f;
+  --red:#c8201a;
+  --red-d:#9c170f;
+  --deep:#3a0d09;
+  --yellow:#f8d43a;
+  --cream:#f8efe3;
+  --paper:#fffaf4;
   --tare:#7a3c17;
-  --ink:#1d2433;
-  --muted:#5d6475;
-  --line:#d9d0bd;
+  --ink:#2b1f1c;
+  --muted:#6a5c57;
+  --line:#e6d8ca;
   --mincho:"Shippori Mincho B1",serif;
-  --goth:"Zen Kaku Gothic New","Hiragino Sans",sans-serif;
-  --num:"Helvetica Neue",Helvetica,Arial,"Inter","Zen Kaku Gothic New",sans-serif;
+  --goth:"Noto Sans JP","游ゴシック体",YuGothic,"Hiragino Sans",sans-serif;
+  --num:"Helvetica Neue",Helvetica,Arial,"Inter","Noto Sans JP",sans-serif;
   /* 青海波：かわすいのバナーで使われている波文様 */
   --wave:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20' viewBox='0 0 40 20'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.09' stroke-width='1.4'%3E%3Cpath d='M0 20a20 20 0 0 1 40 0M6 20a14 14 0 0 1 28 0M12 20a8 8 0 0 1 16 0M-20 10a20 20 0 0 1 40 0M-14 10a14 14 0 0 1 28 0M-8 10a8 8 0 0 1 16 0M20 10a20 20 0 0 1 40 0M26 10a14 14 0 0 1 28 0M32 10a8 8 0 0 1 16 0'/%3E%3C/g%3E%3C/svg%3E");
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{background:var(--navy-d);color:var(--ink);font-family:var(--goth);font-weight:500;line-height:1.8;letter-spacing:.04em}
+body{background:var(--deep);color:var(--ink);font-family:var(--goth);font-weight:400;line-height:1.8;letter-spacing:.03em}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 .page{max-width:480px;margin:0 auto;background:var(--paper);overflow:hidden;overflow:clip}
 .sp{display:inline}.pc{display:none}
 
 /* ========== FV ========== */
-.fv{position:relative;background:var(--navy) var(--wave);color:#fff;padding:26px 22px 0;overflow:hidden}
+.fv{position:relative;background:var(--red) var(--wave);color:#fff;padding:26px 22px 0;overflow:hidden;text-align:center}
 .fv__shop{font-family:var(--mincho);font-weight:700;font-size:15px;letter-spacing:.3em;color:var(--yellow)}
 .fv__shop span{display:inline-block;margin-left:10px;padding-left:10px;border-left:1px solid rgba(255,255,255,.35);color:#fff;font-family:var(--goth);font-size:12px;letter-spacing:.2em;vertical-align:2px}
-.fv__title{position:relative;z-index:2;margin-top:34px;font-family:var(--mincho);font-weight:800;line-height:1}
-.fv__title .k{display:block;font-size:108px;letter-spacing:.04em;color:var(--yellow)}
-.fv__title .s{display:block;margin-top:14px;font-size:64px;letter-spacing:.32em}
-.fv__lead{position:relative;z-index:2;margin-top:26px;font-size:16px;font-weight:700;line-height:1.9}
-.fv__photo{position:relative;margin:4px -96px 0 auto;width:400px;aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--yellow)}
+.fv__title{position:relative;z-index:2;margin-top:30px;font-family:var(--mincho);font-weight:800;line-height:1}
+.fv__title .k{display:block;font-size:112px;letter-spacing:.06em;padding-left:.06em;color:var(--yellow)}
+.fv__title .s{display:block;margin-top:14px;font-size:60px;letter-spacing:.3em;padding-left:.3em}
+.fv__lead{position:relative;z-index:2;margin-top:24px;font-size:16px;font-weight:700;line-height:1.9}
+.fv__photo{position:relative;margin:30px auto 0;width:330px;aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--yellow)}
 .fv__photo::before{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:inset 0 0 0 14px var(--yellow);z-index:1}
 .fv__photo img{width:100%;height:100%;object-fit:cover;transform:scale(1.12)}
-.fv__term{position:relative;z-index:2;margin:-56px -22px 0;background:var(--yellow);color:var(--navy);padding:22px 22px 24px}
+.fv__term{position:relative;z-index:2;margin:-70px -22px 0;background:var(--yellow);color:var(--red);padding:20px 22px 24px}
 .fv__term dt{font-size:13px;font-weight:900;letter-spacing:.24em}
-.fv__term dd{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 10px;margin-top:4px;font-family:var(--num);font-weight:700;line-height:1.05}
+.fv__term dd{display:flex;align-items:baseline;justify-content:center;flex-wrap:wrap;gap:0 8px;margin-top:4px;font-family:var(--num);font-weight:700;line-height:1.05}
 .fv__term .d{font-size:46px;letter-spacing:-.02em}
 .fv__term .w{font-family:var(--goth);font-weight:900;font-size:16px}
 .fv__term .t{font-size:26px}
@@ -57,43 +56,43 @@ a{color:inherit;text-decoration:none}
 
 /* ========== 共通 ========== */
 .wrap{padding:0 22px}
-.sec-no{display:flex;align-items:center;gap:14px;font-family:var(--num);font-weight:700;font-size:13px;letter-spacing:.2em;color:var(--shu)}
-.sec-no::after{content:"";flex:1;height:1px;background:currentColor;opacity:.4}
-.h2{margin-top:16px;font-family:var(--mincho);font-weight:800;font-size:32px;line-height:1.45;letter-spacing:.06em}
-.lead{margin-top:16px;font-size:16px;line-height:1.95;color:var(--muted)}
+.sec-no{display:flex;align-items:center;justify-content:center;gap:14px;font-family:var(--num);font-weight:700;font-size:13px;letter-spacing:.2em;color:var(--red)}
+.sec-no::before,.sec-no::after{content:"";width:36px;height:1.5px;background:currentColor}
+.h2{margin-top:14px;font-family:var(--mincho);font-weight:800;font-size:31px;line-height:1.5;letter-spacing:.06em;text-align:center}
+.lead{margin-top:16px;font-size:15px;line-height:1.95;color:var(--muted);text-align:center}
 
 /* 状態バッジ（JSで切り替え） */
 .st{display:inline-block;font-size:12px;font-weight:900;letter-spacing:.14em;line-height:1;padding:7px 10px 6px;border:1.5px solid currentColor;color:var(--muted);white-space:nowrap}
-.st[data-state="now"]{background:var(--shu);border-color:var(--shu);color:#fff}
-.st[data-state="soon"]{color:var(--navy)}
+.st[data-state="now"]{background:var(--red);border-color:var(--red);color:#fff}
+.st[data-state="soon"]{color:var(--red)}
 .st[data-state="end"]{color:#9aa0ab}
 
 /* ========== スケジュール ========== */
 .sched{padding:72px 0 76px}
 /* カレンダー */
-.cal{margin-top:34px;border-top:2px solid var(--navy)}
-.cal__mon{display:flex;align-items:baseline;gap:10px;padding:14px 0 12px;font-family:var(--num);font-weight:700;color:var(--navy)}
+.cal{margin-top:34px;border-top:2px solid var(--red)}
+.cal__mon{display:flex;align-items:baseline;justify-content:center;gap:10px;padding:14px 0 12px;font-family:var(--num);font-weight:700;color:var(--red)}
 .cal__mon b{font-size:40px;line-height:1;letter-spacing:-.02em}
 .cal__mon span{font-size:14px;letter-spacing:.2em}
 .cal__dow,.cal__wk{display:grid;grid-template-columns:repeat(7,1fr)}
 .cal__dow{border-bottom:1px solid var(--line)}
 .cal__dow span{text-align:center;font-size:12px;font-weight:900;padding:6px 0;color:var(--muted)}
-.cal .sun{color:var(--shu)}
+.cal .sun{color:var(--red)}
 .cal .sat{color:#2e5d9a}
 .cal__wk{grid-template-rows:30px 22px 22px 22px 8px;row-gap:3px;border-bottom:1px solid var(--line)}
 .cal__d{grid-row:1/6;padding:5px 0 0 6px;font-family:var(--num);font-weight:700;font-size:15px;line-height:1;color:#b3ad9f;border-left:1px solid var(--line)}
 .cal__d:nth-child(7n+1){border-left:0}
 .cal__d.on{color:var(--ink);background:#fff}
-.cal__d.on.sun{color:var(--shu)}
+.cal__d.on.sun{color:var(--red)}
 .cal__d.on.sat{color:#2e5d9a}
-.cal__d.is-today{box-shadow:inset 0 0 0 2px var(--shu)}
-.cal__d.is-today::after{content:"今日";display:block;margin-top:2px;font-family:var(--goth);font-size:9px;font-weight:900;color:var(--shu)}
+.cal__d.is-today{box-shadow:inset 0 0 0 2px var(--red)}
+.cal__d.is-today::after{content:"今日";display:block;margin-top:2px;font-family:var(--goth);font-size:9px;font-weight:900;color:var(--red)}
 .bar{position:relative;z-index:1;margin:0 2px;display:flex;align-items:center;padding:0 6px;font-size:11px;font-weight:900;letter-spacing:.04em;line-height:1;white-space:nowrap;overflow:hidden;color:#fff}
-.bar--1{background:var(--navy)}
-.bar--m{background:var(--yellow);color:var(--navy)}
-.bar--5{background:var(--shu);justify-content:center;padding:0;font-family:var(--num);font-weight:700}
+.bar--1{background:var(--red)}
+.bar--m{background:var(--yellow);color:var(--red)}
+.bar--5{background:var(--deep);color:var(--yellow);justify-content:center;padding:0;font-family:var(--num);font-weight:700}
 .bar--2{background:var(--tare)}
-.bar--k{border:1.5px dashed var(--navy-l);color:var(--navy-l);background:none}
+.bar--k{border:1.5px dashed var(--red-d);color:var(--red-d);background:none}
 .bar.cont{margin-left:0;padding-left:8px}
 .bar.go{margin-right:0}
 .cal__note{margin-top:10px;font-size:12px;color:var(--muted)}
@@ -104,20 +103,20 @@ a{color:inherit;text-decoration:none}
 .tl li:first-child{border-top:1px solid var(--line)}
 .tl li::before{content:"";position:absolute;left:0;top:25px;width:14px;height:14px;background:var(--c)}
 .tl a{display:block}
-.tl__name{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-weight:900;font-size:17px;line-height:1.5}
-.tl__date{margin-top:4px;font-family:var(--num);font-weight:700;font-size:17px;letter-spacing:0;color:var(--navy-l);line-height:1.3}
+.tl__name{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-weight:700;font-size:17px;line-height:1.5}
+.tl__date{margin-top:4px;font-family:var(--num);font-weight:700;font-size:17px;letter-spacing:0;color:var(--red-d);line-height:1.3}
 .tl__date small{font-family:var(--goth);font-size:12px;font-weight:700}
 .tl__next{margin-top:2px;font-size:13px;color:var(--muted)}
 
 /* ========== 弾ヘッダー ========== */
-.wave-head{position:relative;background:var(--navy) var(--wave);color:#fff;padding:60px 22px 56px}
-.wave-head__no{font-family:var(--mincho);font-weight:800;font-size:20px;letter-spacing:.3em;color:var(--yellow)}
-.wave-head__ttl{display:flex;align-items:flex-end;gap:16px;margin-top:6px;font-family:var(--mincho);font-weight:800;line-height:1}
-.wave-head__ttl b{font-size:96px;color:var(--yellow);letter-spacing:0}
+.wave-head{position:relative;background:var(--red) var(--wave);color:#fff;padding:58px 22px 54px;text-align:center}
+.wave-head__no{font-family:var(--mincho);font-weight:800;font-size:20px;letter-spacing:.3em;padding-left:.3em;color:#fff}
+.wave-head__ttl{display:flex;justify-content:center;margin-top:8px;font-family:var(--mincho);font-weight:800;line-height:1}
+.wave-head__ttl b{font-size:92px;color:var(--yellow);letter-spacing:.04em;padding-left:.04em}
 .wave-head__ttl span{font-size:40px;padding-bottom:8px;letter-spacing:.12em}
-.wave-head__date{margin-top:26px;font-family:var(--num);font-weight:700;font-size:25px;line-height:1.25;letter-spacing:.02em}
+.wave-head__date{display:inline-block;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.4);font-family:var(--num);font-weight:700;font-size:24px;line-height:1.3;letter-spacing:.01em}
 .wave-head__date small{font-family:var(--goth);font-size:13px;font-weight:700;margin:0 2px}
-.wave-head .st{margin-top:18px}
+.wave-head .st{display:table;margin:18px auto 0}
 .wave-head .st[data-state="soon"]{color:var(--yellow)}
 .wave-head .st[data-state="end"]{color:rgba(255,255,255,.5)}
 .wave-head__note{margin-top:14px;font-size:13px;color:rgba(255,255,255,.75)}
@@ -126,32 +125,33 @@ a{color:inherit;text-decoration:none}
 .hero-item{padding:60px 0 64px}
 .hero-item__img{margin:0 22px;position:relative}
 .hero-item__img img{width:100%}
-.hero-item__cap{position:absolute;left:-10px;top:-14px;background:var(--shu);color:#fff;font-weight:900;font-size:14px;letter-spacing:.14em;padding:8px 14px}
-.hero-item__body{padding:28px 22px 0}
-.hero-item__copy{font-family:var(--mincho);font-weight:800;font-size:30px;line-height:1.5;letter-spacing:.04em}
-.hero-item__copy em{font-style:normal;color:var(--shu)}
-.hero-item__txt{margin-top:16px;font-size:16px;line-height:1.95}
+.hero-item__cap{position:absolute;left:-10px;top:-14px;background:var(--red);color:#fff;font-weight:900;font-size:14px;letter-spacing:.14em;padding:8px 14px}
+.hero-item__body{padding:30px 22px 0}
+.hero-item__copy{font-family:var(--mincho);font-weight:800;font-size:28px;line-height:1.55;letter-spacing:.04em;text-align:center}
+.hero-item__copy em{font-style:normal;color:var(--red)}
+.hero-item__txt{margin-top:16px;font-size:15px;line-height:1.95}
+.hero-item .price{justify-content:center}
 
 /* 価格 */
 .price{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 8px;margin-top:20px;line-height:1.1}
 .price__old{font-size:15px;color:var(--muted)}
 .price__old s{font-family:var(--num);font-weight:700;font-size:19px;margin:0 2px}
 .price__arrow{color:var(--muted);font-size:15px}
-.price__lbl{font-size:14px;font-weight:900;color:var(--shu)}
-.price__now{font-family:var(--num);font-weight:700;font-size:56px;color:var(--shu);letter-spacing:-.02em}
+.price__lbl{font-size:14px;font-weight:900;color:var(--red)}
+.price__now{font-family:var(--num);font-weight:700;font-size:56px;color:var(--red);letter-spacing:-.02em}
 .price__now small{font-family:var(--goth);font-weight:900;font-size:20px;margin-left:2px}
 .price__tax{font-size:12px;color:var(--muted)}
-.off{display:inline-flex;align-items:baseline;gap:4px;margin-top:14px;background:var(--navy);color:var(--yellow);padding:8px 14px 7px;font-weight:900;font-size:15px;letter-spacing:.06em}
+.off{display:inline-flex;align-items:baseline;gap:4px;margin-top:14px;background:var(--yellow);color:var(--red);padding:8px 14px 7px;font-weight:900;font-size:15px;letter-spacing:.06em}
 .off b{font-family:var(--num);font-weight:700;font-size:26px;line-height:1}
 
-.btn{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:24px;background:var(--navy);color:#fff;font-weight:900;font-size:17px;letter-spacing:.1em;padding:19px 22px;transition:background .2s}
-.btn::after{content:"";width:11px;height:11px;border-top:2.5px solid var(--yellow);border-right:2.5px solid var(--yellow);transform:rotate(45deg);flex:none}
-.btn:hover{background:var(--navy-l)}
+.btn{display:flex;align-items:center;justify-content:center;position:relative;margin-top:24px;background:var(--red);color:#fff;font-weight:700;font-size:17px;letter-spacing:.1em;padding:19px 44px;border-radius:4px;transition:background .2s}
+.btn::after{content:"";position:absolute;right:22px;top:50%;width:10px;height:10px;margin-top:-5px;border-top:2.5px solid #fff;border-right:2.5px solid #fff;transform:rotate(45deg)}
+.btn:hover{background:var(--red-d)}
 
 /* ========== 商品：行 ========== */
 .rows{border-top:1px solid var(--line)}
 .row{display:grid;grid-template-columns:132px 1fr;gap:18px;padding:28px 22px;border-bottom:1px solid var(--line);align-items:start}
-.row__name{font-weight:900;font-size:18px;line-height:1.55}
+.row__name{font-weight:700;font-size:18px;line-height:1.55}
 .row__desc{margin-top:6px;font-size:14px;line-height:1.8;color:var(--muted)}
 .row .price{margin-top:10px}
 .row .price__now{font-size:38px}
@@ -162,32 +162,34 @@ a{color:inherit;text-decoration:none}
 
 /* ========== マラソン連動 ========== */
 .mara{background:var(--cream);padding:64px 0 0}
-.mara__head{padding:0 22px 34px}
-.mara__term{display:block;margin:14px 0 10px;font-family:var(--num);font-weight:700;font-size:19px;color:var(--navy)}
+.mara__head{padding:0 22px 34px;text-align:center}
+.mara__term{display:block;margin:16px 0 12px;font-family:var(--num);font-weight:700;font-size:19px;color:var(--red)}
 .mara__term small{font-family:var(--goth);font-size:12px;font-weight:700}
 .mara .rows{background:var(--paper)}
 
 /* ========== ラスト5時間 ========== */
-.last{position:relative;background:var(--navy-d);color:#fff;padding:70px 22px 64px;overflow:hidden}
-.last__eye{font-weight:900;font-size:15px;letter-spacing:.24em;color:var(--yellow)}
-.last__big{display:flex;align-items:flex-end;margin-top:6px;font-family:var(--mincho);font-weight:800;line-height:.9}
-.last__big b{font-family:var(--num);font-weight:700;font-size:190px;color:var(--yellow);line-height:.78;letter-spacing:-.04em}
-.last__big span{font-size:46px;padding:0 0 4px 8px;letter-spacing:.06em}
-.last__date{margin-top:26px;font-family:var(--num);font-weight:700;font-size:21px;line-height:1.3}
-.last__date small{font-family:var(--goth);font-size:13px;font-weight:700;margin:0 2px}
+.last{position:relative;background:var(--deep);color:#fff;padding:68px 22px 0;overflow:hidden;text-align:center}
+.last__eye{display:flex;align-items:center;justify-content:center;gap:12px;font-weight:700;font-size:14px;letter-spacing:.2em;color:var(--yellow)}
+.last__eye::before,.last__eye::after{content:"";width:28px;height:1.5px;background:currentColor}
+.last__big{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:22px;font-family:var(--mincho);font-weight:800}
+.last__big b{font-family:var(--num);font-weight:700;font-size:168px;color:var(--yellow);line-height:.72;letter-spacing:-.04em}
+.last__big span{text-align:left;font-size:40px;line-height:1.15;letter-spacing:.06em}
+.last__big small{display:block;font-size:22px;letter-spacing:.2em;color:var(--yellow);margin-bottom:6px}
+.last__date{display:inline-block;margin-top:28px;padding:10px 18px;border:1px solid rgba(255,255,255,.35);font-family:var(--num);font-weight:700;font-size:19px;line-height:1.3}
+.last__date small{font-family:var(--goth);font-size:12px;font-weight:700;margin:0 2px}
 .last__count{margin-top:16px;font-size:14px;font-weight:700;color:var(--yellow);min-height:1.8em}
 .last__count b{font-family:var(--num);font-size:28px;letter-spacing:.04em;margin:0 3px}
-.last__item{display:grid;grid-template-columns:132px 1fr;gap:18px;margin-top:36px;padding-top:34px;border-top:1px solid rgba(255,255,255,.18);align-items:start}
-.last__item .btn{grid-column:1/-1;margin-top:6px}
 .last .st[data-state="soon"]{color:var(--yellow)}
 .last .st[data-state="end"]{color:rgba(255,255,255,.5)}
-.last__name{font-weight:900;font-size:19px;line-height:1.55}
-.last .price__old,.last .price__arrow,.last .price__tax{color:rgba(255,255,255,.7)}
-.last .price__now{color:var(--yellow);font-size:44px}
-.last .off{background:var(--shu);color:#fff}
-.last .btn{background:var(--yellow);color:var(--navy)}
-.last .btn::after{border-color:var(--navy)}
-.last .btn:hover{background:#fbe27a}
+.last__item{margin:30px -22px 0;padding:40px 22px 0;background:linear-gradient(transparent 0,transparent 120px,var(--paper) 120px);color:var(--ink)}
+.last__photo{position:relative;width:240px;margin:0 auto}
+.last__photo .off{position:absolute;right:-26px;top:-14px;margin:0;width:84px;height:84px;border-radius:50%;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:0;background:var(--yellow);color:var(--red);font-size:12px;line-height:1}
+.last__photo .off b{font-size:32px}
+.last__name{margin-top:22px;font-weight:700;font-size:19px;line-height:1.55}
+.last .price{justify-content:center}
+.last .price__now{color:var(--red);font-size:52px}
+.last .btn{margin-top:20px}
+.last__end{height:60px}
 
 /* ========== 第二弾 ========== */
 .second{padding:0 0 70px}
@@ -198,10 +200,10 @@ a{color:inherit;text-decoration:none}
 .notes h3{font-size:15px;font-weight:900;color:var(--ink);margin-bottom:10px;letter-spacing:.1em}
 .notes li{list-style:none;padding-left:1em;text-indent:-1em}
 .notes li::before{content:"※"}
-.foot{background:var(--navy) var(--wave);color:#fff;text-align:center;padding:52px 22px 56px}
+.foot{background:var(--red) var(--wave);color:#fff;text-align:center;padding:52px 22px 56px}
 .foot__shop{font-family:var(--mincho);font-weight:800;font-size:28px;letter-spacing:.24em}
-.foot .btn{max-width:420px;margin:24px auto 0;background:var(--yellow);color:var(--navy)}
-.foot .btn::after{border-color:var(--navy)}
+.foot .btn{max-width:420px;margin:24px auto 0;background:var(--yellow);color:var(--red)}
+.foot .btn::after{border-color:var(--red)}
 
 </style>
 </head>
@@ -212,7 +214,7 @@ a{color:inherit;text-decoration:none}
   <header class="fv">
     <p class="fv__shop">うなぎ屋かわすい<span>楽天市場店</span></p>
     <h1 class="fv__title"><span class="k">決算</span><span class="s">セール</span></h1>
-    <p class="fv__lead">1年分の感謝をこめて。<br>専門店の蒲焼きを、<br class="sp">いちばんお得なこの機会に。</p>
+    <p class="fv__lead">1年分の感謝をこめて。<br>専門店の蒲焼きを、<br>いちばんお得なこの機会に。</p>
     <div class="fv__photo"><img src="img/fv-don.jpg" alt="ご飯の上にのった国産うなぎの蒲焼き" width="600" height="600"></div>
     <dl class="fv__term">
       <dt>開催期間</dt>
@@ -230,7 +232,7 @@ a{color:inherit;text-decoration:none}
       <div>
         <p class="sec-no">SCHEDULE</p>
         <h2 class="h2">期間ごとに、<br>お得が変わります。</h2>
-        <p class="lead">クーポンやタイムセールは期間限定。<br class="pc">いま開催中のセールをチェックしてください。</p>
+        <p class="lead">クーポンやタイムセールは期間限定。<br>開催中のセールをチェックしてください。</p>
       </div>
       <div class="cal">
         <p class="cal__mon"><b>11</b><span>NOVEMBER 2026</span></p>
@@ -282,7 +284,7 @@ a{color:inherit;text-decoration:none}
         <p class="cal__note">白い日が決算セール期間です。</p>
       </div>
       <ol class="tl">
-        <li style="--c:var(--navy)"><a href="#first">
+        <li style="--c:var(--red)"><a href="#first">
           <p class="tl__name">セール第一弾 <span class="st" data-start="2026-11-04T20:00" data-end="2026-11-13T13:59"></span></p>
           <p class="tl__date">11/4<small>(水)</small>20:00 – 11/13<small>(金)</small>13:59</p>
           <p class="tl__next">伝説福袋・お重箱</p>
@@ -292,7 +294,7 @@ a{color:inherit;text-decoration:none}
           <p class="tl__date">11/4<small>(水)</small>20:00 – 11/11<small>(水)</small>01:59</p>
           <p class="tl__next">常温蒲焼き 送料無料／超特大 3,000円OFF</p>
         </a></li>
-        <li style="--c:var(--shu)"><a href="#last5">
+        <li style="--c:var(--deep)"><a href="#last5">
           <p class="tl__name">ラスト5時間セール <span class="st" data-start="2026-11-10T21:00" data-end="2026-11-11T01:59"></span></p>
           <p class="tl__date">11/10<small>(火)</small>21:00 – 11/11<small>(水)</small>01:59</p>
           <p class="tl__next">蒲焼きカット6枚 22%OFF</p>
@@ -347,7 +349,7 @@ a{color:inherit;text-decoration:none}
   <section class="mara" id="marathon">
     <div class="mara__head">
       <p class="sec-no">MARATHON SALE</p>
-      <h2 class="h2">お買い物マラソン<br class="sp">連動セール</h2>
+      <h2 class="h2">お買い物マラソン<br>連動セール</h2>
       <p class="mara__term">11/4<small>(水)</small>20:00 – 11/11<small>(水)</small>01:59</p>
       <p><span class="st" data-start="2026-11-04T20:00" data-end="2026-11-11T01:59"></span></p>
     </div>
@@ -379,19 +381,20 @@ a{color:inherit;text-decoration:none}
   <!-- ===== ラスト5時間 ===== -->
   <section class="last" id="last5">
     <p class="last__eye">マラソン最終日 限定</p>
-    <p class="last__big"><b>5</b><span>時間<br>だけ。</span></p>
+    <p class="last__big"><b>5</b><span><small>ラスト</small>時間<br>だけ。</span></p>
     <p class="last__date">11/10<small>(火)</small>21:00 – 11/11<small>(水)</small>01:59</p>
     <p class="last__count" id="last5count"><span class="st" data-start="2026-11-10T21:00" data-end="2026-11-11T01:59"></span></p>
     <article class="last__item">
-      <img src="img/cut6.jpg" alt="うなぎ蒲焼きカット6枚セット" width="600" height="600" loading="lazy">
-      <div>
-        <h3 class="last__name">蒲焼きカット<br>6枚セット</h3>
+      <div class="last__photo">
+        <img src="img/cut6.jpg" alt="うなぎ蒲焼きカット6枚セット" width="600" height="600" loading="lazy">
         <p class="off"><b>22</b>%OFF</p>
-        <p class="price"><span class="price__old">通常<s>6,980</s>円</span><span class="price__arrow">→</span></p>
-        <p class="price" style="margin-top:2px"><span class="price__now">5,400<small>円</small></span><span class="price__tax">税込・送料無料</span></p>
       </div>
+      <h3 class="last__name">蒲焼きカット 6枚セット</h3>
+      <p class="price"><span class="price__old">通常<s>6,980</s>円</span><span class="price__arrow">→</span></p>
+      <p class="price" style="margin-top:2px"><span class="price__now">5,400<small>円</small></span><span class="price__tax">税込・送料無料</span></p>
       <!-- コピーページで入稿予定：URL確定後に差し替え -->
       <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002525/" target="_blank" rel="noopener">5時間限定価格で買う</a>
+      <div class="last__end"></div>
     </article>
   </section>
 
@@ -408,7 +411,7 @@ a{color:inherit;text-decoration:none}
     <div class="second__intro">
       <p class="sec-no">STOCK UP</p>
       <h2 class="h2">たっぷり買って、<br>冷凍庫にうなぎを。</h2>
-      <p class="lead">小分けの蒲焼きカットは、食べたい分だけ温めればOK。<br class="pc">大容量ほどお得なクーポンをご用意しました。</p>
+      <p class="lead">小分けの蒲焼きカットは、<br>食べたい分だけ温めればOK。<br>大容量ほどお得なクーポンをご用意しました。</p>
     </div>
     <div class="rows">
       <article class="row">
