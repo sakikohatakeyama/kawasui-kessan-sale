@@ -7,7 +7,7 @@
 <title>決算セール｜うなぎ屋かわすい</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Inter:wght@700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#1d2c48;
@@ -23,7 +23,7 @@
   --line:#d9d0bd;
   --mincho:"Shippori Mincho B1",serif;
   --goth:"Zen Kaku Gothic New","Hiragino Sans",sans-serif;
-  --num:"Barlow Condensed","Zen Kaku Gothic New",sans-serif;
+  --num:"Helvetica Neue",Helvetica,Arial,"Inter","Zen Kaku Gothic New",sans-serif;
   /* 青海波：かわすいのバナーで使われている波文様 */
   --wave:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20' viewBox='0 0 40 20'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.09' stroke-width='1.4'%3E%3Cpath d='M0 20a20 20 0 0 1 40 0M6 20a14 14 0 0 1 28 0M12 20a8 8 0 0 1 16 0M-20 10a20 20 0 0 1 40 0M-14 10a14 14 0 0 1 28 0M-8 10a8 8 0 0 1 16 0M20 10a20 20 0 0 1 40 0M26 10a14 14 0 0 1 28 0M32 10a8 8 0 0 1 16 0'/%3E%3C/g%3E%3C/svg%3E");
 }
@@ -32,7 +32,7 @@ html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{background:var(--navy-d);color:var(--ink);font-family:var(--goth);font-weight:500;line-height:1.8;letter-spacing:.04em}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
-.page{max-width:1080px;margin:0 auto;background:var(--paper);overflow:hidden;overflow:clip}
+.page{max-width:480px;margin:0 auto;background:var(--paper);overflow:hidden;overflow:clip}
 .sp{display:inline}.pc{display:none}
 
 /* ========== FV ========== */
@@ -49,15 +49,15 @@ a{color:inherit;text-decoration:none}
 .fv__term{position:relative;z-index:2;margin:-56px -22px 0;background:var(--yellow);color:var(--navy);padding:22px 22px 24px}
 .fv__term dt{font-size:13px;font-weight:900;letter-spacing:.24em}
 .fv__term dd{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 10px;margin-top:4px;font-family:var(--num);font-weight:700;line-height:1.05}
-.fv__term .d{font-size:50px;letter-spacing:.01em}
+.fv__term .d{font-size:46px;letter-spacing:-.02em}
 .fv__term .w{font-family:var(--goth);font-weight:900;font-size:16px}
-.fv__term .t{font-size:30px}
+.fv__term .t{font-size:26px}
 .fv__term .to{width:100%;height:0}
 .fv__term .arrow{font-size:28px;margin:0 2px}
 
 /* ========== 共通 ========== */
 .wrap{padding:0 22px}
-.sec-no{display:flex;align-items:center;gap:14px;font-family:var(--num);font-weight:700;font-size:15px;letter-spacing:.24em;color:var(--shu)}
+.sec-no{display:flex;align-items:center;gap:14px;font-family:var(--num);font-weight:700;font-size:13px;letter-spacing:.2em;color:var(--shu)}
 .sec-no::after{content:"";flex:1;height:1px;background:currentColor;opacity:.4}
 .h2{margin-top:16px;font-family:var(--mincho);font-weight:800;font-size:32px;line-height:1.45;letter-spacing:.06em}
 .lead{margin-top:16px;font-size:16px;line-height:1.95;color:var(--muted)}
@@ -70,17 +70,42 @@ a{color:inherit;text-decoration:none}
 
 /* ========== スケジュール ========== */
 .sched{padding:72px 0 76px}
-.tl{list-style:none;margin-top:34px;position:relative}
-.tl::before{content:"";position:absolute;left:7px;top:10px;bottom:10px;width:2px;background:var(--line)}
-.tl li{position:relative;padding:0 0 30px 34px}
-.tl li:last-child{padding-bottom:0}
-.tl li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:3px solid var(--navy)}
-.tl li.is-sub::before{left:3px;top:9px;width:10px;height:10px;border-width:2px;border-color:var(--shu)}
-.tl li.is-sub{padding-left:34px}
+/* カレンダー */
+.cal{margin-top:34px;border-top:2px solid var(--navy)}
+.cal__mon{display:flex;align-items:baseline;gap:10px;padding:14px 0 12px;font-family:var(--num);font-weight:700;color:var(--navy)}
+.cal__mon b{font-size:40px;line-height:1;letter-spacing:-.02em}
+.cal__mon span{font-size:14px;letter-spacing:.2em}
+.cal__dow,.cal__wk{display:grid;grid-template-columns:repeat(7,1fr)}
+.cal__dow{border-bottom:1px solid var(--line)}
+.cal__dow span{text-align:center;font-size:12px;font-weight:900;padding:6px 0;color:var(--muted)}
+.cal .sun{color:var(--shu)}
+.cal .sat{color:#2e5d9a}
+.cal__wk{grid-template-rows:30px 22px 22px 22px 8px;row-gap:3px;border-bottom:1px solid var(--line)}
+.cal__d{grid-row:1/6;padding:5px 0 0 6px;font-family:var(--num);font-weight:700;font-size:15px;line-height:1;color:#b3ad9f;border-left:1px solid var(--line)}
+.cal__d:nth-child(7n+1){border-left:0}
+.cal__d.on{color:var(--ink);background:#fff}
+.cal__d.on.sun{color:var(--shu)}
+.cal__d.on.sat{color:#2e5d9a}
+.cal__d.is-today{box-shadow:inset 0 0 0 2px var(--shu)}
+.cal__d.is-today::after{content:"今日";display:block;margin-top:2px;font-family:var(--goth);font-size:9px;font-weight:900;color:var(--shu)}
+.bar{position:relative;z-index:1;margin:0 2px;display:flex;align-items:center;padding:0 6px;font-size:11px;font-weight:900;letter-spacing:.04em;line-height:1;white-space:nowrap;overflow:hidden;color:#fff}
+.bar--1{background:var(--navy)}
+.bar--m{background:var(--yellow);color:var(--navy)}
+.bar--5{background:var(--shu);justify-content:center;padding:0;font-family:var(--num);font-weight:700}
+.bar--2{background:var(--tare)}
+.bar--k{border:1.5px dashed var(--navy-l);color:var(--navy-l);background:none}
+.bar.cont{margin-left:0;padding-left:8px}
+.bar.go{margin-right:0}
+.cal__note{margin-top:10px;font-size:12px;color:var(--muted)}
+
+/* 凡例 */
+.tl{list-style:none;margin-top:30px}
+.tl li{position:relative;padding:18px 0 18px 26px;border-bottom:1px solid var(--line)}
+.tl li:first-child{border-top:1px solid var(--line)}
+.tl li::before{content:"";position:absolute;left:0;top:25px;width:14px;height:14px;background:var(--c)}
 .tl a{display:block}
-.tl__name{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-weight:900;font-size:19px;line-height:1.5}
-.tl li.is-sub .tl__name{font-size:16px}
-.tl__date{margin-top:4px;font-family:var(--num);font-weight:600;font-size:21px;letter-spacing:.03em;color:var(--navy-l);line-height:1.3}
+.tl__name{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-weight:900;font-size:17px;line-height:1.5}
+.tl__date{margin-top:4px;font-family:var(--num);font-weight:700;font-size:17px;letter-spacing:0;color:var(--navy-l);line-height:1.3}
 .tl__date small{font-family:var(--goth);font-size:12px;font-weight:700}
 .tl__next{margin-top:2px;font-size:13px;color:var(--muted)}
 
@@ -90,7 +115,7 @@ a{color:inherit;text-decoration:none}
 .wave-head__ttl{display:flex;align-items:flex-end;gap:16px;margin-top:6px;font-family:var(--mincho);font-weight:800;line-height:1}
 .wave-head__ttl b{font-size:96px;color:var(--yellow);letter-spacing:0}
 .wave-head__ttl span{font-size:40px;padding-bottom:8px;letter-spacing:.12em}
-.wave-head__date{margin-top:26px;font-family:var(--num);font-weight:700;font-size:28px;line-height:1.25;letter-spacing:.02em}
+.wave-head__date{margin-top:26px;font-family:var(--num);font-weight:700;font-size:25px;line-height:1.25;letter-spacing:.02em}
 .wave-head__date small{font-family:var(--goth);font-size:13px;font-weight:700;margin:0 2px}
 .wave-head .st{margin-top:18px}
 .wave-head .st[data-state="soon"]{color:var(--yellow)}
@@ -110,14 +135,14 @@ a{color:inherit;text-decoration:none}
 /* 価格 */
 .price{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 8px;margin-top:20px;line-height:1.1}
 .price__old{font-size:15px;color:var(--muted)}
-.price__old s{font-family:var(--num);font-weight:600;font-size:22px;margin:0 2px}
+.price__old s{font-family:var(--num);font-weight:700;font-size:19px;margin:0 2px}
 .price__arrow{color:var(--muted);font-size:15px}
 .price__lbl{font-size:14px;font-weight:900;color:var(--shu)}
-.price__now{font-family:var(--num);font-weight:700;font-size:64px;color:var(--shu);letter-spacing:.01em}
+.price__now{font-family:var(--num);font-weight:700;font-size:56px;color:var(--shu);letter-spacing:-.02em}
 .price__now small{font-family:var(--goth);font-weight:900;font-size:20px;margin-left:2px}
 .price__tax{font-size:12px;color:var(--muted)}
 .off{display:inline-flex;align-items:baseline;gap:4px;margin-top:14px;background:var(--navy);color:var(--yellow);padding:8px 14px 7px;font-weight:900;font-size:15px;letter-spacing:.06em}
-.off b{font-family:var(--num);font-size:30px;line-height:1}
+.off b{font-family:var(--num);font-weight:700;font-size:26px;line-height:1}
 
 .btn{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:24px;background:var(--navy);color:#fff;font-weight:900;font-size:17px;letter-spacing:.1em;padding:19px 22px;transition:background .2s}
 .btn::after{content:"";width:11px;height:11px;border-top:2.5px solid var(--yellow);border-right:2.5px solid var(--yellow);transform:rotate(45deg);flex:none}
@@ -129,16 +154,16 @@ a{color:inherit;text-decoration:none}
 .row__name{font-weight:900;font-size:18px;line-height:1.55}
 .row__desc{margin-top:6px;font-size:14px;line-height:1.8;color:var(--muted)}
 .row .price{margin-top:10px}
-.row .price__now{font-size:44px}
+.row .price__now{font-size:38px}
 .row .price__now small{font-size:16px}
 .row .off{margin-top:10px;font-size:13px;padding:6px 10px 5px}
-.row .off b{font-size:24px}
+.row .off b{font-size:21px}
 .row .btn{grid-column:1/-1;margin-top:4px;font-size:16px;padding:16px 20px}
 
 /* ========== マラソン連動 ========== */
 .mara{background:var(--cream);padding:64px 0 0}
 .mara__head{padding:0 22px 34px}
-.mara__term{display:block;margin:14px 0 10px;font-family:var(--num);font-weight:700;font-size:22px;color:var(--navy)}
+.mara__term{display:block;margin:14px 0 10px;font-family:var(--num);font-weight:700;font-size:19px;color:var(--navy)}
 .mara__term small{font-family:var(--goth);font-size:12px;font-weight:700}
 .mara .rows{background:var(--paper)}
 
@@ -146,9 +171,9 @@ a{color:inherit;text-decoration:none}
 .last{position:relative;background:var(--navy-d);color:#fff;padding:70px 22px 64px;overflow:hidden}
 .last__eye{font-weight:900;font-size:15px;letter-spacing:.24em;color:var(--yellow)}
 .last__big{display:flex;align-items:flex-end;margin-top:6px;font-family:var(--mincho);font-weight:800;line-height:.9}
-.last__big b{font-family:var(--num);font-weight:700;font-size:200px;color:var(--yellow);line-height:.78;letter-spacing:-.02em}
+.last__big b{font-family:var(--num);font-weight:700;font-size:190px;color:var(--yellow);line-height:.78;letter-spacing:-.04em}
 .last__big span{font-size:46px;padding:0 0 4px 8px;letter-spacing:.06em}
-.last__date{margin-top:26px;font-family:var(--num);font-weight:700;font-size:26px;line-height:1.3}
+.last__date{margin-top:26px;font-family:var(--num);font-weight:700;font-size:21px;line-height:1.3}
 .last__date small{font-family:var(--goth);font-size:13px;font-weight:700;margin:0 2px}
 .last__count{margin-top:16px;font-size:14px;font-weight:700;color:var(--yellow);min-height:1.8em}
 .last__count b{font-family:var(--num);font-size:28px;letter-spacing:.04em;margin:0 3px}
@@ -158,7 +183,7 @@ a{color:inherit;text-decoration:none}
 .last .st[data-state="end"]{color:rgba(255,255,255,.5)}
 .last__name{font-weight:900;font-size:19px;line-height:1.55}
 .last .price__old,.last .price__arrow,.last .price__tax{color:rgba(255,255,255,.7)}
-.last .price__now{color:var(--yellow);font-size:56px}
+.last .price__now{color:var(--yellow);font-size:44px}
 .last .off{background:var(--shu);color:#fff}
 .last .btn{background:var(--yellow);color:var(--navy)}
 .last .btn::after{border-color:var(--navy)}
@@ -178,65 +203,6 @@ a{color:inherit;text-decoration:none}
 .foot .btn{max-width:420px;margin:24px auto 0;background:var(--yellow);color:var(--navy)}
 .foot .btn::after{border-color:var(--navy)}
 
-/* ========== PC ========== */
-@media (min-width:900px){
-  .sp{display:none}.pc{display:inline}
-  .wrap{padding:0 64px}
-  .fv{display:grid;grid-template-columns:1fr 520px;padding:44px 0 0 64px;min-height:640px}
-  .fv__title{margin-top:70px}
-  .fv__title .k{font-size:150px}
-  .fv__title .s{font-size:86px;margin-top:18px}
-  .fv__lead{font-size:19px;margin-top:34px}
-  .fv__photo{grid-column:2;grid-row:1/span 3;margin:30px -120px 0 0;width:640px}
-  .fv__term{grid-column:1/-1;margin:-40px 0 0 -64px;padding:26px 64px 30px;display:flex;align-items:center;gap:30px}
-  .fv__term dd{margin-top:0}
-  .fv__term .to{display:none}
-  .fv__term .d{font-size:60px}
-  .fv__term .t{font-size:34px}
-  .fv__term .arrow{margin:0 14px}
-
-  .h2{font-size:42px}
-  .lead{font-size:17px}
-  .sched{padding:100px 0}
-  .sched .wrap{display:grid;grid-template-columns:440px 1fr;gap:56px}
-  .tl{margin-top:8px}
-  .tl__name{font-size:21px}
-  .tl__date{font-size:24px}
-
-  .wave-head{padding:80px 64px 74px;display:grid;grid-template-columns:auto 1fr;column-gap:60px;align-items:end}
-  .wave-head__no{grid-column:1/-1}
-  .wave-head__ttl b{font-size:130px}
-  .wave-head__ttl span{font-size:52px}
-  .wave-head__date{font-size:34px;margin:0 0 10px}
-  .wave-head .st,.wave-head__note{grid-column:2;justify-self:start}
-
-  .hero-item{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:90px 64px;align-items:center}
-  .hero-item__img{margin:0}
-  .hero-item__body{padding:0}
-  .hero-item__copy{font-size:36px}
-  .hero-item--rev .hero-item__img{order:2}
-  .hero-item + .hero-item{padding-top:0}
-
-  .rows{display:grid;grid-template-columns:1fr 1fr;border-top:0;margin:0 64px;gap:0 56px}
-  .row{grid-template-columns:170px 1fr;padding:34px 0;border-bottom:1px solid var(--line)}
-  .row:nth-child(-n+2){border-top:1px solid var(--line)}
-  .mara{padding-top:90px}
-  .mara__head{padding:0 64px 40px}
-  .mara .rows{background:none;padding-bottom:80px}
-
-  .last{padding:96px 64px;display:grid;grid-template-columns:1fr 1fr;gap:0 64px;align-items:center}
-  .last__big b{font-size:260px}
-  .last__big span{font-size:58px}
-  .last__item{grid-column:2;grid-row:1/span 4;margin:0;padding:0;border:0;grid-template-columns:1fr}
-  .last__item{grid-template-columns:200px 1fr;gap:28px}
-
-  .second__intro{padding:80px 64px 46px}
-  .second .rows{grid-template-columns:repeat(3,1fr);gap:0 40px}
-  .second .row{grid-template-columns:1fr;border-top:1px solid var(--line)}
-  .second .row img{max-width:260px}
-
-  .notes{padding:60px 64px;font-size:14px}
-}
 </style>
 </head>
 <body>
@@ -266,23 +232,72 @@ a{color:inherit;text-decoration:none}
         <h2 class="h2">期間ごとに、<br>お得が変わります。</h2>
         <p class="lead">クーポンやタイムセールは期間限定。<br class="pc">いま開催中のセールをチェックしてください。</p>
       </div>
+      <div class="cal">
+        <p class="cal__mon"><b>11</b><span>NOVEMBER 2026</span></p>
+        <div class="cal__dow"><span class="sun">日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span class="sat">土</span></div>
+        <div class="cal__wk">
+          <span class="cal__d sun" style="grid-column:1" data-d="2026-11-01">1</span>
+          <span class="cal__d" style="grid-column:2" data-d="2026-11-02">2</span>
+          <span class="cal__d" style="grid-column:3" data-d="2026-11-03">3</span>
+          <span class="cal__d on" style="grid-column:4" data-d="2026-11-04">4</span>
+          <span class="cal__d on" style="grid-column:5" data-d="2026-11-05">5</span>
+          <span class="cal__d on" style="grid-column:6" data-d="2026-11-06">6</span>
+          <span class="cal__d sat on" style="grid-column:7" data-d="2026-11-07">7</span>
+          <a class="bar bar--1 go" href="#first" style="grid-column:4/8;grid-row:2">第一弾</a>
+          <a class="bar bar--m go" href="#marathon" style="grid-column:4/8;grid-row:3">マラソン連動</a>
+        </div>
+        <div class="cal__wk">
+          <span class="cal__d sun on" style="grid-column:1" data-d="2026-11-08">8</span>
+          <span class="cal__d on" style="grid-column:2" data-d="2026-11-09">9</span>
+          <span class="cal__d on" style="grid-column:3" data-d="2026-11-10">10</span>
+          <span class="cal__d on" style="grid-column:4" data-d="2026-11-11">11</span>
+          <span class="cal__d on" style="grid-column:5" data-d="2026-11-12">12</span>
+          <span class="cal__d on" style="grid-column:6" data-d="2026-11-13">13</span>
+          <span class="cal__d sat on" style="grid-column:7" data-d="2026-11-14">14</span>
+          <a class="bar bar--1 cont" href="#first" style="grid-column:1/7;grid-row:2">第一弾 〜13日13:59</a>
+          <a class="bar bar--m cont" href="#marathon" style="grid-column:1/5;grid-row:3">マラソン連動 〜11日</a>
+          <a class="bar bar--5" href="#last5" style="grid-column:3/4;grid-row:4">5時間</a>
+          <a class="bar bar--2 go" href="#second" style="grid-column:6/8;grid-row:3">第二弾</a>
+        </div>
+        <div class="cal__wk">
+          <span class="cal__d sun on" style="grid-column:1" data-d="2026-11-15">15</span>
+          <span class="cal__d on" style="grid-column:2" data-d="2026-11-16">16</span>
+          <span class="cal__d on" style="grid-column:3" data-d="2026-11-17">17</span>
+          <span class="cal__d on" style="grid-column:4" data-d="2026-11-18">18</span>
+          <span class="cal__d on" style="grid-column:5" data-d="2026-11-19">19</span>
+          <span class="cal__d on" style="grid-column:6" data-d="2026-11-20">20</span>
+          <span class="cal__d sat on" style="grid-column:7" data-d="2026-11-21">21</span>
+          <a class="bar bar--2 cont" href="#second" style="grid-column:1/7;grid-row:2">第二弾 〜20日13:59</a>
+        </div>
+        <div class="cal__wk">
+          <span class="cal__d sun on" style="grid-column:1" data-d="2026-11-22">22</span>
+          <span class="cal__d on" style="grid-column:2" data-d="2026-11-23">23</span>
+          <span class="cal__d on" style="grid-column:3" data-d="2026-11-24">24</span>
+          <span class="cal__d on" style="grid-column:4" data-d="2026-11-25">25</span>
+          <span class="cal__d on" style="grid-column:5" data-d="2026-11-26">26</span>
+          <span class="cal__d on" style="grid-column:6" data-d="2026-11-27">27</span>
+          <span class="cal__d sat" style="grid-column:7" data-d="2026-11-28">28</span>
+          <span class="bar bar--k" style="grid-column:1/7;grid-row:2">決算セール 〜27日13:59</span>
+        </div>
+        <p class="cal__note">白い日が決算セール期間です。</p>
+      </div>
       <ol class="tl">
-        <li><a href="#first">
+        <li style="--c:var(--navy)"><a href="#first">
           <p class="tl__name">セール第一弾 <span class="st" data-start="2026-11-04T20:00" data-end="2026-11-13T13:59"></span></p>
           <p class="tl__date">11/4<small>(水)</small>20:00 – 11/13<small>(金)</small>13:59</p>
           <p class="tl__next">伝説福袋・お重箱</p>
         </a></li>
-        <li class="is-sub"><a href="#marathon">
+        <li style="--c:var(--yellow)"><a href="#marathon">
           <p class="tl__name">マラソン連動セール <span class="st" data-start="2026-11-04T20:00" data-end="2026-11-11T01:59"></span></p>
           <p class="tl__date">11/4<small>(水)</small>20:00 – 11/11<small>(水)</small>01:59</p>
           <p class="tl__next">常温蒲焼き 送料無料／超特大 3,000円OFF</p>
         </a></li>
-        <li class="is-sub"><a href="#last5">
+        <li style="--c:var(--shu)"><a href="#last5">
           <p class="tl__name">ラスト5時間セール <span class="st" data-start="2026-11-10T21:00" data-end="2026-11-11T01:59"></span></p>
           <p class="tl__date">11/10<small>(火)</small>21:00 – 11/11<small>(水)</small>01:59</p>
           <p class="tl__next">蒲焼きカット6枚 22%OFF</p>
         </a></li>
-        <li><a href="#second">
+        <li style="--c:var(--tare)"><a href="#second">
           <p class="tl__name">セール第二弾 <span class="st" data-start="2026-11-13T14:00" data-end="2026-11-20T13:59"></span></p>
           <p class="tl__date">11/13<small>(金)</small>14:00 – 11/20<small>(金)</small>13:59</p>
           <p class="tl__next">蒲焼きカット 大容量クーポン／白焼き 1,680円</p>
@@ -458,6 +473,12 @@ a{color:inherit;text-decoration:none}
     el.dataset.state = state;
     el.textContent = state === 'now' ? '開催中' : state === 'end' ? '終了しました' : md(el.dataset.start) + ' ' + el.dataset.start.slice(11) + ' スタート';
   });
+
+  // カレンダーの今日
+  var p2 = function(n){ return ('0' + n).slice(-2); };
+  var j = new Date(now + 9 * 3600e3);
+  var today = document.querySelector('.cal__d[data-d="' + j.getUTCFullYear() + '-' + p2(j.getUTCMonth() + 1) + '-' + p2(j.getUTCDate()) + '"]');
+  if (today) today.classList.add('is-today');
 
   // ラスト5時間：開催中は残り時間を表示
   var box = document.getElementById('last5count');
