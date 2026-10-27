@@ -210,9 +210,9 @@ section[id]{scroll-margin-top:100px}
 .last__big .l2{display:flex;align-items:center;justify-content:center;margin:14px 0 8px;font-size:min(34px,8.6vw);letter-spacing:.04em;white-space:nowrap}
 .last__big b{display:inline-block;font-family:var(--num);font-weight:800;font-size:min(96px,24vw);color:var(--yellow);line-height:1;transform-origin:center;position:relative;top:-.16em;letter-spacing:-.03em;margin:0 .12em 0 .06em}
 .last__big em{font-style:normal;color:var(--yellow)}
-.last__date{display:inline-block;margin-top:26px;padding:10px 14px;background:var(--red);border-radius:6px;white-space:nowrap;font-family:var(--num);font-weight:700;font-size:19px;line-height:1.3}
+.last__date{display:inline-block;margin-top:10px;padding:10px 14px;background:var(--red);border-radius:6px;white-space:nowrap;font-family:var(--num);font-weight:700;font-size:19px;line-height:1.3}
 .last__date small{font-family:var(--goth);font-size:12px;font-weight:700;margin:0 2px}
-.last__count{margin-top:16px;font-size:15px;font-weight:700;color:#fff;min-height:1.8em}
+.last__count{margin-top:8px;font-size:15px;font-weight:700;color:#fff}
 .last__count b{font-family:var(--num);font-size:30px;letter-spacing:.04em;margin:0 3px;color:var(--yellow)}
 .last .st[data-state="soon"]{color:#fff}
 .last .st[data-state="now"]{background:var(--yellow);border-color:var(--yellow);color:var(--red)}
@@ -379,7 +379,7 @@ section[id]{scroll-margin-top:100px}
   .last{padding:100px 48px 110px}
   .last__big small{font-size:30px;gap:18px}
   .last__big small::before,.last__big small::after{width:40px}
-  .last__big .l2{font-size:72px;margin:22px 0 14px}
+  .last__big .l2{font-size:72px;margin:22px 0 0}
   .last__big b{font-size:200px}
   .last__date{font-size:32px;padding:12px 26px}
   .last__count{font-size:17px}
@@ -619,8 +619,8 @@ section[id]{scroll-margin-top:100px}
   <section class="last" id="last5">
     <div class="last__head">
     <h2 class="last__big"><small>お買い物マラソン最終日</small><span class="l2">ラスト<b>5</b>時間<em>限定</em></span></h2>
-    <p class="last__date">11/10<small>(火)</small>21:00 – 11/11<small>(水)</small>01:59</p>
     <p class="last__count" id="last5count"><span class="st" data-start="2026-11-10T21:00" data-end="2026-11-11T01:59"></span></p>
+    <p class="last__date">11/10<small>(火)</small>21:00 – 11/11<small>(水)</small>01:59</p>
     </div>
     <article class="last__item">
       <div class="last__photo">
@@ -812,7 +812,7 @@ section[id]{scroll-margin-top:100px}
     '.hero-item__img, .hero-item__body',
     '.mara__head > *',
     '.rows > .row',
-    '.last__date, .last__count',
+    '.last__count, .last__date',
     '.last__item',
     '.second__intro > *',
     '.notes, .foot > *',
