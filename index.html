@@ -267,13 +267,21 @@ section[id]{scroll-margin-top:100px}
 .row .cpn__v{padding-top:0;padding-bottom:0}
 .row .sl{align-items:center;padding-top:0;padding-bottom:0}
 .row .sl b{line-height:1}
+.row .cpn__v{gap:4px;padding-left:10px;padding-right:6px}
+.row .cpn__v b{font-size:40px}
+.row .cpn__u{font-size:14px}
+.row .cpn__u i{font-size:18px}
+.row .cpn__get{font-size:20px;padding:0 14px}
+.row .sl{font-size:20px;padding-left:10px;padding-right:10px}
+.row .sl b{font-size:40px}
+@media (min-width:900px){.second .cpn__v b{font-size:34px}.second .cpn__u{font-size:13px}.second .cpn__u i{font-size:16px}.second .cpn__get{padding:0 10px;font-size:18px}.second .sl b{font-size:36px}.second .sl{font-size:18px}}
 @media (max-width:899px){.row .cpn,.row .sl{height:68px}}
 /* クーポン（獲得ボタン付き）とセール札 */
 .cpn{display:flex;align-items:stretch;margin-top:16px;background:var(--coupon);color:#fff;border-radius:10px;overflow:hidden;font-weight:900;line-height:1;white-space:nowrap}
 .cpn__v{flex:1;min-width:0;display:flex;align-items:center;justify-content:center;gap:5px;padding:10px 8px 10px 12px}
 .cpn__v b{font-family:var(--num);font-weight:600;letter-spacing:-.015em;font-size:clamp(36px,3.4vw,52px);letter-spacing:-.01em}
-.cpn__u{display:flex;flex-direction:column;align-items:flex-start;gap:3px;font-size:15px}
-.cpn__u i{font-style:normal;font-family:var(--num);font-weight:700;font-size:23px;letter-spacing:.02em}
+.cpn__u{display:flex;flex-direction:row;align-items:baseline;gap:2px;font-size:17px}
+.cpn__u i{font-style:normal;font-family:var(--num);font-weight:700;font-size:22px;letter-spacing:.02em}
 .cpn__get{flex:none;display:flex;align-items:center;padding:0 16px;border-left:2px dashed rgba(255,255,255,.85);font-size:25px;letter-spacing:.06em;transition:background .2s}
 .cpn{text-decoration:none;transition:filter .2s,transform .2s}
 .cpn:hover{filter:brightness(1.08)}
@@ -487,7 +495,7 @@ section[id]{scroll-margin-top:100px}
   .mara{padding-top:56px}
   .mara__head{padding-bottom:50px}
   .rows{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;border:0;padding:0 max(48px,calc((100% - 1120px)/2)) 110px}
-  .mara .rows{background:none}
+  .mara .rows{background:none;max-width:860px;margin:0 auto;padding-left:0;padding-right:0}
   .row{grid-template-columns:1fr;gap:0;padding:28px;background:#fff;border:1px solid var(--line);border-radius:10px}
   .row > img{width:100%;margin-bottom:22px}
   .row__name{font-size:26px}
