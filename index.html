@@ -41,6 +41,12 @@ a{color:inherit;text-decoration:none}
 .hd__logo img{display:block;height:24px;width:auto;margin:4px 0 0 -9.5px;filter:brightness(0) invert(1)}
 .hd__logo small{display:block;font-family:var(--goth);font-weight:500;font-size:10px;letter-spacing:.12em;line-height:1;opacity:.85}
 .hd__ttl{display:none}
+.hd__menu{flex:none;position:relative;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.14);cursor:pointer}
+.hd__menu span{position:absolute;left:12px;right:12px;height:2px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
+.hd__menu span:nth-child(1){top:15px}.hd__menu span:nth-child(2){top:21px}.hd__menu span:nth-child(3){top:27px}
+.hd__menu[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.hd__menu[aria-expanded="true"] span:nth-child(2){opacity:0}
+.hd__menu[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 .hd__cta{flex:none;background:#fff;color:var(--red);font-weight:700;font-size:13px;letter-spacing:.06em;line-height:1;padding:11px 16px;border-radius:999px}
 .nav{position:sticky;top:54px;z-index:40;background:#fff;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
 .nav::-webkit-scrollbar{display:none}
@@ -385,6 +391,7 @@ section[id]{scroll-margin-top:100px}
   .sp{display:none}.pc{display:inline}
   .pad,.sched .wrap,.hero-item,.mara__head,.second__intro,.notes{padding-left:max(48px,calc((100% - 1120px)/2));padding-right:max(48px,calc((100% - 1120px)/2))}
   .hd{height:64px;padding:0 32px}
+  .hd__menu{display:none}
   .hd__logo img{height:30px;margin-left:-11.8px}
   .hd__logo small{font-size:11px}
   .hd__ttl{display:block;flex:1;margin-left:24px;padding-left:24px;border-left:1px solid rgba(255,255,255,.35);font-family:var(--num);font-weight:600;font-size:16px;letter-spacing:.04em}
@@ -517,15 +524,23 @@ section[id]{scroll-margin-top:100px}
 
 /* SP全体のバランス調整 */
 @media (max-width:899px){
-  /* メニュー：スクロールさせず3列×2段で全部見せる */
-  .nav{overflow:visible}
-  .nav ul{display:grid;grid-template-columns:repeat(3,1fr);width:auto;margin:0}
-  .nav li{display:flex;border-bottom:1px solid var(--line)}
-  .nav li:nth-child(3n+2),.nav li:nth-child(3n){border-left:1px solid var(--line)}
+  .fv__track{animation-duration:20s}
+  /* ヘッダー：ロゴを大きく中央に */
+  .hd{justify-content:center;height:60px;padding:0 60px}
+  .hd__logo img{height:30px;margin-left:-11.8px}
+  .hd__logo small{font-size:11px}
+  .hd__menu{position:absolute;right:10px;top:50%;margin-top:-22px}
+  .nav{top:60px!important}
+  /* メニュー：ハンバーガーで開閉 */
+  .nav{position:fixed;left:0;right:0;top:54px;z-index:45;border-bottom:0;background:#fff;box-shadow:0 10px 24px rgba(0,0,0,.18);transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s}
+  .nav.is-open{opacity:1;visibility:visible;transform:none}
+  .nav ul{display:block;width:auto;margin:0}
   .nav li + li a{border-left:0}
-  .nav a{display:flex;align-items:center;justify-content:center;width:100%;min-height:46px;padding:7px 4px;font-size:12px;line-height:1.35;letter-spacing:.02em;text-align:center;white-space:normal}
-  .nav{border-bottom:0}
-  section[id]{scroll-margin-top:160px}
+  .nav a{display:flex;align-items:center;justify-content:space-between;padding:17px 22px;font-size:16px;border-top:1px solid var(--line);white-space:normal}
+  .nav a::after{content:"";width:8px;height:8px;border-top:2px solid var(--red);border-right:2px solid var(--red);transform:rotate(45deg)}
+  .nav a br{display:none}
+  .nav a .pc{display:inline}
+  section[id]{scroll-margin-top:70px}
   .h2{font-size:33px}
   .h2--goth{font-size:44px}
   .h2--goth small{font-size:21px}
@@ -577,6 +592,7 @@ section[id]{scroll-margin-top:100px}
   <header class="hd">
     <p class="hd__logo"><small>楽天市場店</small><img src="img/logo-kawasui.png" alt="うなぎ屋かわすい" width="960" height="160"></p>
     <p class="hd__ttl">決算感謝祭 開催　11/4(水)20:00〜11/27(金)13:59</p>
+    <button class="hd__menu" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="gnav"><span></span><span></span><span></span></button>
   </header>
 
   <!-- ===== FV ===== -->
@@ -610,7 +626,7 @@ section[id]{scroll-margin-top:100px}
     </div>
   </section>
 
-  <nav class="nav" aria-label="ページ内メニュー">
+  <nav class="nav" id="gnav" aria-label="ページ内メニュー">
     <ul>
       <li><a href="#schedule">スケジュール</a></li>
       <li><a href="#first">セール第一弾</a></li>
@@ -954,6 +970,16 @@ section[id]{scroll-margin-top:100px}
   var fv = document.querySelector('.fv'), img = document.querySelector('.fv__ttl img'), done = false;
   function go(){ if (done) return; done = true; fv.classList.add('is-go'); }
   if (img.complete) go(); else { img.addEventListener('load', go); img.addEventListener('error', go); setTimeout(go, 2500); }
+})();
+
+// スマホ：ハンバーガーメニュー
+(function(){
+  var btn = document.querySelector('.hd__menu'), nav = document.getElementById('gnav');
+  if (!btn) return;
+  function set(open){ nav.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', open); btn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く'); }
+  btn.addEventListener('click', function(){ set(!nav.classList.contains('is-open')); });
+  nav.addEventListener('click', function(e){ if (e.target.closest('a')) set(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') set(false); });
 })();
 
 // スクロールで要素をふわっと表示（同じ並びのものは少しずつ時間差で）
