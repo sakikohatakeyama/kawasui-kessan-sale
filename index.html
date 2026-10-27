@@ -7,7 +7,7 @@
 <title>うなぎ屋かわすいの決算感謝祭</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@700;800&family=Jost:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Jost:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --red:#c8201a;
@@ -53,6 +53,7 @@ a{color:inherit;text-decoration:none}
 .nav ul{display:flex;list-style:none;width:max-content;margin:0 auto}
 .nav a{display:block;padding:14px 15px 13px;font-size:13px;font-weight:700;letter-spacing:.06em;white-space:nowrap}
 .nav li + li a{border-left:1px solid var(--line)}
+.nav a.nav__bf{color:#b8862b;background:linear-gradient(180deg,#d9ab3c 0%,#a8781f 55%,#c99a2e 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 section[id]{scroll-margin-top:100px}
 
 /* ========== FV ========== */
@@ -63,7 +64,7 @@ section[id]{scroll-margin-top:100px}
 .fv__body{position:relative;z-index:2;padding:26px 16px 0}
 .fv__ttl{position:relative;width:100%;max-width:440px;margin:0 auto}
 .fv__ttl img{width:100%}
-.fv__ttl::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 42%,rgba(255,255,255,.95) 50%,transparent 58%) no-repeat;background-size:300% 100%;background-position:100% 0;-webkit-mask:url(img/fv-title-sp.png) center/100% 100% no-repeat;mask:url(img/fv-title-sp.png) center/100% 100% no-repeat;animation:shine 4.5s ease-in-out 1s infinite}
+.fv__ttl::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 42%,rgba(255,255,255,.95) 50%,transparent 58%) no-repeat;background-size:300% 100%;background-position:100% 0;-webkit-mask:url(img/fv-title-sp.webp) center/100% 100% no-repeat;mask:url(img/fv-title-sp.webp) center/100% 100% no-repeat;animation:shine 4.5s ease-in-out 1s infinite}
 @keyframes shine{0%{background-position:100% 0}35%,100%{background-position:0% 0}}
 /* 開いた時だけ：タイトルがドーン */
 .js .fv__ttl,.js .fv__date{opacity:0}
@@ -278,6 +279,16 @@ section[id]{scroll-margin-top:100px}
 .cpn,.sl{width:100%;box-sizing:border-box}
 .third .cpn{background:linear-gradient(180deg,#f6dc8a 0%,#e0b64a 45%,#c49328 100%);color:#000}
 .third .cpn__get{border-left-color:rgba(0,0,0,.6)}
+.third .cpn__v{padding-top:16px;padding-bottom:16px}
+.third .cpn__v b{font-size:56px}
+.third .cpn__u{font-size:17px}
+.third .cpn__u i{font-size:26px}
+.third .cpn__get{font-size:28px;padding:0 22px}
+@media (min-width:900px){
+  .third .cpn__u{flex-direction:row;align-items:baseline;gap:4px;font-size:24px}
+  .third .cpn__u i{font-size:30px}
+  .third .cpn__v b{font-size:60px}
+}
 .cp{display:inline-flex;align-items:baseline;gap:8px;margin-top:14px;background:var(--coupon);color:#fff;border-radius:4px;padding:7px 14px 6px;font-weight:900;line-height:1;white-space:nowrap}
 .cp--sale{background:var(--red)}
 .cp__k{font-size:14px;letter-spacing:.06em}
@@ -415,7 +426,7 @@ section[id]{scroll-margin-top:100px}
   .fv__band img{object-fit:fill}
   .fv__body{position:absolute;left:26.5cqw;top:16.4cqw;width:51cqw;padding:0}
   .fv__ttl{max-width:none}
-  .fv__ttl::after{-webkit-mask-image:url(img/fv-title.png);mask-image:url(img/fv-title.png)}
+  .fv__ttl::after{-webkit-mask-image:url(img/fv-title.webp);mask-image:url(img/fv-title.webp)}
   .fv__date{margin-top:2.6cqw;font-size:2.85cqw;letter-spacing:.03em}
   .fv__chara{position:absolute;left:69.7cqw;bottom:0;width:27cqw;height:30cqw;margin:0;display:block}
   .fv__woman{position:absolute;left:0;bottom:-1.5cqw;width:23cqw;margin:0}
@@ -529,6 +540,10 @@ section[id]{scroll-margin-top:100px}
 /* SP全体のバランス調整 */
 @media (max-width:899px){
   .fv__track{animation-duration:20s}
+  .cd__nums{font-size:14px;gap:2px}
+  .third .hero-item__copy{font-size:min(27px,7.4vw);white-space:nowrap}
+  .cd__nums b{font-size:min(48px,12vw);min-width:0}
+  .cd__nums span{margin-right:5px}
   /* ヘッダー：ロゴを大きく中央に */
   .hd{justify-content:center;height:60px;padding:0 60px}
   .hd__logo img{height:30px;margin-left:-11.8px}
@@ -594,7 +609,7 @@ section[id]{scroll-margin-top:100px}
 <div class="page">
 
   <header class="hd">
-    <p class="hd__logo"><small>楽天市場店</small><img src="img/logo-kawasui.png" alt="うなぎ屋かわすい" width="960" height="160"></p>
+    <p class="hd__logo"><small>楽天市場店</small><img decoding="async" src="img/logo-kawasui.png" alt="うなぎ屋かわすい" width="960" height="160"></p>
     <p class="hd__ttl">決算感謝祭 開催　11/4(水)20:00〜11/27(金)13:59</p>
     <button class="hd__menu" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="gnav"><span></span><span></span><span></span></button>
   </header>
@@ -605,27 +620,27 @@ section[id]{scroll-margin-top:100px}
     <div class="fv__flash" aria-hidden="true"></div>
     <div class="fv__strip" aria-hidden="true">
       <div class="fv__track">
-        <img src="img/photo-01.jpg" alt="" width="1000" height="667">
-        <img src="img/photo-02.jpg" alt="" width="1000" height="667">
-        <img src="img/photo-03.jpg" alt="" width="1000" height="667">
-        <img src="img/photo-01.jpg" alt="" width="1000" height="667">
-        <img src="img/photo-02.jpg" alt="" width="1000" height="667">
-        <img src="img/photo-03.jpg" alt="" width="1000" height="667">
-        <img src="img/photo-01.jpg" alt="" width="1000" height="667">
-        <img src="img/photo-02.jpg" alt="" width="1000" height="667">
-        <img src="img/photo-03.jpg" alt="" width="1000" height="667">
-        <img src="img/photo-01.jpg" alt="" width="1000" height="667">
-        <img src="img/photo-02.jpg" alt="" width="1000" height="667">
-        <img src="img/photo-03.jpg" alt="" width="1000" height="667">
+        <img decoding="async" src="img/photo-01.webp" alt="" width="1000" height="667">
+        <img decoding="async" src="img/photo-02.webp" alt="" width="1000" height="667">
+        <img decoding="async" src="img/photo-03.webp" alt="" width="1000" height="667">
+        <img decoding="async" src="img/photo-01.webp" alt="" width="1000" height="667">
+        <img decoding="async" src="img/photo-02.webp" alt="" width="1000" height="667">
+        <img decoding="async" src="img/photo-03.webp" alt="" width="1000" height="667">
+        <img decoding="async" src="img/photo-01.webp" alt="" width="1000" height="667">
+        <img decoding="async" src="img/photo-02.webp" alt="" width="1000" height="667">
+        <img decoding="async" src="img/photo-03.webp" alt="" width="1000" height="667">
+        <img decoding="async" src="img/photo-01.webp" alt="" width="1000" height="667">
+        <img decoding="async" src="img/photo-02.webp" alt="" width="1000" height="667">
+        <img decoding="async" src="img/photo-03.webp" alt="" width="1000" height="667">
       </div>
     </div>
-    <p class="fv__band"><picture><source media="(min-width:900px)" srcset="img/fv-band.jpg" width="2500" height="136"><img src="img/fv-band-sp.jpg" alt="日頃の感謝を込めて、うなぎで大還元！" width="1200" height="301"></picture></p>
+    <p class="fv__band"><picture><source media="(min-width:900px)" srcset="img/fv-band.webp" width="2500" height="136"><img decoding="async" src="img/fv-band-sp.webp" alt="日頃の感謝を込めて、うなぎで大還元！" width="1200" height="301"></picture></p>
     <div class="fv__body">
-      <h1 class="fv__ttl"><picture><source media="(min-width:900px)" srcset="img/fv-title.png" width="1275" height="395"><img src="img/fv-title-sp.png" alt="うなぎ屋かわすいの決算感謝祭" width="940" height="753"></picture></h1>
+      <h1 class="fv__ttl"><picture><source media="(min-width:900px)" srcset="img/fv-title.webp" width="1275" height="395"><img decoding="async" src="img/fv-title-sp.webp" alt="うなぎ屋かわすいの決算感謝祭" width="940" height="753"></picture></h1>
       <p class="fv__date">11.4<small>(水)</small>20:00〜11.27<small>(金)</small>13:59</p>
     </div>
     <div class="fv__chara">
-      <img class="fv__woman" src="img/fv-woman.png" alt="" width="934" height="612">
+      <img decoding="async" class="fv__woman" src="img/fv-woman.webp" alt="" width="700" height="459">
       <p class="fv__bubble"><span><small>11月中は</small>お得が<br>止まらない！</span></p>
     </div>
   </section>
@@ -637,7 +652,7 @@ section[id]{scroll-margin-top:100px}
       <li><a href="#marathon">お買い物<br class="sp">マラソン期間</a></li>
       <li><a href="#last5">マラソン<br class="sp">ラスト5時間</a></li>
       <li><a href="#second">セール第二弾</a></li>
-      <li><a href="#third">セール第三弾<br class="sp"><span class="pc"> </span>ブラックフライデー</a></li>
+      <li><a class="nav__bf" href="#third">セール第三弾<br class="sp"><span class="pc"> </span>ブラックフライデー</a></li>
     </ul>
   </nav>
 
@@ -659,7 +674,7 @@ section[id]{scroll-margin-top:100px}
       <ol class="pl-list">
         <li><a class="pl" href="#first" style="--c:var(--red);--f:#fff">
           <span class="pl__head"><b>セール第一弾</b><span class="st" data-start="2026-11-04T20:00" data-end="2026-11-13T13:59"></span></span>
-          <span class="pl__img"><img src="img/fukubukuro.jpg" alt="" width="600" height="600" loading="lazy"></span>
+          <span class="pl__img"><img decoding="async" src="img/fukubukuro.webp" alt="" width="600" height="600" loading="lazy"></span>
           <span class="pl__body">
             <span class="pl__deal">伝説の<em class="j">福袋</em>復活！</span>
             <span class="pl__items">福袋・お重箱</span>
@@ -669,7 +684,7 @@ section[id]{scroll-margin-top:100px}
         </a></li>
         <li><a class="pl" href="#marathon" style="--c:var(--red);--f:#fff">
           <span class="pl__head"><b>お買い物マラソン期間</b><span class="st" data-start="2026-11-04T20:00" data-end="2026-11-11T01:59"></span></span>
-          <span class="pl__img"><img src="img/chotokudai.jpg" alt="" width="600" height="600" loading="lazy"></span>
+          <span class="pl__img"><img decoding="async" src="img/chotokudai.webp" alt="" width="600" height="600" loading="lazy"></span>
           <span class="pl__body">
             <span class="pl__deal">最大<em>3,000</em><span class="nw">円OFF</span></span>
             <span class="pl__items">超特大 長焼き・常温蒲焼き</span>
@@ -679,7 +694,7 @@ section[id]{scroll-margin-top:100px}
         </a></li>
         <li><a class="pl" href="#last5" style="--c:var(--red);--f:#fff">
           <span class="pl__head"><b>マラソンラスト5時間</b><span class="st" data-start="2026-11-10T21:00" data-end="2026-11-11T01:59"></span></span>
-          <span class="pl__img"><img src="img/cut6.jpg" alt="" width="600" height="600" loading="lazy"></span>
+          <span class="pl__img"><img decoding="async" src="img/cut6.webp" alt="" width="600" height="600" loading="lazy"></span>
           <span class="pl__body">
             <span class="pl__deal"><em>22</em>%OFF</span>
             <span class="pl__items">蒲焼きカット6枚</span>
@@ -689,7 +704,7 @@ section[id]{scroll-margin-top:100px}
         </a></li>
         <li><a class="pl" href="#second" style="--c:var(--yellow);--f:var(--ink)">
           <span class="pl__head"><b>セール第二弾</b><span class="st" data-start="2026-11-13T14:00" data-end="2026-11-20T13:59"></span></span>
-          <span class="pl__img"><img src="img/shiroyaki.jpg" alt="" width="600" height="600" loading="lazy"></span>
+          <span class="pl__img"><img decoding="async" src="img/shiroyaki.webp" alt="" width="600" height="600" loading="lazy"></span>
           <span class="pl__body">
             <span class="pl__deal">最大<em>37</em>%OFF</span>
             <span class="pl__items">蒲焼きカット大容量・白焼き</span>
@@ -699,7 +714,7 @@ section[id]{scroll-margin-top:100px}
         </a></li>
         <li><a class="pl" href="#third" style="--c:#141110;--f:var(--yellow)">
           <span class="pl__head"><b>セール第三弾<small>ブラックフライデー</small></b><span class="st" data-start="2026-11-19T20:00" data-end="2026-11-27T13:59"></span></span>
-          <span class="pl__img"><img src="img/set3.jpg" alt="" width="600" height="600" loading="lazy"></span>
+          <span class="pl__img"><img decoding="async" src="img/set3.webp" alt="" width="600" height="600" loading="lazy"></span>
           <span class="pl__body">
             <span class="pl__deal"><em>20</em>%OFF</span>
             <span class="pl__items">3種セット</span>
@@ -725,7 +740,7 @@ section[id]{scroll-margin-top:100px}
     <article class="hero-item">
       <div class="hero-item__img">
         <span class="hero-item__cap">数量限定</span>
-        <img src="img/fukubukuro.jpg" alt="うなぎ屋かわすい 伝説福袋" width="800" height="800" loading="lazy">
+        <img decoding="async" src="img/fukubukuro.webp" alt="うなぎ屋かわすい 伝説福袋" width="800" height="800" loading="lazy">
       </div>
       <div class="hero-item__body">
         <h3 class="hero-item__copy">あの<em>伝説の福袋</em>が、<br>帰ってきました。</h3>
@@ -737,7 +752,7 @@ section[id]{scroll-margin-top:100px}
 
     <article class="hero-item hero-item--rev">
       <div class="hero-item__img">
-        <img src="img/ojuu.jpg" alt="かわすいオリジナルお重" width="600" height="600" loading="lazy">
+        <img decoding="async" src="img/ojuu.webp" alt="かわすいオリジナルお重" width="600" height="600" loading="lazy">
       </div>
       <div class="hero-item__body">
         <h3 class="hero-item__copy">お重に盛れば、<br>おうちがうなぎ屋に。</h3>
@@ -757,7 +772,7 @@ section[id]{scroll-margin-top:100px}
     </div>
     <div class="rows">
       <article class="row">
-        <img src="img/joon.jpg" alt="常温保存できるうなぎ蒲焼きカット" width="600" height="600" loading="lazy">
+        <img decoding="async" src="img/joon.webp" alt="常温保存できるうなぎ蒲焼きカット" width="600" height="600" loading="lazy">
         <div>
           <h3 class="row__name">常温保存できる<br>蒲焼きカット 100g</h3>
           <p class="row__desc">2,000円以下・送料無料のお手頃グルメ。ストックや手土産に。</p>
@@ -772,7 +787,7 @@ section[id]{scroll-margin-top:100px}
         <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/10002502/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10002513&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </article>
       <article class="row">
-        <img src="img/chotokudai.jpg" alt="超特大うなぎ長焼き200g×3本" width="600" height="600" loading="lazy">
+        <img decoding="async" src="img/chotokudai.webp" alt="超特大うなぎ長焼き200g×3本" width="600" height="600" loading="lazy">
         <div>
           <h3 class="row__name">超特大 長焼き<br>200g×3本</h3>
           <p class="row__desc">専門店でもなかなか出会えない1本200gの肉厚サイズ。</p>
@@ -798,7 +813,7 @@ section[id]{scroll-margin-top:100px}
     </div>
     <article class="last__item">
       <div class="last__photo">
-        <img src="img/cut6.jpg" alt="うなぎ蒲焼きカット6枚セット" width="600" height="600" loading="lazy">
+        <img decoding="async" src="img/cut6.webp" alt="うなぎ蒲焼きカット6枚セット" width="600" height="600" loading="lazy">
         <p class="off"><span class="off__n"><b>22</b>%</span><span class="off__u">OFF</span></p>
       </div>
       <h3 class="last__name">蒲焼きカット 6枚セット</h3>
@@ -830,7 +845,7 @@ section[id]{scroll-margin-top:100px}
     </div>
     <div class="rows">
       <article class="row">
-        <img src="img/cut500.jpg" alt="うなぎ蒲焼きカット 大盛り500g" width="600" height="600" loading="lazy">
+        <img decoding="async" src="img/cut500.webp" alt="うなぎ蒲焼きカット 大盛り500g" width="600" height="600" loading="lazy">
         <div>
           <h3 class="row__name">蒲焼きカット<br>大盛り 500g</h3>
           <!-- クーポンURLは後で差し替え --><a class="cpn" href="#" target="_blank" rel="noopener"><span class="cpn__v"><b>1<span class="cm">,</span>000</b><span class="cpn__u"><i>円OFF</i>クーポン</span></span><span class="cpn__get">獲得</span></a>
@@ -844,7 +859,7 @@ section[id]{scroll-margin-top:100px}
         <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/cut40-500/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10001574&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </article>
       <article class="row">
-        <img src="img/cut1k.jpg" alt="うなぎ蒲焼きカット メガ盛り1kg" width="600" height="600" loading="lazy">
+        <img decoding="async" src="img/cut1k.webp" alt="うなぎ蒲焼きカット メガ盛り1kg" width="600" height="600" loading="lazy">
         <div>
           <h3 class="row__name">蒲焼きカット<br>メガ盛り 1kg</h3>
           <!-- クーポンURLは後で差し替え --><a class="cpn" href="#" target="_blank" rel="noopener"><span class="cpn__v"><b>2<span class="cm">,</span>000</b><span class="cpn__u"><i>円OFF</i>クーポン</span></span><span class="cpn__get">獲得</span></a>
@@ -858,7 +873,7 @@ section[id]{scroll-margin-top:100px}
         <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/cut40-1k/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10001554&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </article>
       <article class="row">
-        <img src="img/shiroyaki.jpg" alt="自家製ぽん酢付き うなぎ白焼き1尾" width="600" height="600" loading="lazy">
+        <img decoding="async" src="img/shiroyaki.webp" alt="自家製ぽん酢付き うなぎ白焼き1尾" width="600" height="600" loading="lazy">
         <div>
           <h3 class="row__name">自家製ぽん酢付き<br>白焼き 120g 1尾</h3>
           <p class="sl"><b>37</b>%OFFセール</p>
@@ -890,7 +905,7 @@ section[id]{scroll-margin-top:100px}
     <article class="hero-item">
       <div class="hero-item__img">
         <span class="hero-item__cap">20%OFFクーポン</span>
-        <img src="img/set3.jpg" alt="うなぎ蒲焼き3種セット（長焼き・カット・きざみ）" width="600" height="600" loading="lazy">
+        <img decoding="async" src="img/set3.webp" alt="うなぎ蒲焼き3種セット（長焼き・カット・きざみ）" width="600" height="600" loading="lazy">
       </div>
       <div class="hero-item__body">
         <h3 class="hero-item__copy">長焼き・カット・きざみ<br>3種をひと箱で。</h3>
@@ -919,7 +934,7 @@ section[id]{scroll-margin-top:100px}
   </section>
 
   <footer class="foot">
-    <p class="foot__shop"><img src="img/logo-kawasui.png" alt="うなぎ屋かわすい" width="960" height="160" loading="lazy"></p>
+    <p class="foot__shop"><img decoding="async" src="img/logo-kawasui.png" alt="うなぎ屋かわすい" width="960" height="160" loading="lazy"></p>
     <a class="btn" href="https://www.rakuten.co.jp/kawasui/" target="_blank" rel="noopener">ショップトップへ</a>
   </footer>
 </div>
