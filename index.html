@@ -100,6 +100,7 @@ section[id]{scroll-margin-top:100px}
 .h2{margin-top:14px;font-family:var(--goth);font-weight:900;font-size:30px;line-height:1.45;letter-spacing:.04em;text-align:center}
 .h2--goth{font-family:var(--goth);font-weight:900;font-size:38px;line-height:1.3;letter-spacing:.04em;color:var(--red)}
 .h2--goth small{display:block;margin-bottom:8px;font-size:20px;font-weight:700;letter-spacing:.06em;color:var(--ink)}
+.hang{display:inline-block;width:.45em;margin-right:-.45em;text-align:left}
 .lead{margin-top:16px;font-size:16px;line-height:1.95;color:var(--muted);text-align:center}
 
 /* 状態バッジ（JSで切り替え） */
@@ -185,7 +186,7 @@ section[id]{scroll-margin-top:100px}
 /* ========== 商品：行 ========== */
 .rows{border-top:1px solid var(--line)}
 .row{display:grid;grid-template-columns:132px 1fr;gap:18px;padding:28px 22px;border-bottom:1px solid var(--line);align-items:start}
-.row__name{font-weight:700;font-size:18px;line-height:1.55}
+.row__name{font-weight:900;font-size:21px;line-height:1.55}
 .row__desc{margin-top:6px;font-size:14px;line-height:1.8;color:var(--muted)}
 .row .price{margin-top:10px}
 .row .price__now{font-size:38px}
@@ -219,10 +220,42 @@ section[id]{scroll-margin-top:100px}
 .last__item{margin:30px -22px 0;padding:40px 22px 0;background:linear-gradient(transparent 0,transparent 120px,var(--paper) 120px);color:var(--ink)}
 .last__photo{position:relative;width:240px;margin:0 auto}
 .last__photo img{box-shadow:0 10px 24px rgba(0,0,0,.25)}
-.last__photo .off{position:absolute;right:-26px;top:-14px;margin:0;width:84px;height:84px;border-radius:50%;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:0;background:var(--yellow);color:var(--red);font-size:12px;line-height:1}
-.last__photo .off b{font-size:32px}
-.last__name{margin-top:22px;font-weight:700;font-size:20px;line-height:1.55}
-.last .price{justify-content:center}
+.last__photo .off{position:absolute;right:-30px;top:-26px;margin:0;width:110px;height:110px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:0;background:var(--red);color:#fff;font-weight:900;font-size:15px;line-height:1;transform:rotate(-8deg);box-shadow:0 0 0 4px var(--yellow),0 8px 18px rgba(0,0,0,.25)}
+.last__photo .off b{font-family:var(--num);font-weight:800;font-size:46px;color:var(--yellow);letter-spacing:-.02em}
+.last__name{margin-top:24px;font-weight:900;font-size:25px;line-height:1.45}
+/* クーポン・セール札 */
+.cp{display:inline-flex;align-items:stretch;margin-top:14px;border:2px solid var(--red);border-radius:6px;overflow:hidden;font-weight:900;line-height:1;white-space:nowrap}
+.cp__k{display:flex;align-items:center;background:var(--red);color:#fff;font-size:15px;letter-spacing:.08em;padding:0 10px}
+.cp__v{display:flex;align-items:baseline;gap:2px;background:#fff6cf;color:var(--red);font-size:17px;padding:7px 14px 6px;border-left:2px dashed var(--red)}
+.cp__v b{font-family:var(--num);font-weight:800;font-size:36px;letter-spacing:-.01em}
+.row .pp,.hero-item .pp{flex-direction:column;align-items:flex-start;gap:6px;margin-top:12px}
+.row .pp__arw,.hero-item .pp__arw{display:none}
+.row .pp__old,.hero-item .pp__old{padding:0}
+.row .pp__old i,.hero-item .pp__old i{display:inline;margin:0 6px 0 0}
+.row .pp__new b{font-size:44px}
+@media (max-width:899px){
+  .row .cp__k{font-size:12px;padding:0 7px;letter-spacing:.02em}
+  .row .cp__v{font-size:13px;padding:6px 8px 5px}
+  .row .cp__v b{font-size:24px}
+  .row .pp__new b{font-size:38px}
+  .row .pp__old i{display:block;margin:0 0 2px}
+  .last .pp{gap:8px}
+  .last .pp__new b{font-size:46px}
+  .last .pp__old s{font-size:20px}
+}
+.hero-item .pp,.hero-item .pp__tax{align-items:center;text-align:center}
+.hero-item .cp{display:flex;width:max-content;margin:16px auto 0}
+.pp{display:flex;align-items:flex-end;justify-content:center;gap:12px;margin-top:18px}
+.pp i{display:block;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;margin-bottom:4px}
+.pp__old{color:var(--muted);font-size:15px;line-height:1;padding-bottom:6px}
+.pp__old i{color:var(--muted)}
+.pp__old s{font-family:var(--num);font-weight:700;font-size:24px;margin-right:2px}
+.pp__arw{width:0;height:0;border-left:13px solid var(--red);border-top:9px solid transparent;border-bottom:9px solid transparent;margin-bottom:12px}
+.pp__new{color:var(--red);font-weight:900;font-size:20px;line-height:1;white-space:nowrap}
+.pp__old{white-space:nowrap}
+.pp__new i{display:table;background:var(--red);color:#fff;padding:4px 8px 5px;border-radius:3px}
+.pp__new b{font-family:var(--num);font-weight:800;font-size:54px;letter-spacing:-.02em;margin-right:2px}
+.pp__tax{margin-top:8px;font-size:12px;color:var(--muted)}
 .last .price__now{color:var(--red);font-size:52px}
 .last .btn{margin-top:20px}
 .last__end{height:60px}
@@ -335,7 +368,7 @@ section[id]{scroll-margin-top:100px}
   .rows{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;border:0;padding:0 max(48px,calc((100% - 1120px)/2)) 110px}
   .mara .rows{background:none}
   .row{grid-template-columns:200px 1fr;gap:26px;padding:32px;background:#fff;border:1px solid var(--line);border-radius:10px}
-  .row__name{font-size:21px}
+  .row__name{font-size:26px}
   .row .price__now{font-size:46px}
 
   .last{padding:100px 48px 110px}
@@ -347,10 +380,16 @@ section[id]{scroll-margin-top:100px}
   .last__count{font-size:17px}
   .last__item{max-width:860px;margin:56px auto 0;padding:44px 48px;background:var(--paper);border-radius:14px;display:grid;grid-template-columns:300px 1fr;column-gap:48px;align-items:center;text-align:left}
   .last__item .last__photo{grid-row:1/span 4;align-self:center;width:300px}
-  .last__item .price{justify-content:flex-start}
+  .last__item .pp{justify-content:flex-start;margin-top:22px;gap:16px}
+  .pp__old s{font-size:28px}
+  .pp__new b{font-size:72px}
+  .pp__new{font-size:24px}
+  .pp__tax{font-size:13px}
+  .last__photo .off{width:128px;height:128px;font-size:17px;right:-36px;top:-30px}
+  .last__photo .off b{font-size:56px}
   .last__item .last__name{margin-top:0}
   .last__photo{width:300px}
-  .last__name{font-size:24px}
+  .last__name{font-size:34px}
   .last .price__now{font-size:64px}
   .last__end{display:none}
 
@@ -533,7 +572,7 @@ section[id]{scroll-margin-top:100px}
   <section class="mara" id="marathon">
     <div class="mara__head">
       <p class="sec-no">MARATHON SALE</p>
-      <h2 class="h2 h2--goth"><small>お買い物マラソン期間中は</small>ずーっとお得！</h2>
+      <h2 class="h2 h2--goth"><small>お買い物マラソン期間中は</small>ずーっとお得<span class="hang">！</span></h2>
       <p class="mara__term">11/4<small>(水)</small>20:00 – 11/11<small>(水)</small>01:59</p>
       <p><span class="st" data-start="2026-11-04T20:00" data-end="2026-11-11T01:59"></span></p>
     </div>
@@ -543,8 +582,13 @@ section[id]{scroll-margin-top:100px}
         <div>
           <h3 class="row__name">常温保存できる<br>蒲焼きカット 100g</h3>
           <p class="row__desc">2,000円以下・送料無料のお手頃グルメ。ストックや手土産に。</p>
-          <p class="price"><span class="price__old">通常<s>2,080</s>円</span><span class="price__arrow">→</span></p>
-          <p class="price" style="margin-top:2px"><span class="price__now">1,680<small>円</small></span><span class="price__tax">税込・送料無料</span></p>
+          <p class="cp cp--sale"><span class="cp__k">送料無料</span><span class="cp__v"><b>2,000</b>円以下</span></p>
+          <div class="pp">
+            <p class="pp__old"><i>通常価格</i><s>2,080</s>円</p>
+            <span class="pp__arw" aria-hidden="true"></span>
+            <p class="pp__new"><i>セール価格</i><b>1,680</b>円</p>
+          </div>
+          <p class="pp__tax">税込・送料無料</p>
         </div>
         <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002502/" target="_blank" rel="noopener">常温蒲焼きを見る</a>
       </article>
@@ -553,9 +597,13 @@ section[id]{scroll-margin-top:100px}
         <div>
           <h3 class="row__name">超特大 長焼き<br>200g×3本</h3>
           <p class="row__desc">専門店でもなかなか出会えない1本200gの肉厚サイズ。</p>
-          <p class="off"><b>3,000</b>円OFFクーポン</p>
-          <p class="price"><span class="price__old">通常<s>11,890</s>円</span><span class="price__arrow">→</span><span class="price__lbl">クーポン利用で</span></p>
-          <p class="price" style="margin-top:2px"><span class="price__now">8,890<small>円</small></span><span class="price__tax">税込・送料無料</span></p>
+          <p class="cp"><span class="cp__k">クーポン</span><span class="cp__v"><b>3,000</b>円OFF</span></p>
+          <div class="pp">
+            <p class="pp__old"><i>通常価格</i><s>11,890</s>円</p>
+            <span class="pp__arw" aria-hidden="true"></span>
+            <p class="pp__new"><i>クーポン利用で</i><b>8,890</b>円</p>
+          </div>
+          <p class="pp__tax">税込・送料無料</p>
         </div>
         <a class="btn" href="https://item.rakuten.co.jp/kawasui/10000913/" target="_blank" rel="noopener">クーポンを使って買う</a>
       </article>
@@ -575,8 +623,12 @@ section[id]{scroll-margin-top:100px}
         <p class="off"><b>22</b>%OFF</p>
       </div>
       <h3 class="last__name">蒲焼きカット 6枚セット</h3>
-      <p class="price"><span class="price__old">通常<s>6,980</s>円</span><span class="price__arrow">→</span></p>
-      <p class="price" style="margin-top:2px"><span class="price__now">5,400<small>円</small></span><span class="price__tax">税込・送料無料</span></p>
+      <div class="pp">
+        <p class="pp__old"><i>通常価格</i><s>6,980</s>円</p>
+        <span class="pp__arw" aria-hidden="true"></span>
+        <p class="pp__new"><i>5時間限定価格</i><b>5,400</b>円</p>
+      </div>
+      <p class="pp__tax">税込・送料無料</p>
       <!-- コピーページで入稿予定：URL確定後に差し替え -->
       <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002525/" target="_blank" rel="noopener">5時間限定価格で買う</a>
       <div class="last__end"></div>
@@ -603,9 +655,13 @@ section[id]{scroll-margin-top:100px}
         <img src="img/cut500.jpg" alt="うなぎ蒲焼きカット 大盛り500g" width="600" height="600" loading="lazy">
         <div>
           <h3 class="row__name">蒲焼きカット<br>大盛り 500g</h3>
-          <p class="off"><b>1,000</b>円OFFクーポン</p>
-          <p class="price"><span class="price__old">通常<s>9,180</s>円</span><span class="price__arrow">→</span><span class="price__lbl">クーポン利用で</span></p>
-          <p class="price" style="margin-top:2px"><span class="price__now">8,180<small>円〜</small></span><span class="price__tax">税込・送料無料</span></p>
+          <p class="cp"><span class="cp__k">クーポン</span><span class="cp__v"><b>1,000</b>円OFF</span></p>
+          <div class="pp">
+            <p class="pp__old"><i>通常価格</i><s>9,180</s>円</p>
+            <span class="pp__arw" aria-hidden="true"></span>
+            <p class="pp__new"><i>クーポン利用で</i><b>8,180</b>円〜</p>
+          </div>
+          <p class="pp__tax">税込・送料無料</p>
         </div>
         <a class="btn" href="https://item.rakuten.co.jp/kawasui/cut40-500/" target="_blank" rel="noopener">500gを見る</a>
       </article>
@@ -613,9 +669,13 @@ section[id]{scroll-margin-top:100px}
         <img src="img/cut1k.jpg" alt="うなぎ蒲焼きカット メガ盛り1kg" width="600" height="600" loading="lazy">
         <div>
           <h3 class="row__name">蒲焼きカット<br>メガ盛り 1kg</h3>
-          <p class="off"><b>2,000</b>円OFFクーポン</p>
-          <p class="price"><span class="price__old">通常<s>17,060</s>円</span><span class="price__arrow">→</span><span class="price__lbl">クーポン利用で</span></p>
-          <p class="price" style="margin-top:2px"><span class="price__now">15,060<small>円〜</small></span><span class="price__tax">税込・送料無料</span></p>
+          <p class="cp"><span class="cp__k">クーポン</span><span class="cp__v"><b>2,000</b>円OFF</span></p>
+          <div class="pp">
+            <p class="pp__old"><i>通常価格</i><s>17,060</s>円</p>
+            <span class="pp__arw" aria-hidden="true"></span>
+            <p class="pp__new"><i>クーポン利用で</i><b>15,060</b>円〜</p>
+          </div>
+          <p class="pp__tax">税込・送料無料</p>
         </div>
         <a class="btn" href="https://item.rakuten.co.jp/kawasui/cut40-1k/" target="_blank" rel="noopener">1kgを見る</a>
       </article>
@@ -623,9 +683,13 @@ section[id]{scroll-margin-top:100px}
         <img src="img/shiroyaki.jpg" alt="自家製ぽん酢付き うなぎ白焼き1尾" width="600" height="600" loading="lazy">
         <div>
           <h3 class="row__name">自家製ぽん酢付き<br>白焼き 120g 1尾</h3>
-          <p class="off"><b>37</b>%OFF</p>
-          <p class="price"><span class="price__old">通常<s>2,690</s>円</span><span class="price__arrow">→</span></p>
-          <p class="price" style="margin-top:2px"><span class="price__now">1,680<small>円</small></span><span class="price__tax">税込</span></p>
+          <p class="cp cp--sale"><span class="cp__k">セール</span><span class="cp__v"><b>37</b>%OFF</span></p>
+          <div class="pp">
+            <p class="pp__old"><i>通常価格</i><s>2,690</s>円</p>
+            <span class="pp__arw" aria-hidden="true"></span>
+            <p class="pp__new"><i>セール価格</i><b>1,680</b>円</p>
+          </div>
+          <p class="pp__tax">税込</p>
         </div>
         <a class="btn" href="https://item.rakuten.co.jp/kawasui/531627/" target="_blank" rel="noopener">白焼きを見る</a>
       </article>
@@ -653,9 +717,13 @@ section[id]{scroll-margin-top:100px}
       <div class="hero-item__body">
         <h3 class="hero-item__copy">長焼き・カット・きざみ<br>3種をひと箱で。</h3>
         <p class="hero-item__txt">うな重にする長焼き、少しずつ使えるカット、ひつまぶしやちらしに便利なきざみうなぎ。3種類の蒲焼きをひと箱にまとめたセットです。</p>
-        <p class="price"><span class="off"><b>20</b>%OFFクーポン</span></p>
-        <p class="price" style="margin-top:12px"><span class="price__old">通常<s>5,990</s>円〜</span><span class="price__arrow">→</span><span class="price__lbl">クーポン利用で</span></p>
-        <p class="price" style="margin-top:2px"><span class="price__now">4,792<small>円〜</small></span><span class="price__tax">税込・送料無料</span></p>
+        <p class="cp"><span class="cp__k">クーポン</span><span class="cp__v"><b>20</b>%OFF</span></p>
+        <div class="pp">
+          <p class="pp__old"><i>通常価格</i><s>5,990</s>円〜</p>
+          <span class="pp__arw" aria-hidden="true"></span>
+          <p class="pp__new"><i>クーポン利用で</i><b>4,792</b>円〜</p>
+        </div>
+        <p class="pp__tax">税込・送料無料</p>
         <a class="btn" href="https://item.rakuten.co.jp/kawasui/10000130/" target="_blank" rel="noopener">3種セットを見る</a>
       </div>
     </article>
