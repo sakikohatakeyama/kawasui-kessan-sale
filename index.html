@@ -7,7 +7,7 @@
 <title>うなぎ屋かわすいの決算感謝祭</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@700;800&family=Jost:wght@500&display=swap" rel="stylesheet">
 <style>
 :root{
   --red:#c8201a;
@@ -143,7 +143,7 @@ section[id]{scroll-margin-top:100px}
 
 /* ========== 弾ヘッダー ========== */
 .wave-head{position:relative;background:var(--red) var(--wave);color:#fff;padding:58px 22px 54px;text-align:center}
-.wave-head__no{font-family:var(--mincho);font-weight:800;font-size:20px;letter-spacing:.3em;padding-left:.3em;color:#fff}
+.wave-head__no{font-family:var(--goth);font-weight:900;font-size:32px;letter-spacing:.3em;padding-left:.3em;color:#fff}
 .wave-head__ttl{display:flex;justify-content:center;margin-top:8px;font-family:var(--mincho);font-weight:800;line-height:1}
 .wave-head__ttl b{font-size:92px;letter-spacing:.04em;padding-left:.04em;color:#e9c45a;background:linear-gradient(110deg,transparent 42%,rgba(255,255,255,.9) 50%,transparent 58%) no-repeat,linear-gradient(180deg,#fff3c4 0%,#f1cf6b 30%,#c99a2e 58%,#f6dc8a 78%,#b8862b 100%);background-size:300% 100%,100% 100%;background-position:100% 0,0 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 3px 0 rgba(60,10,5,.35));animation:goldShine 5s ease-in-out 1s infinite}
 @keyframes goldShine{0%{background-position:100% 0,0 0}30%,100%{background-position:0% 0,0 0}}
@@ -207,8 +207,8 @@ section[id]{scroll-margin-top:100px}
 .last__big{position:relative;margin-top:4px;font-family:var(--goth);font-weight:900;line-height:1}
 .last__big small{display:inline-flex;align-items:center;gap:12px;font-size:21px;letter-spacing:.12em;color:#fff}
 .last__big small::before,.last__big small::after{content:"";width:22px;height:2px;background:linear-gradient(90deg,#c99a2e,#f6dc8a,#c99a2e)}
-.last__big .l2{display:flex;align-items:center;justify-content:center;margin:14px 0 8px;font-size:min(34px,8.6vw);letter-spacing:.04em;white-space:nowrap}
-.last__big b{display:inline-block;font-family:var(--num);font-weight:800;font-size:min(96px,24vw);color:var(--yellow);line-height:.82;transform-origin:center;position:relative;top:-.12em;letter-spacing:0;padding:0 .04em;margin:0 .12em 0 .06em}
+.last__big .l2{display:flex;align-items:center;justify-content:center;margin:22px 0 8px;font-size:min(34px,8.6vw);letter-spacing:.04em;white-space:nowrap}
+.last__big b{display:inline-block;font-family:var(--num);font-weight:800;font-size:min(96px,24vw);color:var(--yellow);line-height:.82;transform-origin:center;position:relative;top:-.12em;letter-spacing:0;padding:0 .03em;margin:0 -.02em}
 .last__big em{font-style:normal}
 /* 金文字 */
 .last__big b{color:#e9c45a;background:linear-gradient(180deg,#fff3c4 0%,#f1cf6b 30%,#c99a2e 58%,#f6dc8a 78%,#b8862b 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
@@ -290,7 +290,31 @@ section[id]{scroll-margin-top:100px}
 /* ========== 第三弾（ブラックフライデー） ========== */
 .wave-head--bf{background:#141110 var(--wave-bf)}
 .wave-head--bf .wave-head__no{color:var(--yellow)}
-.bf-tag{display:inline-block;margin-bottom:18px;background:var(--red);color:#fff;font-family:var(--num);font-weight:800;font-size:15px;letter-spacing:.24em;padding:8px 14px 7px 18px}
+.wave-head--bf{overflow:hidden;isolation:isolate}
+.wave-head--bf > *{position:relative;z-index:1}
+.bf-title{font-family:"Jost","Futura","Century Gothic",sans-serif;font-weight:500;font-size:min(54px,13.5vw);line-height:1;letter-spacing:.02em;color:#e9c45a;background:linear-gradient(110deg,transparent 42%,rgba(255,255,255,.9) 50%,transparent 58%) no-repeat,linear-gradient(180deg,#fff3c4 0%,#f1cf6b 35%,#c99a2e 62%,#f6dc8a 85%,#b8862b 100%);background-size:300% 100%,100% 100%;background-position:100% 0,0 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:goldShine 5s ease-in-out .5s infinite;margin-bottom:6px}
+/* 流れ星ときらめき */
+.bf-stars{position:absolute!important;inset:0;z-index:0!important;pointer-events:none;overflow:hidden}
+.bf-stars i{position:absolute;top:-10%;width:180px;height:2px;border-radius:2px;background:linear-gradient(90deg,rgba(255,240,190,0),#ffe9a8 70%,#fff);filter:drop-shadow(0 0 6px #f1cf6b);transform:rotate(145deg);opacity:0;animation:shoot 4.5s linear infinite}
+.bf-stars i::after{content:"";position:absolute;right:-3px;top:-3px;width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 10px 3px #f6dc8a}
+.bf-stars i:nth-child(1){left:20%;animation-delay:0s}
+.bf-stars i:nth-child(2){left:55%;animation-delay:1.2s;width:140px}
+.bf-stars i:nth-child(3){left:85%;animation-delay:2.3s}
+.bf-stars i:nth-child(4){left:40%;animation-delay:3.1s;width:220px}
+.bf-stars i:nth-child(5){left:105%;animation-delay:.7s;width:160px}
+.bf-stars i:nth-child(6){left:70%;animation-delay:3.8s;width:120px}
+@keyframes shoot{0%{opacity:0;transform:rotate(145deg) translateX(0)}8%{opacity:1}55%{opacity:1}70%,100%{opacity:0;transform:rotate(145deg) translateX(700px)}}
+.bf-stars b{position:absolute;width:10px;height:10px;background:radial-gradient(circle,#fff 0,#f6dc8a 30%,transparent 70%);clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:twinkle 2.4s ease-in-out infinite;opacity:0}
+.bf-stars b:nth-of-type(1){left:8%;top:22%;animation-delay:.2s;transform:scale(1.6)}
+.bf-stars b:nth-of-type(2){left:18%;top:70%;animation-delay:1.1s}
+.bf-stars b:nth-of-type(3){left:30%;top:12%;animation-delay:1.8s;transform:scale(1.2)}
+.bf-stars b:nth-of-type(4){left:68%;top:18%;animation-delay:.6s;transform:scale(2)}
+.bf-stars b:nth-of-type(5){left:82%;top:60%;animation-delay:1.5s;transform:scale(1.4)}
+.bf-stars b:nth-of-type(6){left:92%;top:30%;animation-delay:2.1s}
+.bf-stars b:nth-of-type(7){left:50%;top:85%;animation-delay:.9s;transform:scale(1.3)}
+.bf-stars b:nth-of-type(8){left:4%;top:48%;animation-delay:1.4s}
+@keyframes twinkle{0%,100%{opacity:0}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.bf-stars{display:none}.bf-title{animation:none}}
 .third .hero-item .off{margin-top:0}
 
 /* ========== 注意・フッター ========== */
@@ -363,10 +387,12 @@ section[id]{scroll-margin-top:100px}
   .pl__go{margin:16px;font-size:14px}
 
   .wave-head{padding:90px 48px 80px}
-  .wave-head__no{font-size:26px}
+  .wave-head__no{font-size:48px}
   .wave-head__ttl b{font-size:160px}
   .wave-head__date{font-size:40px}
-  .bf-tag{font-size:18px;padding:10px 18px 9px 22px}
+  .bf-title{font-size:96px;margin-bottom:10px}
+  .bf-stars i{width:260px}
+  @keyframes shoot{0%{opacity:0;transform:rotate(145deg) translateX(0)}8%{opacity:1}55%{opacity:1}70%,100%{opacity:0;transform:rotate(145deg) translateX(1300px)}}
   .wave-head__note{font-size:16px}
 
   .hero-item{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding-top:100px;padding-bottom:100px}
@@ -389,7 +415,7 @@ section[id]{scroll-margin-top:100px}
   .last{padding:100px 48px 110px}
   .last__big small{font-size:30px;gap:18px}
   .last__big small::before,.last__big small::after{width:40px}
-  .last__big .l2{font-size:72px;margin:22px 0 0}
+  .last__big .l2{font-size:72px;margin:36px 0 0}
   .last__big b{font-size:200px}
   .last__date{font-size:32px;padding:12px 26px}
   .last__count{font-size:17px}
@@ -773,9 +799,9 @@ section[id]{scroll-margin-top:100px}
   <!-- ===== 第三弾（ブラックフライデー） ===== -->
   <section class="third" id="third">
     <div class="wave-head wave-head--bf">
-      <p class="bf-tag">BLACK FRIDAY</p>
+      <div class="bf-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
       <div>
-        <p class="wave-head__no">セール ラスト</p>
+        <p class="bf-title">BLACK FRIDAY</p>
         <p class="wave-head__ttl"><b>第三弾</b></p>
       </div>
       <p class="wave-head__date">11/19<small>(木)</small>20:00<br class="sp"> – 11/27<small>(金)</small>13:59</p>
