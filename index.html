@@ -427,18 +427,44 @@ section[id]{scroll-margin-top:100px}
 }
 /* SP FV：1200×1700のデザインを cqw で再現（1cqw = 12px） */
 @media (max-width:899px){
-  .fv{display:block;container-type:inline-size;aspect-ratio:1200/1700;height:auto}
+  .fv{display:block;container-type:inline-size;aspect-ratio:1200/1750;height:auto}
   .fv__band{position:absolute;left:0;right:0;top:0;height:25.1cqw;margin:0;z-index:3}
   .fv__band img{width:100%;height:100%;object-fit:cover}
-  .fv__body{position:absolute;left:11.25cqw;top:31.7cqw;width:78.3cqw;padding:0}
+  .fv__body{position:absolute;left:6cqw;top:29.5cqw;width:88cqw;padding:0}
   .fv__ttl{max-width:none}
-  .fv__date{margin-top:4.6cqw;font-size:4.35cqw;letter-spacing:.02em}
+  .fv__date{margin-top:2.6cqw;font-size:4.6cqw;letter-spacing:.02em}
   .fv__chara{position:absolute;inset:0;margin:0;display:block;pointer-events:none}
   .fv__woman{display:none}
-  .fv__bubble{position:absolute;left:63.75cqw;top:31.2cqw;width:31.7cqw;height:31.7cqw;margin:0;font-size:3.9cqw}
-  .fv__strip{position:absolute;left:0;right:0;top:110.8cqw;bottom:0;height:auto;margin:0;background:none}
+  .fv__bubble{position:absolute;left:66cqw;top:27.5cqw;width:30cqw;height:30cqw;margin:0;font-size:3.7cqw}
+  .fv__strip{position:absolute;left:0;right:0;top:115cqw;bottom:0;height:auto;margin:0;background:none}
   .fv__track{height:100%;gap:1.9cqw}
-  .fv__track img{width:auto;height:100%;aspect-ratio:auto}
+  .fv__track img{width:auto;height:100%;aspect-ratio:1;object-fit:cover}
+}
+
+/* SP全体のバランス調整 */
+@media (max-width:899px){
+  .h2{font-size:33px}
+  .h2--goth{font-size:44px}
+  .h2--goth small{font-size:21px}
+  .sec-no{font-size:15px}
+  .wave-head__ttl b{font-size:104px}
+  .hero-item__copy{font-size:30px}
+  .hero-item__img{margin:0 16px}
+  .pl__head b{font-size:22px}
+  /* 商品：写真を大きく、その下に説明 */
+  .rows{padding:0 16px 24px;background:none;border:0}
+  .row{grid-template-columns:1fr;gap:0;margin-top:18px;padding:16px 16px 20px;background:#fff;border:1px solid var(--line);border-radius:10px;text-align:center}
+  .row > img{width:100%;border-radius:6px}
+  .row__name{margin-top:16px;font-size:24px;line-height:1.45}
+  .row__desc{text-align:left;font-size:14px;margin-top:8px}
+  .row .cp{margin-top:14px}
+  .row .pp{align-items:center;margin-top:12px}
+  .row .pp__old i{display:inline;margin:0 6px 0 0}
+  .row .pp__new b{font-size:48px}
+  .row .pp__new i{margin:0 auto 6px}
+  .row .pp__tax{text-align:center}
+  .row .btn{margin-top:16px}
+  .mara .rows{background:none}
 }
 
 /* スクロールでふわっと表示 */
