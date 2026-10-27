@@ -57,7 +57,7 @@ section[id]{scroll-margin-top:100px}
 .fv__body{position:relative;z-index:2;padding:26px 16px 0}
 .fv__ttl{position:relative;width:100%;max-width:440px;margin:0 auto}
 .fv__ttl img{width:100%}
-.fv__ttl::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 42%,rgba(255,255,255,.95) 50%,transparent 58%) no-repeat;background-size:300% 100%;background-position:100% 0;-webkit-mask:url(img/fv-title.png) center/100% 100% no-repeat;mask:url(img/fv-title.png) center/100% 100% no-repeat;animation:shine 4.5s ease-in-out 1s infinite}
+.fv__ttl::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 42%,rgba(255,255,255,.95) 50%,transparent 58%) no-repeat;background-size:300% 100%;background-position:100% 0;-webkit-mask:url(img/fv-title-sp.png) center/100% 100% no-repeat;mask:url(img/fv-title-sp.png) center/100% 100% no-repeat;animation:shine 4.5s ease-in-out 1s infinite}
 @keyframes shine{0%{background-position:100% 0}35%,100%{background-position:0% 0}}
 /* 開いた時だけ：タイトルがドーン */
 .js .fv__ttl,.js .fv__date{opacity:0}
@@ -328,6 +328,7 @@ section[id]{scroll-margin-top:100px}
   .fv__band img{object-fit:fill}
   .fv__body{position:absolute;left:26.5cqw;top:16.4cqw;width:51cqw;padding:0}
   .fv__ttl{max-width:none}
+  .fv__ttl::after{-webkit-mask-image:url(img/fv-title.png);mask-image:url(img/fv-title.png)}
   .fv__date{margin-top:2.6cqw;font-size:2.85cqw;letter-spacing:.03em}
   .fv__chara{position:absolute;left:69.7cqw;bottom:0;width:27cqw;height:30cqw;margin:0;display:block}
   .fv__woman{position:absolute;left:0;bottom:-1.5cqw;width:23cqw;margin:0}
@@ -419,6 +420,22 @@ section[id]{scroll-margin-top:100px}
   .foot{padding:80px 48px}
   .foot__shop img{width:320px}
 }
+/* SP FV：1200×1700のデザインを cqw で再現（1cqw = 12px） */
+@media (max-width:899px){
+  .fv{display:block;container-type:inline-size;aspect-ratio:1200/1700;height:auto}
+  .fv__band{position:absolute;left:0;right:0;top:0;height:25.1cqw;margin:0;z-index:3}
+  .fv__band img{width:100%;height:100%;object-fit:cover}
+  .fv__body{position:absolute;left:11.25cqw;top:31.7cqw;width:78.3cqw;padding:0}
+  .fv__ttl{max-width:none}
+  .fv__date{margin-top:4.6cqw;font-size:4.35cqw;letter-spacing:.02em}
+  .fv__chara{position:absolute;inset:0;margin:0;display:block;pointer-events:none}
+  .fv__woman{display:none}
+  .fv__bubble{position:absolute;left:63.75cqw;top:31.2cqw;width:31.7cqw;height:31.7cqw;margin:0;font-size:3.9cqw}
+  .fv__strip{position:absolute;left:0;right:0;top:110.8cqw;bottom:0;height:auto;margin:0;background:none}
+  .fv__track{height:100%;gap:1.9cqw}
+  .fv__track img{width:auto;height:100%;aspect-ratio:auto}
+}
+
 /* スクロールでふわっと表示 */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.3,1);transition-delay:var(--d,0s)}
 .rv.is-shown{opacity:1;transform:none}
@@ -454,9 +471,9 @@ section[id]{scroll-margin-top:100px}
         <img src="img/photo-03.jpg" alt="" width="1000" height="667">
       </div>
     </div>
-    <p class="fv__band"><img src="img/fv-band.jpg" alt="日頃の感謝を込めて、うなぎで大還元！" width="2500" height="136"></p>
+    <p class="fv__band"><picture><source media="(min-width:900px)" srcset="img/fv-band.jpg" width="2500" height="136"><img src="img/fv-band-sp.jpg" alt="日頃の感謝を込めて、うなぎで大還元！" width="1200" height="301"></picture></p>
     <div class="fv__body">
-      <h1 class="fv__ttl"><img src="img/fv-title.png" alt="うなぎ屋かわすいの決算感謝祭" width="1275" height="395"></h1>
+      <h1 class="fv__ttl"><picture><source media="(min-width:900px)" srcset="img/fv-title.png" width="1275" height="395"><img src="img/fv-title-sp.png" alt="うなぎ屋かわすいの決算感謝祭" width="940" height="753"></picture></h1>
       <p class="fv__date">11.4<small>(水)</small>20:00〜11.27<small>(金)</small>13:59</p>
     </div>
     <div class="fv__chara">
