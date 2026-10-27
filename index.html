@@ -72,32 +72,32 @@ a{color:inherit;text-decoration:none}
 /* カレンダー */
 .cal{margin-top:34px;border-top:2px solid var(--red)}
 .cal__mon{display:flex;align-items:baseline;justify-content:center;gap:10px;padding:14px 0 12px;font-family:var(--num);font-weight:700;color:var(--red)}
-.cal__mon b{font-size:40px;line-height:1;letter-spacing:-.02em}
-.cal__mon span{font-size:14px;letter-spacing:.2em}
+.cal__mon b{font-size:48px;line-height:1;letter-spacing:-.02em}
+.cal__mon span{font-size:16px;letter-spacing:.2em}
 .cal__dow,.cal__wk{display:grid;grid-template-columns:repeat(7,1fr)}
 .cal__dow{border-bottom:1px solid var(--line)}
-.cal__dow span{text-align:center;font-size:12px;font-weight:900;padding:6px 0;color:var(--muted)}
+.cal__dow span{text-align:center;font-size:14px;font-weight:900;padding:6px 0;color:var(--muted)}
 .cal .sun{color:var(--red)}
 .cal .sat{color:#2e5d9a}
-.cal__wk{grid-template-rows:28px 18px 22px 22px 22px 8px;row-gap:3px;border-bottom:1px solid var(--line)}
-.cal__d{grid-row:1/7;padding:5px 0 0 6px;font-family:var(--num);font-weight:700;font-size:15px;line-height:1;color:#b3ad9f;border-left:1px solid var(--line)}
+.cal__wk{grid-template-rows:32px 22px 26px 26px 26px 8px;row-gap:3px;border-bottom:1px solid var(--line)}
+.cal__d{grid-row:1/7;padding:6px 0 0 6px;font-family:var(--num);font-weight:700;font-size:18px;line-height:1;color:#b3ad9f;border-left:1px solid var(--line)}
 .cal__d:nth-child(7n+1){border-left:0}
 .cal__d.on{color:var(--ink);background:#fff}
 .cal__d.on.sun{color:var(--red)}
 .cal__d.on.sat{color:#2e5d9a}
 .cal__d.is-today{box-shadow:inset 0 0 0 2px var(--red)}
-.cal__d.is-today::after{content:"今日";display:block;margin-top:2px;font-family:var(--goth);font-size:9px;font-weight:900;color:var(--red)}
-.bar{position:relative;z-index:1;margin:0 2px;display:flex;align-items:center;padding:0 6px;font-size:11px;font-weight:900;letter-spacing:.04em;line-height:1;white-space:nowrap;overflow:hidden;color:#fff}
+.cal__d.is-today::after{content:"今日";display:block;margin-top:2px;font-family:var(--goth);font-size:11px;font-weight:900;color:var(--red)}
+.bar{position:relative;z-index:1;margin:0 2px;display:flex;align-items:center;padding:0 6px;font-size:13px;font-weight:900;letter-spacing:.04em;line-height:1;white-space:nowrap;overflow:hidden;color:#fff}
 .bar--1{background:var(--red)}
 .bar--m{background:var(--yellow);color:var(--red)}
 .bar--5{background:var(--deep);color:var(--yellow);justify-content:center;padding:0;font-family:var(--num);font-weight:700}
 .bar--2{background:var(--tare)}
-.bar--k{background:#f6d9d3;color:var(--red-d);font-size:10px}
+.bar--k{background:#f6d9d3;color:var(--red-d);font-size:12px}
 .bar--k.go{margin-right:0}
 .cal__note b{color:var(--red);font-weight:700}
 .bar.cont{margin-left:0;padding-left:8px}
 .bar.go{margin-right:0}
-.cal__note{margin-top:10px;font-size:12px;color:var(--muted)}
+.cal__note{margin-top:12px;font-size:14px;color:var(--muted)}
 
 /* 凡例 */
 .tl{list-style:none;margin-top:30px}
@@ -286,7 +286,7 @@ a{color:inherit;text-decoration:none}
           <span class="cal__d sat" style="grid-column:7" data-d="2026-11-28">28</span>
           <span class="bar bar--k cont" style="grid-column:1/7;grid-row:2">決算セール 11/27 13:59まで</span>
         </div>
-        <p class="cal__note">決算セールは<b>11/4(水)20:00〜11/27(金)13:59</b>。期間中に第一弾・第二弾などのお得が順に切り替わります。</p>
+        <p class="cal__note">決算セールは<b>11/4(水)20:00〜11/27(金)13:59</b>。<br>期間中、お得な企画が順に切り替わります。</p>
       </div>
       <ol class="tl">
         <li style="--c:var(--red)"><a href="#first">
