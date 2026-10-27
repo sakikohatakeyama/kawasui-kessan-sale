@@ -210,7 +210,7 @@ section[id]{scroll-margin-top:100px}
 .last__big small{display:inline-flex;align-items:center;gap:12px;font-size:21px;letter-spacing:.12em;color:#fff}
 .last__big small::before,.last__big small::after{content:"";width:22px;height:2px;background:linear-gradient(90deg,#c99a2e,#f6dc8a,#c99a2e)}
 .last__big .l2{display:flex;align-items:center;justify-content:center;margin:22px 0 8px;font-size:min(34px,8.6vw);letter-spacing:.04em;white-space:nowrap}
-.last__big b{display:inline-block;font-family:var(--num);font-weight:800;font-size:min(96px,24vw);color:var(--yellow);line-height:.82;transform-origin:center;position:relative;top:-.12em;letter-spacing:0;padding:0 .03em;margin:0 -.02em}
+.last__big b{display:inline-block;font-family:var(--num);font-weight:800;font-size:min(96px,24vw);color:var(--yellow);line-height:.82;transform-origin:center;position:relative;top:-.12em;letter-spacing:0;padding:0 .03em;margin:0 .05em 0 -.02em}
 .last__big em{font-style:normal}
 /* 金文字 */
 .last__big b{color:#e9c45a;background:linear-gradient(180deg,#fff3c4 0%,#f1cf6b 30%,#c99a2e 58%,#f6dc8a 78%,#b8862b 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
@@ -221,7 +221,13 @@ section[id]{scroll-margin-top:100px}
 .last .st[data-state="soon"]{color:#fff}
 .last .st[data-state="now"]{background:var(--yellow);border-color:var(--yellow);color:var(--red)}
 .last .st[data-state="end"]{color:rgba(255,255,255,.6)}
-.last__item{margin:30px -22px 0;padding:40px 22px 0;background:linear-gradient(transparent 0,transparent 120px,var(--paper) 120px);color:var(--ink)}
+.last__item{margin:30px -22px 0;padding:40px 22px 0;background:none;color:#fff}
+@media (max-width:899px){
+  .last__item .last__name{color:#fff}
+  .last__item .pp__old,.last__item .pp__old i,.last__item .pp__tax{color:rgba(255,255,255,.75)}
+  .last__item .pp__new,.last__item .pp__new i{color:#ff4a3d}
+  .last__item .pp__arw{border-left-color:#ff4a3d}
+}
 .last__photo{position:relative;width:240px;margin:0 auto}
 .last__photo img{box-shadow:0 10px 24px rgba(0,0,0,.25)}
 .last__photo .off{position:absolute;right:-20px;top:-18px;margin:0;width:84px;height:84px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:0;background:var(--red);color:#fff;font-weight:900;font-size:15px;line-height:1;transform:rotate(10deg);box-shadow:0 0 0 4px var(--yellow),0 8px 18px rgba(0,0,0,.25)}
@@ -318,9 +324,12 @@ section[id]{scroll-margin-top:100px}
 @keyframes twinkle{0%,100%{opacity:0}50%{opacity:1}}
 @media (prefers-reduced-motion:reduce){.bf-stars{display:none}.bf-title{animation:none}}
 .third .hero-item .off{margin-top:0}
-/* 第三弾の商品ブロック：金色の背景 */
-.third .hero-item{background:linear-gradient(135deg,#f9e7a8 0%,#e8c25c 30%,#f6dc8a 52%,#cfa035 78%,#f1d27a 100%)}
-.third .hero-item__txt,.third .pp__tax,.third .pp__old,.third .pp__old i{color:#3a2a14}
+/* 第三弾の商品ブロック：黒の背景 */
+.third .hero-item{background:#111;color:#fff}
+.third .hero-item__copy,.third .hero-item__txt{color:#fff}
+.third .pp__old,.third .pp__old i,.third .pp__tax{color:rgba(255,255,255,.75)}
+.third .pp__new,.third .pp__new i{color:#ff4a3d}
+.third .pp__arw{border-left-color:#ff4a3d}
 
 /* ========== 注意・フッター ========== */
 .notes{background:var(--cream);padding:48px 22px 50px;font-size:13px;line-height:1.9;color:var(--muted)}
