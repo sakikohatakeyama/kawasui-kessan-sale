@@ -245,7 +245,7 @@ section[id]{scroll-margin-top:100px}
 .last__photo .off{animation:tekete 2.4s ease-in-out infinite}
 @keyframes tekete{0%,60%,100%{transform:rotate(10deg)}66%{transform:rotate(2deg)}72%{transform:rotate(18deg)}78%{transform:rotate(4deg)}84%{transform:rotate(14deg)}90%{transform:rotate(8deg)}}
 @media (prefers-reduced-motion:reduce){.last__photo .off{animation:none}}
-.last__name{margin-top:24px;font-weight:900;font-size:25px;line-height:1.45}
+.last__name{margin-top:24px;font-weight:900;font-size:25px;line-height:1.45;color:var(--ink)}
 /* クーポン・セール札（クーポン＝オレンジ、セール＝赤） */
 :root{--coupon:#e8730c}
 .cp{display:inline-flex;align-items:baseline;gap:8px;margin-top:14px;background:var(--coupon);color:#fff;border-radius:4px;padding:7px 14px 6px;font-weight:900;line-height:1;white-space:nowrap}
@@ -260,6 +260,15 @@ section[id]{scroll-margin-top:100px}
 .row .pp__old{padding:0}
 .row .pp__old i{display:inline;margin:0 6px 0 0}
 .row .pp__new b{font-size:44px}
+@media (min-width:900px){
+  .row .cp{padding:9px 16px 8px;gap:8px}
+  .row .cp__k{font-size:16px}
+  .row .cp__v{font-size:19px}
+  .row .cp__v b{font-size:40px}
+  .row .pp__new{font-size:24px}
+  .row .pp__new i{font-size:16px}
+  .row .pp__new b{font-size:64px}
+}
 @media (max-width:899px){
   .last .pp{gap:8px}
   .last .pp__new b{font-size:46px}
@@ -343,7 +352,7 @@ section[id]{scroll-margin-top:100px}
 .notes h3{font-size:15px;font-weight:900;color:var(--ink);margin-bottom:10px;letter-spacing:.1em}
 .notes li{list-style:none;padding-left:1em;text-indent:-1em}
 .notes li::before{content:"※"}
-.foot{background:#111;color:#fff;text-align:center;padding:52px 22px 56px}
+.foot{background:var(--red-d);color:#fff;text-align:center;padding:52px 22px 56px}
 .foot__shop img{display:block;width:240px;height:auto;margin:0 auto;filter:brightness(0) invert(1)}
 .foot .btn{max-width:420px;margin:24px auto 0;background:#fff;color:var(--ink)}
 .foot .btn::after{border-color:var(--ink)}
@@ -827,7 +836,7 @@ section[id]{scroll-margin-top:100px}
       </div>
       <p class="wave-head__date">11/19<small>(木)</small>20:00<br class="sp"> – 11/27<small>(金)</small>13:59</p>
       <span class="st" data-start="2026-11-19T20:00" data-end="2026-11-27T13:59"></span>
-      <p class="wave-head__note">決算感謝祭の締めくくり。ブラックフライデーと同時開催です。</p>
+      <p class="wave-head__note">決算感謝祭の締めくくり。<br class="sp">ブラックフライデーと同時開催です。</p>
     </div>
 
     <article class="hero-item">
