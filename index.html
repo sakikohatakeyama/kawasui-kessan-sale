@@ -444,6 +444,15 @@ section[id]{scroll-margin-top:100px}
 
 /* SP全体のバランス調整 */
 @media (max-width:899px){
+  /* メニュー：スクロールさせず3列×2段で全部見せる */
+  .nav{overflow:visible}
+  .nav ul{display:grid;grid-template-columns:repeat(3,1fr);width:auto;margin:0}
+  .nav li{display:flex;border-bottom:1px solid var(--line)}
+  .nav li:nth-child(3n+2),.nav li:nth-child(3n){border-left:1px solid var(--line)}
+  .nav li + li a{border-left:0}
+  .nav a{display:flex;align-items:center;justify-content:center;width:100%;min-height:46px;padding:7px 4px;font-size:12px;line-height:1.35;letter-spacing:.02em;text-align:center;white-space:normal}
+  .nav{border-bottom:0}
+  section[id]{scroll-margin-top:160px}
   .h2{font-size:33px}
   .h2--goth{font-size:44px}
   .h2--goth small{font-size:21px}
@@ -517,10 +526,10 @@ section[id]{scroll-margin-top:100px}
     <ul>
       <li><a href="#schedule">スケジュール</a></li>
       <li><a href="#first">セール第一弾</a></li>
-      <li><a href="#marathon">お買い物マラソン期間</a></li>
-      <li><a href="#last5">マラソンラスト5時間</a></li>
+      <li><a href="#marathon">お買い物<br class="sp">マラソン期間</a></li>
+      <li><a href="#last5">マラソン<br class="sp">ラスト5時間</a></li>
       <li><a href="#second">セール第二弾</a></li>
-      <li><a href="#third">セール第三弾 ブラックフライデー</a></li>
+      <li><a href="#third">セール第三弾<br class="sp"><span class="pc"> </span>ブラックフライデー</a></li>
     </ul>
   </nav>
 
