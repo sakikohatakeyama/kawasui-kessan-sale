@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ja" class="js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -179,28 +179,45 @@ section[id]{scroll-margin-top:100px}
 .mara .rows{background:var(--paper)}
 
 /* ========== ラスト5時間 ========== */
-.last{position:relative;background:var(--deep);color:#fff;padding:68px 22px 0;overflow:hidden;text-align:center}
-.last__eye{display:flex;align-items:center;justify-content:center;gap:12px;font-weight:700;font-size:14px;letter-spacing:.2em;color:var(--yellow)}
-.last__eye::before,.last__eye::after{content:"";width:28px;height:1.5px;background:currentColor}
-.last__big{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:22px;font-family:var(--goth);font-weight:900}
-.last__big b{font-family:var(--num);font-weight:700;font-size:168px;color:var(--yellow);line-height:.72;letter-spacing:-.04em}
-.last__big span{text-align:left;font-size:40px;line-height:1.15;letter-spacing:.06em}
-.last__big small{display:block;font-size:22px;letter-spacing:.2em;color:var(--yellow);margin-bottom:6px}
-.last__date{display:inline-block;margin-top:28px;padding:10px 18px;border:1px solid rgba(255,255,255,.35);font-family:var(--num);font-weight:700;font-size:22px;line-height:1.3}
+.last{position:relative;background:var(--red);color:#fff;padding:64px 22px 0;overflow:hidden;text-align:center;isolation:isolate}
+.last::before{content:"";position:absolute;left:50%;top:230px;width:1600px;height:1600px;margin:-800px 0 0 -800px;z-index:-1;background:repeating-conic-gradient(from 0deg,rgba(255,255,255,.09) 0deg 5deg,transparent 5deg 15deg);border-radius:50%;-webkit-mask:radial-gradient(circle,#000 0,#000 30%,transparent 62%);mask:radial-gradient(circle,#000 0,#000 30%,transparent 62%);animation:rays 40s linear infinite}
+.last::after{content:"";position:absolute;left:50%;top:230px;width:420px;height:420px;margin:-210px 0 0 -210px;z-index:-1;background:radial-gradient(circle,rgba(255,214,90,.45) 0,rgba(255,214,90,0) 65%)}
+@keyframes rays{to{transform:rotate(360deg)}}
+.last__eye{display:inline-block;background:var(--yellow);color:var(--red);font-weight:900;font-size:16px;letter-spacing:.14em;padding:8px 18px 8px 20px;border-radius:999px}
+.last__big{position:relative;margin-top:22px;font-family:var(--goth);font-weight:900;line-height:1}
+.last__big small{display:block;font-size:28px;letter-spacing:.3em;padding-left:.3em}
+.last__big .n{display:inline-flex;align-items:flex-end;justify-content:center;margin-top:6px}
+.last__big b{font-family:var(--num);font-weight:800;font-size:190px;color:var(--yellow);line-height:.78;letter-spacing:-.04em;text-shadow:6px 6px 0 var(--deep)}
+.last__big .u{font-size:62px;letter-spacing:.04em;margin-left:6px;padding-bottom:4px}
+.last__big .dake{display:block;margin-top:14px;font-size:46px;letter-spacing:.12em;padding-left:.12em}
+.last__date{display:inline-block;margin-top:26px;padding:10px 14px;background:var(--deep);border-radius:6px;white-space:nowrap;font-family:var(--num);font-weight:700;font-size:19px;line-height:1.3}
 .last__date small{font-family:var(--goth);font-size:12px;font-weight:700;margin:0 2px}
-.last__count{margin-top:16px;font-size:14px;font-weight:700;color:var(--yellow);min-height:1.8em}
-.last__count b{font-family:var(--num);font-size:28px;letter-spacing:.04em;margin:0 3px}
-.last .st[data-state="soon"]{color:var(--yellow)}
-.last .st[data-state="end"]{color:rgba(255,255,255,.5)}
+.last__count{margin-top:16px;font-size:15px;font-weight:700;color:#fff;min-height:1.8em}
+.last__count b{font-family:var(--num);font-size:30px;letter-spacing:.04em;margin:0 3px;color:var(--yellow)}
+.last .st[data-state="soon"]{color:#fff}
+.last .st[data-state="now"]{background:var(--yellow);border-color:var(--yellow);color:var(--red)}
+.last .st[data-state="end"]{color:rgba(255,255,255,.6)}
 .last__item{margin:30px -22px 0;padding:40px 22px 0;background:linear-gradient(transparent 0,transparent 120px,var(--paper) 120px);color:var(--ink)}
 .last__photo{position:relative;width:240px;margin:0 auto}
+.last__photo img{box-shadow:0 10px 24px rgba(0,0,0,.25)}
 .last__photo .off{position:absolute;right:-26px;top:-14px;margin:0;width:84px;height:84px;border-radius:50%;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:0;background:var(--yellow);color:var(--red);font-size:12px;line-height:1}
 .last__photo .off b{font-size:32px}
-.last__name{margin-top:22px;font-weight:700;font-size:19px;line-height:1.55}
+.last__name{margin-top:22px;font-weight:700;font-size:20px;line-height:1.55}
 .last .price{justify-content:center}
 .last .price__now{color:var(--red);font-size:52px}
 .last .btn{margin-top:20px}
 .last__end{height:60px}
+/* ドーン！ */
+.js .last__big b,.js .last__big .u,.js .last__big small,.js .last__big .dake{opacity:0}
+.last.is-in .last__big small{animation:fadeDown .4s ease-out both}
+.last.is-in .last__big b{display:inline-block;animation:doon .7s cubic-bezier(.2,1.6,.4,1) .25s both}
+.last.is-in .last__big .u{animation:fadeDown .4s ease-out .75s both}
+.last.is-in .last__big .dake{animation:fadeDown .4s ease-out .9s both}
+.last.is-in .last__big{animation:shake .45s ease-out .55s}
+@keyframes doon{0%{opacity:0;transform:scale(3.2)}60%{opacity:1;transform:scale(.88)}100%{opacity:1;transform:scale(1)}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
+@keyframes shake{0%,100%{transform:none}20%{transform:translate(-6px,3px)}40%{transform:translate(5px,-3px)}60%{transform:translate(-3px,2px)}80%{transform:translate(2px,-1px)}}
+@media (prefers-reduced-motion:reduce){.last::before{animation:none}.js .last__big b,.js .last__big .u,.js .last__big small,.js .last__big .dake{opacity:1;animation:none!important}}
 
 /* ========== 第二弾 ========== */
 .second{padding:0 0 70px}
@@ -303,14 +320,21 @@ section[id]{scroll-margin-top:100px}
   .row__name{font-size:21px}
   .row .price__now{font-size:46px}
 
-  .last{display:grid;grid-template-columns:1fr 460px;column-gap:72px;align-items:center;padding:110px max(48px,calc((100% - 1120px)/2))}
-  .last__eye{font-size:18px}
-  .last__big b{font-size:260px}
-  .last__big span{font-size:62px}
-  .last__big small{font-size:30px}
-  .last__date{font-size:30px}
-  .last__count{font-size:16px}
-  .last__item{margin:0;padding:44px 40px 0;background:var(--paper);border-radius:14px}
+  .last{padding:100px 48px 110px}
+  .last::before,.last::after{top:330px}
+  .last::before{width:2600px;height:2600px;margin:-1300px 0 0 -1300px}
+  .last::after{width:700px;height:700px;margin:-350px 0 0 -350px}
+  .last__eye{font-size:20px;padding:10px 26px 10px 28px}
+  .last__big small{font-size:38px}
+  .last__big b{font-size:300px;text-shadow:10px 10px 0 var(--deep)}
+  .last__big .u{font-size:96px;margin-left:10px}
+  .last__big .dake{font-size:68px}
+  .last__date{font-size:32px;padding:12px 26px}
+  .last__count{font-size:17px}
+  .last__item{max-width:860px;margin:56px auto 0;padding:44px 48px 0;background:var(--paper);border-radius:14px;display:grid;grid-template-columns:300px 1fr;column-gap:48px;align-items:center;text-align:left}
+  .last__item .last__photo{grid-row:1/span 5;width:300px}
+  .last__item .price{justify-content:flex-start}
+  .last__item .last__name{margin-top:0}
   .last__photo{width:300px}
   .last__name{font-size:24px}
   .last .price__now{font-size:64px}
@@ -509,8 +533,8 @@ section[id]{scroll-margin-top:100px}
   <!-- ===== ラスト5時間 ===== -->
   <section class="last" id="last5">
     <div class="last__head">
-    <p class="last__eye">マラソン最終日 限定</p>
-    <p class="last__big"><b>5</b><span><small>ラスト</small>時間<br>だけ。</span></p>
+    <p class="last__eye">お買い物マラソン最終日 限定</p>
+    <p class="last__big"><small>ラスト</small><span class="n"><b>5</b><span class="u">時間</span></span><span class="dake">だけ！</span></p>
     <p class="last__date">11/10<small>(火)</small>21:00 – 11/11<small>(水)</small>01:59</p>
     <p class="last__count" id="last5count"><span class="st" data-start="2026-11-10T21:00" data-end="2026-11-11T01:59"></span></p>
     </div>
@@ -666,6 +690,16 @@ section[id]{scroll-margin-top:100px}
     setTimeout(tick, 1000);
   }
   tick();
+})();
+
+// ラスト5時間：画面に入ったらドーン
+(function(){
+  var s = document.getElementById('last5');
+  if (!('IntersectionObserver' in window)) { s.classList.add('is-in'); return; }
+  var io = new IntersectionObserver(function(e){
+    if (e[0].isIntersecting) { s.classList.add('is-in'); io.disconnect(); }
+  }, { threshold: .35 });
+  io.observe(s);
 })();
 
 // FV：金の紙吹雪
