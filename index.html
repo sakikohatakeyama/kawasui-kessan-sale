@@ -261,7 +261,13 @@ section[id]{scroll-margin-top:100px}
 @media (prefers-reduced-motion:reduce){.last__photo .off{animation:none}}
 .last__name{margin-top:24px;font-weight:900;font-size:25px;line-height:1.45;color:var(--ink)}
 /* クーポン・セール札（クーポン＝オレンジ、セール＝赤） */
-:root{--coupon:#d65a00}
+:root{--coupon:#ef6c00}
+/* クーポン帯とセール帯の高さをそろえる */
+.row .cpn,.row .sl{height:76px;box-sizing:border-box}
+.row .cpn__v{padding-top:0;padding-bottom:0}
+.row .sl{align-items:center;padding-top:0;padding-bottom:0}
+.row .sl b{line-height:1}
+@media (max-width:899px){.row .cpn,.row .sl{height:68px}}
 /* クーポン（獲得ボタン付き）とセール札 */
 .cpn{display:flex;align-items:stretch;margin-top:16px;background:var(--coupon);color:#fff;border-radius:10px;overflow:hidden;font-weight:900;line-height:1;white-space:nowrap}
 .cpn__v{flex:1;min-width:0;display:flex;align-items:center;justify-content:center;gap:5px;padding:10px 8px 10px 12px}
