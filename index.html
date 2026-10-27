@@ -203,13 +203,12 @@ section[id]{scroll-margin-top:100px}
 .last::before{content:"";position:absolute;left:50%;top:230px;width:1600px;height:1600px;margin:-800px 0 0 -800px;z-index:-1;background:repeating-conic-gradient(from 0deg,rgba(255,255,255,.09) 0deg 5deg,transparent 5deg 15deg);border-radius:50%;-webkit-mask:radial-gradient(circle,#000 0,#000 30%,transparent 62%);mask:radial-gradient(circle,#000 0,#000 30%,transparent 62%);animation:rays 40s linear infinite}
 .last::after{content:"";position:absolute;left:50%;top:230px;width:420px;height:420px;margin:-210px 0 0 -210px;z-index:-1;background:radial-gradient(circle,rgba(255,214,90,.45) 0,rgba(255,214,90,0) 65%)}
 @keyframes rays{to{transform:rotate(360deg)}}
-.last__eye{display:inline-block;background:var(--yellow);color:var(--red);font-weight:900;font-size:16px;letter-spacing:.14em;padding:8px 18px 8px 20px;border-radius:999px}
-.last__big{position:relative;margin-top:22px;font-family:var(--goth);font-weight:900;line-height:1}
-.last__big small{display:block;font-size:28px;letter-spacing:.3em;padding-left:.3em}
-.last__big .n{display:inline-flex;align-items:flex-end;justify-content:center;margin-top:6px}
-.last__big b{font-family:var(--num);font-weight:800;font-size:190px;color:var(--yellow);line-height:.78;letter-spacing:-.04em;text-shadow:6px 6px 0 var(--deep)}
-.last__big .u{font-size:62px;letter-spacing:.04em;margin-left:6px;padding-bottom:4px}
-.last__big .dake{display:block;margin-top:14px;font-size:46px;letter-spacing:.12em;padding-left:.12em}
+.last__big{position:relative;margin-top:4px;font-family:var(--goth);font-weight:900;line-height:1}
+.last__big small{display:inline-flex;align-items:center;gap:12px;font-size:21px;letter-spacing:.12em;color:#fff}
+.last__big small::before,.last__big small::after{content:"";width:22px;height:2px;background:var(--yellow)}
+.last__big .l2{display:flex;align-items:baseline;justify-content:center;margin:14px 0 8px;font-size:min(34px,8.6vw);letter-spacing:.04em;white-space:nowrap}
+.last__big b{display:inline-block;font-family:var(--num);font-weight:800;font-size:min(96px,24vw);color:var(--yellow);line-height:.8;letter-spacing:-.03em;margin:0 4px 0 2px;text-shadow:4px 4px 0 var(--deep)}
+.last__big em{font-style:normal;color:var(--yellow)}
 .last__date{display:inline-block;margin-top:26px;padding:10px 14px;background:var(--deep);border-radius:6px;white-space:nowrap;font-family:var(--num);font-weight:700;font-size:19px;line-height:1.3}
 .last__date small{font-family:var(--goth);font-size:12px;font-weight:700;margin:0 2px}
 .last__count{margin-top:16px;font-size:15px;font-weight:700;color:#fff;min-height:1.8em}
@@ -228,16 +227,15 @@ section[id]{scroll-margin-top:100px}
 .last .btn{margin-top:20px}
 .last__end{height:60px}
 /* ドーン！ */
-.js .last__big b,.js .last__big .u,.js .last__big small,.js .last__big .dake{opacity:0}
+.js .last__big b,.js .last__big small,.js .last__big .l2{opacity:0}
 .last.is-in .last__big small{animation:fadeDown .4s ease-out both}
-.last.is-in .last__big b{display:inline-block;animation:doon .7s cubic-bezier(.2,1.6,.4,1) .25s both}
-.last.is-in .last__big .u{animation:fadeDown .4s ease-out .75s both}
-.last.is-in .last__big .dake{animation:fadeDown .4s ease-out .9s both}
-.last.is-in .last__big{animation:shake .45s ease-out .55s}
+.last.is-in .last__big .l2{animation:fadeDown .4s ease-out .2s both}
+.last.is-in .last__big b{animation:doon .7s cubic-bezier(.2,1.6,.4,1) .45s both}
+.last.is-in .last__big{animation:shake .45s ease-out .75s}
 @keyframes doon{0%{opacity:0;transform:scale(3.2)}60%{opacity:1;transform:scale(.88)}100%{opacity:1;transform:scale(1)}}
 @keyframes fadeDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
 @keyframes shake{0%,100%{transform:none}20%{transform:translate(-6px,3px)}40%{transform:translate(5px,-3px)}60%{transform:translate(-3px,2px)}80%{transform:translate(2px,-1px)}}
-@media (prefers-reduced-motion:reduce){.last::before{animation:none}.js .last__big b,.js .last__big .u,.js .last__big small,.js .last__big .dake{opacity:1;animation:none!important}}
+@media (prefers-reduced-motion:reduce){.last::before{animation:none}.js .last__big b,.js .last__big small,.js .last__big .l2{opacity:1;animation:none!important}}
 
 /* ========== 第二弾 ========== */
 .second{padding:0 0 70px}
@@ -343,11 +341,10 @@ section[id]{scroll-margin-top:100px}
   .last::before,.last::after{top:330px}
   .last::before{width:2600px;height:2600px;margin:-1300px 0 0 -1300px}
   .last::after{width:700px;height:700px;margin:-350px 0 0 -350px}
-  .last__eye{font-size:20px;padding:10px 26px 10px 28px}
-  .last__big small{font-size:38px}
-  .last__big b{font-size:300px;text-shadow:10px 10px 0 var(--deep)}
-  .last__big .u{font-size:96px;margin-left:10px}
-  .last__big .dake{font-size:68px}
+  .last__big small{font-size:30px;gap:18px}
+  .last__big small::before,.last__big small::after{width:40px}
+  .last__big .l2{font-size:72px;margin:22px 0 14px}
+  .last__big b{font-size:200px;text-shadow:8px 8px 0 var(--deep);margin:0 8px 0 4px}
   .last__date{font-size:32px;padding:12px 26px}
   .last__count{font-size:17px}
   .last__item{max-width:860px;margin:56px auto 0;padding:44px 48px 0;background:var(--paper);border-radius:14px;display:grid;grid-template-columns:300px 1fr;column-gap:48px;align-items:center;text-align:left}
@@ -566,8 +563,7 @@ section[id]{scroll-margin-top:100px}
   <!-- ===== ラスト5時間 ===== -->
   <section class="last" id="last5">
     <div class="last__head">
-    <p class="last__eye">お買い物マラソン最終日 限定</p>
-    <p class="last__big"><small>ラスト</small><span class="n"><b>5</b><span class="u">時間</span></span><span class="dake">だけ！</span></p>
+    <h2 class="last__big"><small>お買い物マラソン最終日</small><span class="l2">ラスト<b>5</b>時間<em>限定！</em></span></h2>
     <p class="last__date">11/10<small>(火)</small>21:00 – 11/11<small>(水)</small>01:59</p>
     <p class="last__count" id="last5count"><span class="st" data-start="2026-11-10T21:00" data-end="2026-11-11T01:59"></span></p>
     </div>
