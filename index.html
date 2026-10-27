@@ -223,19 +223,24 @@ section[id]{scroll-margin-top:100px}
 .last__photo .off{position:absolute;right:-30px;top:-26px;margin:0;width:110px;height:110px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:0;background:var(--red);color:#fff;font-weight:900;font-size:15px;line-height:1;transform:rotate(-8deg);box-shadow:0 0 0 4px var(--yellow),0 8px 18px rgba(0,0,0,.25)}
 .last__photo .off b{font-family:var(--num);font-weight:800;font-size:46px;color:var(--yellow);letter-spacing:-.02em}
 .last__name{margin-top:24px;font-weight:900;font-size:25px;line-height:1.45}
-/* クーポン・セール札 */
-.cp{display:inline-flex;align-items:stretch;margin-top:14px;border:2px solid var(--red);border-radius:6px;overflow:hidden;font-weight:900;line-height:1;white-space:nowrap}
-.cp__k{display:flex;align-items:center;background:var(--red);color:#fff;font-size:15px;letter-spacing:.08em;padding:0 10px}
-.cp__v{display:flex;align-items:baseline;gap:2px;background:#fff6cf;color:var(--red);font-size:17px;padding:7px 14px 6px;border-left:2px dashed var(--red)}
-.cp__v b{font-family:var(--num);font-weight:800;font-size:36px;letter-spacing:-.01em}
+/* クーポン・セール札（クーポン＝オレンジ、セール＝赤） */
+:root{--coupon:#e8730c}
+.cp{display:inline-flex;align-items:baseline;gap:8px;margin-top:14px;background:var(--coupon);color:#fff;border-radius:4px;padding:7px 14px 6px;font-weight:900;line-height:1;white-space:nowrap}
+.cp--sale{background:var(--red)}
+.cp__k{font-size:14px;letter-spacing:.06em}
+.cp__v{display:flex;align-items:baseline;gap:2px;font-size:16px}
+.cp__v b{font-family:var(--num);font-weight:800;font-size:32px;letter-spacing:-.01em}
+.pp__new i.is-cp{background:var(--coupon)}
+.pp__new.is-cp{color:var(--coupon)}
 .row .pp,.hero-item .pp{flex-direction:column;align-items:flex-start;gap:6px;margin-top:12px}
 .row .pp__arw,.hero-item .pp__arw{display:none}
 .row .pp__old,.hero-item .pp__old{padding:0}
 .row .pp__old i,.hero-item .pp__old i{display:inline;margin:0 6px 0 0}
 .row .pp__new b{font-size:44px}
 @media (max-width:899px){
-  .row .cp__k{font-size:12px;padding:0 7px;letter-spacing:.02em}
-  .row .cp__v{font-size:13px;padding:6px 8px 5px}
+  .row .cp{padding:6px 10px 5px;gap:6px}
+  .row .cp__k{font-size:12px}
+  .row .cp__v{font-size:13px}
   .row .cp__v b{font-size:24px}
   .row .pp__new b{font-size:38px}
   .row .pp__old i{display:block;margin:0 0 2px}
@@ -601,7 +606,7 @@ section[id]{scroll-margin-top:100px}
           <div class="pp">
             <p class="pp__old"><i>通常価格</i><s>11,890</s>円</p>
             <span class="pp__arw" aria-hidden="true"></span>
-            <p class="pp__new"><i>クーポン利用で</i><b>8,890</b>円</p>
+            <p class="pp__new is-cp"><i class="is-cp">クーポン利用で</i><b>8,890</b>円</p>
           </div>
           <p class="pp__tax">税込・送料無料</p>
         </div>
@@ -659,7 +664,7 @@ section[id]{scroll-margin-top:100px}
           <div class="pp">
             <p class="pp__old"><i>通常価格</i><s>9,180</s>円</p>
             <span class="pp__arw" aria-hidden="true"></span>
-            <p class="pp__new"><i>クーポン利用で</i><b>8,180</b>円〜</p>
+            <p class="pp__new is-cp"><i class="is-cp">クーポン利用で</i><b>8,180</b>円〜</p>
           </div>
           <p class="pp__tax">税込・送料無料</p>
         </div>
@@ -673,7 +678,7 @@ section[id]{scroll-margin-top:100px}
           <div class="pp">
             <p class="pp__old"><i>通常価格</i><s>17,060</s>円</p>
             <span class="pp__arw" aria-hidden="true"></span>
-            <p class="pp__new"><i>クーポン利用で</i><b>15,060</b>円〜</p>
+            <p class="pp__new is-cp"><i class="is-cp">クーポン利用で</i><b>15,060</b>円〜</p>
           </div>
           <p class="pp__tax">税込・送料無料</p>
         </div>
@@ -721,7 +726,7 @@ section[id]{scroll-margin-top:100px}
         <div class="pp">
           <p class="pp__old"><i>通常価格</i><s>5,990</s>円〜</p>
           <span class="pp__arw" aria-hidden="true"></span>
-          <p class="pp__new"><i>クーポン利用で</i><b>4,792</b>円〜</p>
+          <p class="pp__new is-cp"><i class="is-cp">クーポン利用で</i><b>4,792</b>円〜</p>
         </div>
         <p class="pp__tax">税込・送料無料</p>
         <a class="btn" href="https://item.rakuten.co.jp/kawasui/10000130/" target="_blank" rel="noopener">3種セットを見る</a>
