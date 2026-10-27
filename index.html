@@ -114,7 +114,7 @@ section[id]{scroll-margin-top:100px}
 /* 状態バッジ（JSで切り替え） */
 .st{display:inline-block;font-family:var(--num);font-size:18px;font-weight:600;letter-spacing:.04em;line-height:1;padding:9px 14px 8px;border:1.5px solid currentColor;color:var(--muted);white-space:nowrap}
 .st[data-state="now"]{background:var(--red);border-color:var(--red);color:#fff}
-.st[data-state="soon"]{color:var(--red)}
+.st[data-state="soon"]{color:#b8862b}
 .st[data-state="end"]{color:#9aa0ab}
 
 /* ========== スケジュール ========== */
@@ -161,7 +161,7 @@ section[id]{scroll-margin-top:100px}
 .wave-head__date{display:inline-block;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.4);font-family:var(--num);font-weight:700;font-size:28px;line-height:1.3;letter-spacing:.01em}
 .wave-head__date small{font-family:var(--goth);font-size:.62em;font-weight:700;margin:0 .2em 0 .12em}
 .wave-head .st{display:table;margin:18px auto 0}
-.wave-head .st[data-state="soon"]{color:var(--yellow)}
+.wave-head .st[data-state="soon"]{color:#e9c45a}
 .wave-head .st[data-state="end"]{color:rgba(255,255,255,.5)}
 .wave-head__note{margin-top:14px;font-size:13px;color:rgba(255,255,255,.75)}
 
@@ -219,6 +219,9 @@ section[id]{scroll-margin-top:100px}
 .mara__head{padding:0 22px 34px;text-align:center}
 .mara__term{display:block;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);width:100vw;max-width:none;border-radius:0;margin-top:0;margin-bottom:26px;padding:12px 10px;background:var(--red);color:#fff;font-family:var(--num);font-weight:700;font-size:min(24px,5.4vw);line-height:1.3;white-space:nowrap}
 .mara__head .st{margin-top:18px}
+/* 日時の帯：吹き出し（下に▼） */
+.mara__term,.last__date{position:relative}
+.mara__term::after,.last__date::after{content:"";position:absolute;left:50%;top:100%;margin-left:-12px;border:12px solid transparent;border-top:12px solid var(--red);border-bottom:0}
 .mara__term small{font-family:var(--goth);font-size:.62em;font-weight:700;margin:0 .2em 0 .12em}
 .mara .rows{background:var(--paper)}
 
@@ -226,7 +229,7 @@ section[id]{scroll-margin-top:100px}
 .last{position:relative;background:#111;color:#fff;padding:36px 22px 0;overflow:hidden;text-align:center;isolation:isolate}
 .last__big{position:relative;margin-top:4px;font-family:var(--goth);font-weight:900;line-height:1}
 .last__big small{display:inline-flex;align-items:center;gap:12px;font-size:21px;letter-spacing:.12em;color:#fff}
-.last__big small::before,.last__big small::after{content:"";width:22px;height:2px;background:linear-gradient(90deg,#c99a2e,#f6dc8a,#c99a2e)}
+.last__big small::before,.last__big small::after{content:"";width:22px;height:2px;background:#fff}
 .last__big .l2{display:flex;align-items:center;justify-content:center;margin:22px 0 8px;font-size:min(34px,8.6vw);letter-spacing:.04em;white-space:nowrap}
 .last__big b{display:inline-block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;font-size:min(96px,24vw);color:var(--yellow);line-height:.82;transform-origin:center;position:relative;top:-.12em;letter-spacing:0;padding:0 .03em;margin:0 .05em 0 -.02em}
 .last__big em{font-style:normal}
@@ -236,7 +239,7 @@ section[id]{scroll-margin-top:100px}
 .last__date small{font-family:var(--goth);font-size:.62em;font-weight:700;margin:0 .2em 0 .12em}
 .last__count{margin-top:22px;font-size:15px;font-weight:700;color:#fff}
 .last__count b{font-family:var(--num);font-size:30px;letter-spacing:.04em;margin:0 3px;color:var(--yellow)}
-.last .st[data-state="soon"]{color:#fff}
+.last .st[data-state="soon"]{color:#e9c45a}
 .last .st[data-state="now"]{background:var(--yellow);border-color:var(--yellow);color:var(--red)}
 .last .st[data-state="end"]{color:rgba(255,255,255,.6)}
 .last__item{margin:30px 0 0;padding:40px 16px 24px;background:var(--paper);border-radius:14px;color:var(--ink)}
