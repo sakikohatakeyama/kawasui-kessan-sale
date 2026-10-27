@@ -269,6 +269,10 @@ section[id]{scroll-margin-top:100px}
 .row .cpn__v{padding-top:0;padding-bottom:0}
 .row .sl{align-items:center;padding-top:0;padding-bottom:0}
 .row .sl b{line-height:1}
+/* 帯の文字：ベースラインをそろえて上下中央に */
+.cpn__v,.row .sl,.sl{flex-wrap:wrap;align-content:center;align-items:baseline}
+.cpn__v b,.sl b{line-height:1}
+.cpn__u{line-height:1}
 .row .cpn__v{gap:4px;padding-left:10px;padding-right:6px}
 .row .cpn__v b{font-size:40px}
 .row .cpn__u{font-size:14px}
@@ -792,7 +796,7 @@ section[id]{scroll-margin-top:100px}
         <div>
           <h3 class="row__name">常温保存できる<br>蒲焼きカット 100g</h3>
           <p class="row__desc">2,000円以下・送料無料のお手頃グルメ。ストックや手土産に。</p>
-          <p class="sl">送料無料<small>／</small><b>2<span class="cm">,</span>000</b>円以下</p>
+          <p class="sl">送料無料<b style="margin-left:.25em">2<span class="cm">,</span>000</b>円以下</p>
           <div class="pp">
             <p class="pp__old"><i>通常価格</i><s>2<span class="cm">,</span>080</s>円</p>
             <span class="pp__arw" aria-hidden="true"></span>
@@ -942,8 +946,6 @@ section[id]{scroll-margin-top:100px}
   <section class="notes">
     <h3>ご注意</h3>
     <ul>
-      <li>表示価格は税込です。「〜」表記はいちばん小さい内容量・選択肢の価格です。</li>
-      <li>クーポンは各商品ページから取得してください。先着・枚数限定のため、なくなり次第終了します。</li>
       <li>セール価格・クーポンは各期間内のご注文が対象です。期間外のご注文は通常価格となります。</li>
       <li>数量限定の商品は、売り切れ次第終了となります。</li>
     </ul>
