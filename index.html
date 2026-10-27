@@ -240,11 +240,11 @@ section[id]{scroll-margin-top:100px}
 .cp__v{display:flex;align-items:baseline;gap:2px;font-size:16px}
 .cp__v b{font-family:var(--num);font-weight:800;font-size:32px;letter-spacing:-.01em}
 .pp__new i.is-cp{background:var(--coupon)}
-.pp__new.is-cp{color:var(--coupon)}
-.row .pp,.hero-item .pp{flex-direction:column;align-items:flex-start;gap:6px;margin-top:12px}
-.row .pp__arw,.hero-item .pp__arw{display:none}
-.row .pp__old,.hero-item .pp__old{padding:0}
-.row .pp__old i,.hero-item .pp__old i{display:inline;margin:0 6px 0 0}
+
+.row .pp{flex-direction:column;align-items:flex-start;gap:6px;margin-top:12px}
+.row .pp__arw{display:none}
+.row .pp__old{padding:0}
+.row .pp__old i{display:inline;margin:0 6px 0 0}
 .row .pp__new b{font-size:44px}
 @media (max-width:899px){
   .row .cp{padding:6px 10px 5px;gap:6px}
@@ -257,8 +257,13 @@ section[id]{scroll-margin-top:100px}
   .last .pp__new b{font-size:46px}
   .last .pp__old s{font-size:20px}
 }
-.hero-item .pp,.hero-item .pp__tax{align-items:center;text-align:center}
-.hero-item .cp{display:flex;width:max-content;margin:16px auto 0}
+.hero-item .pp{justify-content:center;margin-top:18px}
+.hero-item .pp__tax{text-align:center}
+.hero-item .pp__new b{font-size:58px}
+.hero-item .cp{display:flex;width:max-content;margin:20px auto 0;padding:10px 20px 9px;gap:10px}
+.hero-item .cp__k{font-size:18px}
+.hero-item .cp__v{font-size:22px}
+.hero-item .cp__v b{font-size:48px}
 .pp{display:flex;align-items:flex-end;justify-content:center;gap:12px;margin-top:18px}
 .pp i{display:block;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;margin-bottom:4px}
 .pp__old{color:var(--muted);font-size:15px;line-height:1;padding-bottom:6px}
@@ -584,7 +589,7 @@ section[id]{scroll-margin-top:100px}
         <h3 class="hero-item__copy">あの<em>伝説の福袋</em>が、<br>帰ってきました。</h3>
         <p class="hero-item__txt">国産うなぎの蒲焼きを中心に、かわすい自慢の品をぎゅっと詰め合わせ。何が入っているかは届いてからのお楽しみです。</p>
         <p class="price"><span class="price__now">4,980<small>円〜</small></span><span class="price__tax">税込</span></p>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002026/" target="_blank" rel="noopener">伝説福袋を見る</a>
+        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002026/" target="_blank" rel="noopener">購入はこちら</a>
       </div>
     </article>
 
@@ -596,7 +601,7 @@ section[id]{scroll-margin-top:100px}
         <h3 class="hero-item__copy">お重に盛れば、<br>おうちがうなぎ屋に。</h3>
         <p class="hero-item__txt">かわすいオリジナルのお重箱。おうちの蒲焼きが、お店のうな重の佇まいに変わります。贈り物との組み合わせにも。</p>
         <p class="price"><span class="price__now">1,350<small>円〜</small></span><span class="price__tax">税込</span></p>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10001006/" target="_blank" rel="noopener">お重箱を見る</a>
+        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10001006/" target="_blank" rel="noopener">購入はこちら</a>
       </div>
     </article>
   </section>
@@ -623,7 +628,7 @@ section[id]{scroll-margin-top:100px}
           </div>
           <p class="pp__tax">税込・送料無料</p>
         </div>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002502/" target="_blank" rel="noopener">常温蒲焼きを見る</a>
+        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002502/" target="_blank" rel="noopener">購入はこちら</a>
       </article>
       <article class="row">
         <img src="img/chotokudai.jpg" alt="超特大うなぎ長焼き200g×3本" width="600" height="600" loading="lazy">
@@ -638,7 +643,7 @@ section[id]{scroll-margin-top:100px}
           </div>
           <p class="pp__tax">税込・送料無料</p>
         </div>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10000913/" target="_blank" rel="noopener">クーポンを使って買う</a>
+        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10000913/" target="_blank" rel="noopener">購入はこちら</a>
       </article>
     </div>
   </section>
@@ -663,7 +668,7 @@ section[id]{scroll-margin-top:100px}
       </div>
       <p class="pp__tax">税込・送料無料</p>
       <!-- コピーページで入稿予定：URL確定後に差し替え -->
-      <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002525/" target="_blank" rel="noopener">5時間限定価格で買う</a>
+      <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002525/" target="_blank" rel="noopener">購入はこちら</a>
       <div class="last__end"></div>
     </article>
   </section>
@@ -696,7 +701,7 @@ section[id]{scroll-margin-top:100px}
           </div>
           <p class="pp__tax">税込・送料無料</p>
         </div>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/cut40-500/" target="_blank" rel="noopener">500gを見る</a>
+        <a class="btn" href="https://item.rakuten.co.jp/kawasui/cut40-500/" target="_blank" rel="noopener">購入はこちら</a>
       </article>
       <article class="row">
         <img src="img/cut1k.jpg" alt="うなぎ蒲焼きカット メガ盛り1kg" width="600" height="600" loading="lazy">
@@ -710,7 +715,7 @@ section[id]{scroll-margin-top:100px}
           </div>
           <p class="pp__tax">税込・送料無料</p>
         </div>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/cut40-1k/" target="_blank" rel="noopener">1kgを見る</a>
+        <a class="btn" href="https://item.rakuten.co.jp/kawasui/cut40-1k/" target="_blank" rel="noopener">購入はこちら</a>
       </article>
       <article class="row">
         <img src="img/shiroyaki.jpg" alt="自家製ぽん酢付き うなぎ白焼き1尾" width="600" height="600" loading="lazy">
@@ -724,7 +729,7 @@ section[id]{scroll-margin-top:100px}
           </div>
           <p class="pp__tax">税込</p>
         </div>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/531627/" target="_blank" rel="noopener">白焼きを見る</a>
+        <a class="btn" href="https://item.rakuten.co.jp/kawasui/531627/" target="_blank" rel="noopener">購入はこちら</a>
       </article>
     </div>
   </section>
@@ -757,7 +762,7 @@ section[id]{scroll-margin-top:100px}
           <p class="pp__new is-cp"><i class="is-cp">クーポン利用で</i><b>4,792</b>円〜</p>
         </div>
         <p class="pp__tax">税込・送料無料</p>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10000130/" target="_blank" rel="noopener">3種セットを見る</a>
+        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10000130/" target="_blank" rel="noopener">購入はこちら</a>
       </div>
     </article>
   </section>
