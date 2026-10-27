@@ -220,8 +220,15 @@ section[id]{scroll-margin-top:100px}
 .last__item{margin:30px -22px 0;padding:40px 22px 0;background:linear-gradient(transparent 0,transparent 120px,var(--paper) 120px);color:var(--ink)}
 .last__photo{position:relative;width:240px;margin:0 auto}
 .last__photo img{box-shadow:0 10px 24px rgba(0,0,0,.25)}
-.last__photo .off{position:absolute;right:-30px;top:-26px;margin:0;width:110px;height:110px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:0;background:var(--red);color:#fff;font-weight:900;font-size:15px;line-height:1;transform:rotate(-8deg);box-shadow:0 0 0 4px var(--yellow),0 8px 18px rgba(0,0,0,.25)}
+.last__photo .off{position:absolute;right:-30px;top:-26px;margin:0;width:110px;height:110px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:0;background:var(--red);color:#fff;font-weight:900;font-size:15px;line-height:1;transform:rotate(10deg);box-shadow:0 0 0 4px var(--yellow),0 8px 18px rgba(0,0,0,.25)}
 .last__photo .off b{font-family:var(--num);font-weight:800;font-size:46px;color:var(--yellow);letter-spacing:-.02em}
+.off__n{display:flex;align-items:baseline;font-family:var(--num);font-weight:800;font-size:22px;color:var(--yellow);line-height:.9}
+.off__u{font-family:var(--num);font-weight:800;font-size:18px;letter-spacing:.08em;line-height:1}
+/* 22%OFF：画面に入ったらドーン */
+.js .last__photo .off{opacity:0}
+.last__item.is-shown .last__photo .off{animation:badgeDoon .7s cubic-bezier(.2,1.6,.4,1) .35s both}
+@keyframes badgeDoon{0%{opacity:0;transform:rotate(10deg) scale(2.8)}60%{opacity:1;transform:rotate(10deg) scale(.88)}100%{opacity:1;transform:rotate(10deg) scale(1)}}
+@media (prefers-reduced-motion:reduce){.js .last__photo .off{opacity:1;animation:none!important}}
 .last__name{margin-top:24px;font-weight:900;font-size:25px;line-height:1.45}
 /* クーポン・セール札（クーポン＝オレンジ、セール＝赤） */
 :root{--coupon:#e8730c}
@@ -392,6 +399,8 @@ section[id]{scroll-margin-top:100px}
   .pp__tax{font-size:13px}
   .last__photo .off{width:128px;height:128px;font-size:17px;right:-36px;top:-30px}
   .last__photo .off b{font-size:56px}
+  .off__n{font-size:26px}
+  .off__u{font-size:21px}
   .last__item .last__name{margin-top:0}
   .last__photo{width:300px}
   .last__name{font-size:34px}
@@ -625,7 +634,7 @@ section[id]{scroll-margin-top:100px}
     <article class="last__item">
       <div class="last__photo">
         <img src="img/cut6.jpg" alt="うなぎ蒲焼きカット6枚セット" width="600" height="600" loading="lazy">
-        <p class="off"><b>22</b>%OFF</p>
+        <p class="off"><span class="off__n"><b>22</b>%</span><span class="off__u">OFF</span></p>
       </div>
       <h3 class="last__name">蒲焼きカット 6枚セット</h3>
       <div class="pp">
