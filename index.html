@@ -195,7 +195,15 @@ section[id]{scroll-margin-top:100px}
 .row .price__now small{font-size:16px}
 .row .off{margin-top:10px;font-size:13px;padding:6px 10px 5px}
 .row .off b{font-size:21px}
-.row .btn{grid-column:1/-1;margin-top:4px;font-size:16px;padding:16px 20px}
+.row .btn{margin-top:0;font-size:16px;padding:16px 20px}
+.row .buy{grid-column:1/-1;margin-top:4px}
+/* 購入ボタン＋お気に入り */
+.buy{display:flex;align-items:center;gap:10px;margin-top:24px}
+.buy .btn{flex:1;margin-top:0}
+.fav{flex:none;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#fff;border:2px solid var(--red);color:var(--red);transition:background .2s,color .2s,transform .2s}
+.fav svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round;transition:fill .2s}
+.fav:hover,.fav:focus-visible{background:var(--red);color:#fff;transform:scale(1.06)}
+.fav:hover svg,.fav:focus-visible svg{fill:currentColor}
 
 /* ========== マラソン連動 ========== */
 .mara{background:var(--cream);padding:64px 0 0}
@@ -278,7 +286,7 @@ section[id]{scroll-margin-top:100px}
 .pp__new b{font-family:var(--num);font-weight:800;font-size:54px;letter-spacing:-.02em;margin-right:2px}
 .pp__tax{margin-top:8px;font-size:12px;color:var(--muted)}
 .last .price__now{color:var(--red);font-size:52px}
-.last .btn{margin-top:20px}
+.last .buy{margin-top:20px}
 .last__end{height:60px}
 /* ドーン！ */
 .js .last__big b,.js .last__big small,.js .last__big .l2{opacity:0}
@@ -328,8 +336,9 @@ section[id]{scroll-margin-top:100px}
 .third .hero-item{background:#111;color:#fff}
 .third .hero-item__copy,.third .hero-item__txt{color:#fff}
 .third .pp__old,.third .pp__old i,.third .pp__tax{color:rgba(255,255,255,.75)}
-.third .pp__new,.third .pp__new i{color:#ff4a3d}
-.third .pp__arw{border-left-color:#ff4a3d}
+.third .cp{background:linear-gradient(180deg,#f6dc8a 0%,#e0b64a 45%,#c49328 100%);color:#2b1a05}
+.third .pp__new,.third .pp__new i{color:#e9c45a;background:linear-gradient(180deg,#fff3c4 0%,#f1cf6b 30%,#c99a2e 60%,#f6dc8a 80%,#b8862b 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.third .pp__arw{border-left-color:#e0b64a}
 
 /* ========== 注意・フッター ========== */
 .notes{background:var(--cream);padding:48px 22px 50px;font-size:13px;line-height:1.9;color:var(--muted)}
@@ -514,7 +523,7 @@ section[id]{scroll-margin-top:100px}
   .row .pp__old s{font-size:20px}
   .row .pp__new b{font-size:min(46px,11.5vw)}
   .row .pp__tax{text-align:center;margin-top:10px}
-  .row .btn{margin-top:16px}
+  .row .buy{margin-top:16px}
   .mara .rows{background:none}
 }
 
@@ -665,7 +674,7 @@ section[id]{scroll-margin-top:100px}
         <h3 class="hero-item__copy">あの<em>伝説の福袋</em>が、<br>帰ってきました。</h3>
         <p class="hero-item__txt">国産うなぎの蒲焼きを中心に、かわすい自慢の品をぎゅっと詰め合わせ。何が入っているかは届いてからのお楽しみです。</p>
         <p class="price"><span class="price__now">4,980<small>円〜</small></span><span class="price__tax">税込</span></p>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002026/" target="_blank" rel="noopener">購入はこちら</a>
+        <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/10002026/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10002026&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </div>
     </article>
 
@@ -677,7 +686,7 @@ section[id]{scroll-margin-top:100px}
         <h3 class="hero-item__copy">お重に盛れば、<br>おうちがうなぎ屋に。</h3>
         <p class="hero-item__txt">かわすいオリジナルのお重箱。おうちの蒲焼きが、お店のうな重の佇まいに変わります。贈り物との組み合わせにも。</p>
         <p class="price"><span class="price__now">1,350<small>円〜</small></span><span class="price__tax">税込</span></p>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10001006/" target="_blank" rel="noopener">購入はこちら</a>
+        <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/10001006/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10001006&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </div>
     </article>
   </section>
@@ -704,7 +713,7 @@ section[id]{scroll-margin-top:100px}
           </div>
           <p class="pp__tax">税込・送料無料</p>
         </div>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002502/" target="_blank" rel="noopener">購入はこちら</a>
+        <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/10002502/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10002513&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </article>
       <article class="row">
         <img src="img/chotokudai.jpg" alt="超特大うなぎ長焼き200g×3本" width="600" height="600" loading="lazy">
@@ -719,7 +728,7 @@ section[id]{scroll-margin-top:100px}
           </div>
           <p class="pp__tax">税込・送料無料</p>
         </div>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10000913/" target="_blank" rel="noopener">購入はこちら</a>
+        <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/10000913/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10000913&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </article>
     </div>
   </section>
@@ -744,7 +753,7 @@ section[id]{scroll-margin-top:100px}
       </div>
       <p class="pp__tax">税込・送料無料</p>
       <!-- コピーページで入稿予定：URL確定後に差し替え -->
-      <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002525/" target="_blank" rel="noopener">購入はこちら</a>
+      <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/10002525/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10002540&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       <div class="last__end"></div>
     </article>
   </section>
@@ -777,7 +786,7 @@ section[id]{scroll-margin-top:100px}
           </div>
           <p class="pp__tax">税込・送料無料</p>
         </div>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/cut40-500/" target="_blank" rel="noopener">購入はこちら</a>
+        <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/cut40-500/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10001574&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </article>
       <article class="row">
         <img src="img/cut1k.jpg" alt="うなぎ蒲焼きカット メガ盛り1kg" width="600" height="600" loading="lazy">
@@ -791,7 +800,7 @@ section[id]{scroll-margin-top:100px}
           </div>
           <p class="pp__tax">税込・送料無料</p>
         </div>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/cut40-1k/" target="_blank" rel="noopener">購入はこちら</a>
+        <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/cut40-1k/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10001554&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </article>
       <article class="row">
         <img src="img/shiroyaki.jpg" alt="自家製ぽん酢付き うなぎ白焼き1尾" width="600" height="600" loading="lazy">
@@ -805,7 +814,7 @@ section[id]{scroll-margin-top:100px}
           </div>
           <p class="pp__tax">税込</p>
         </div>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/531627/" target="_blank" rel="noopener">購入はこちら</a>
+        <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/531627/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10000265&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </article>
     </div>
   </section>
@@ -838,7 +847,7 @@ section[id]{scroll-margin-top:100px}
           <p class="pp__new is-cp"><i class="is-cp">クーポン利用で</i><b>4,792</b>円〜</p>
         </div>
         <p class="pp__tax">税込・送料無料</p>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10000130/" target="_blank" rel="noopener">購入はこちら</a>
+        <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/10000130/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10000130&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </div>
     </article>
   </section>
