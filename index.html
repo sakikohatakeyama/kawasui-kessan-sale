@@ -36,8 +36,9 @@ a{color:inherit;text-decoration:none}
 
 /* ========== ヘッダー・ナビ ========== */
 .hd{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:12px;height:54px;padding:0 14px 0 18px;background:var(--red-d);color:#fff}
-.hd__logo{font-family:var(--mincho);font-weight:800;font-size:17px;letter-spacing:.16em;white-space:nowrap}
-.hd__logo small{display:block;font-family:var(--goth);font-weight:500;font-size:10px;letter-spacing:.12em;line-height:1;opacity:.8}
+.hd__logo{white-space:nowrap;line-height:1}
+.hd__logo img{display:block;height:24px;width:auto;margin-top:4px;filter:brightness(0) invert(1)}
+.hd__logo small{display:block;font-family:var(--goth);font-weight:500;font-size:10px;letter-spacing:.12em;line-height:1;opacity:.85}
 .hd__ttl{display:none}
 .hd__cta{flex:none;background:#fff;color:var(--red);font-weight:700;font-size:13px;letter-spacing:.06em;line-height:1;padding:11px 16px;border-radius:999px}
 .nav{position:sticky;top:54px;z-index:40;background:#fff;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
@@ -50,7 +51,7 @@ section[id]{scroll-margin-top:100px}
 /* ========== FV ========== */
 .fv{position:relative;display:flex;flex-direction:column;background:#000;color:#fff;text-align:center;overflow:hidden}
 .fv__confetti{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
-.fv__band{position:relative;z-index:3;height:40px;overflow:hidden;margin-top:22px}
+.fv__band{position:relative;z-index:3;height:40px;overflow:hidden;margin-top:34px}
 .fv__band img{width:100%;height:100%;object-fit:cover}
 .fv__body{position:relative;z-index:2;padding:26px 16px 0}
 .fv__ttl{position:relative;width:100%;max-width:440px;margin:0 auto}
@@ -227,7 +228,7 @@ section[id]{scroll-margin-top:100px}
 .notes li{list-style:none;padding-left:1em;text-indent:-1em}
 .notes li::before{content:"※"}
 .foot{background:var(--red) var(--wave);color:#fff;text-align:center;padding:52px 22px 56px}
-.foot__shop{font-family:var(--goth);font-weight:900;font-size:28px;letter-spacing:.24em}
+.foot__shop img{display:block;width:240px;height:auto;margin:0 auto;filter:brightness(0) invert(1)}
 .foot .btn{max-width:420px;margin:24px auto 0;background:var(--yellow);color:var(--red)}
 .foot .btn::after{border-color:var(--red)}
 
@@ -236,7 +237,7 @@ section[id]{scroll-margin-top:100px}
   .sp{display:none}.pc{display:inline}
   .pad,.sched .wrap,.hero-item,.mara__head,.second__intro,.notes{padding-left:max(48px,calc((100% - 1120px)/2));padding-right:max(48px,calc((100% - 1120px)/2))}
   .hd{height:64px;padding:0 32px}
-  .hd__logo{font-size:22px}
+  .hd__logo img{height:30px}
   .hd__logo small{font-size:11px}
   .hd__ttl{display:block;flex:1;margin-left:24px;padding-left:24px;border-left:1px solid rgba(255,255,255,.35);font-weight:700;font-size:15px;letter-spacing:.06em}
   .hd__cta{font-size:15px;padding:13px 26px}
@@ -251,9 +252,9 @@ section[id]{scroll-margin-top:100px}
   .fv__strip{position:absolute;left:3.3cqw;top:0;bottom:0;width:18.8cqw;height:auto;margin:0;z-index:2;background:none}
   .fv__track{flex-direction:column;gap:1cqw;width:18.8cqw;animation:mqy 30s linear infinite}
   .fv__track img{width:18.8cqw;height:18.75cqw}
-  .fv__band{position:absolute;left:0;right:0;top:4.3cqw;height:5.4cqw;margin:0}
+  .fv__band{position:absolute;left:0;right:0;top:6.6cqw;height:5.44cqw;margin:0}
   .fv__band img{object-fit:fill}
-  .fv__body{position:absolute;left:26.5cqw;top:15.4cqw;width:51cqw;padding:0}
+  .fv__body{position:absolute;left:26.5cqw;top:16.4cqw;width:51cqw;padding:0}
   .fv__ttl{max-width:none}
   .fv__date{margin-top:2.6cqw;font-size:2.85cqw;letter-spacing:.03em}
   .fv__chara{position:absolute;left:69.7cqw;bottom:0;width:27cqw;height:30cqw;margin:0;display:block}
@@ -334,7 +335,7 @@ section[id]{scroll-margin-top:100px}
 
   .notes{padding-top:64px;padding-bottom:64px;font-size:14px}
   .foot{padding:80px 48px}
-  .foot__shop{font-size:36px}
+  .foot__shop img{width:320px}
 }
 </style>
 </head>
@@ -342,7 +343,7 @@ section[id]{scroll-margin-top:100px}
 <div class="page">
 
   <header class="hd">
-    <p class="hd__logo"><small>楽天市場店</small>うなぎ屋かわすい</p>
+    <p class="hd__logo"><small>楽天市場店</small><img src="img/logo-kawasui.png" alt="うなぎ屋かわすい" width="960" height="160"></p>
     <p class="hd__ttl">決算感謝祭 開催　11/4(水)20:00〜11/27(金)13:59</p>
     <a class="hd__cta" href="#first">セール商品を見る</a>
   </header>
@@ -366,7 +367,7 @@ section[id]{scroll-margin-top:100px}
         <img src="img/photo-03.jpg" alt="" width="1000" height="667">
       </div>
     </div>
-    <p class="fv__band"><img src="img/fv-band.jpg" alt="日頃の感謝を込めて、うなぎで大還元！" width="2511" height="136"></p>
+    <p class="fv__band"><img src="img/fv-band.jpg" alt="日頃の感謝を込めて、うなぎで大還元！" width="2500" height="136"></p>
     <div class="fv__body">
       <h1 class="fv__ttl"><img src="img/fv-title.png" alt="うなぎ屋かわすいの決算感謝祭" width="1275" height="395"></h1>
       <p class="fv__date">11.4<small>(水)</small>20:00〜11.27<small>(金)</small>13:59</p>
@@ -615,7 +616,7 @@ section[id]{scroll-margin-top:100px}
   </section>
 
   <footer class="foot">
-    <p class="foot__shop">うなぎ屋かわすい</p>
+    <p class="foot__shop"><img src="img/logo-kawasui.png" alt="うなぎ屋かわすい" width="960" height="160" loading="lazy"></p>
     <a class="btn" href="https://www.rakuten.co.jp/kawasui/" target="_blank" rel="noopener">ショップトップへ</a>
   </footer>
 </div>
