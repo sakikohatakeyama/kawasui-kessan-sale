@@ -175,7 +175,7 @@ section[id]{scroll-margin-top:100px}
 .price__old s{font-family:var(--num);font-weight:700;font-size:19px;margin:0 2px}
 .price__arrow{color:var(--muted);font-size:15px}
 .price__lbl{font-size:14px;font-weight:900;color:var(--red)}
-.price__now{font-family:var(--num);font-weight:700;font-size:56px;color:var(--red);letter-spacing:-.02em}
+.price__now{font-family:var(--num);font-weight:700;font-size:56px;color:var(--red);letter-spacing:.01em}
 .price__now small{font-family:var(--goth);font-weight:900;font-size:20px;margin-left:2px}
 .price__tax{font-size:12px;color:var(--muted)}
 .off{display:inline-flex;align-items:baseline;gap:4px;margin-top:14px;background:var(--yellow);color:var(--red);padding:8px 14px 7px;font-weight:900;font-size:15px;letter-spacing:.06em}
@@ -290,7 +290,8 @@ section[id]{scroll-margin-top:100px}
 .pp__new{color:var(--red);font-weight:900;font-size:20px;line-height:1;white-space:nowrap}
 .pp__old{white-space:nowrap}
 .pp__new i{display:table;color:var(--red);font-size:14px;margin-bottom:2px}
-.pp__new b{font-family:var(--num);font-weight:800;font-size:54px;letter-spacing:-.02em;margin-right:2px}
+.pp__new b{font-family:var(--num);font-weight:800;font-size:54px;letter-spacing:.01em;margin-right:2px}
+.cm{font-size:.7em;letter-spacing:0;margin:0 .02em}
 .pp__tax{margin-top:8px;font-size:12px;color:var(--muted)}
 .last .price__now{color:var(--red);font-size:52px}
 .last .buy{margin-top:20px}
@@ -438,7 +439,8 @@ section[id]{scroll-margin-top:100px}
   .mara__head{padding-bottom:50px}
   .rows{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;border:0;padding:0 max(48px,calc((100% - 1120px)/2)) 110px}
   .mara .rows{background:none}
-  .row{grid-template-columns:200px 1fr;gap:26px;padding:32px;background:#fff;border:1px solid var(--line);border-radius:10px}
+  .row{grid-template-columns:1fr;gap:0;padding:28px;background:#fff;border:1px solid var(--line);border-radius:10px}
+  .row > img{width:100%;margin-bottom:22px}
   .row__name{font-size:26px}
   .row .price__now{font-size:46px}
 
@@ -680,7 +682,7 @@ section[id]{scroll-margin-top:100px}
       <div class="hero-item__body">
         <h3 class="hero-item__copy">あの<em>伝説の福袋</em>が、<br>帰ってきました。</h3>
         <p class="hero-item__txt">国産うなぎの蒲焼きを中心に、かわすい自慢の品をぎゅっと詰め合わせ。何が入っているかは届いてからのお楽しみです。</p>
-        <p class="price"><span class="price__now">4,980<small>円〜</small></span><span class="price__tax">税込</span></p>
+        <p class="price"><span class="price__now">4<span class="cm">,</span>980<small>円〜</small></span><span class="price__tax">税込</span></p>
         <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/10002026/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10002026&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </div>
     </article>
@@ -692,7 +694,7 @@ section[id]{scroll-margin-top:100px}
       <div class="hero-item__body">
         <h3 class="hero-item__copy">お重に盛れば、<br>おうちがうなぎ屋に。</h3>
         <p class="hero-item__txt">かわすいオリジナルのお重箱。おうちの蒲焼きが、お店のうな重の佇まいに変わります。贈り物との組み合わせにも。</p>
-        <p class="price"><span class="price__now">1,350<small>円〜</small></span><span class="price__tax">税込</span></p>
+        <p class="price"><span class="price__now">1<span class="cm">,</span>350<small>円〜</small></span><span class="price__tax">税込</span></p>
         <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/10001006/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10001006&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </div>
     </article>
@@ -712,11 +714,11 @@ section[id]{scroll-margin-top:100px}
         <div>
           <h3 class="row__name">常温保存できる<br>蒲焼きカット 100g</h3>
           <p class="row__desc">2,000円以下・送料無料のお手頃グルメ。ストックや手土産に。</p>
-          <p class="cp cp--sale"><span class="cp__k">送料無料</span><span class="cp__v"><b>2,000</b>円以下</span></p>
+          <p class="cp cp--sale"><span class="cp__k">送料無料</span><span class="cp__v"><b>2<span class="cm">,</span>000</b>円以下</span></p>
           <div class="pp">
-            <p class="pp__old"><i>通常価格</i><s>2,080</s>円</p>
+            <p class="pp__old"><i>通常価格</i><s>2<span class="cm">,</span>080</s>円</p>
             <span class="pp__arw" aria-hidden="true"></span>
-            <p class="pp__new"><i>セール価格</i><b>1,680</b>円</p>
+            <p class="pp__new"><i>セール価格</i><b>1<span class="cm">,</span>680</b>円</p>
           </div>
           <p class="pp__tax">税込・送料無料</p>
         </div>
@@ -727,11 +729,11 @@ section[id]{scroll-margin-top:100px}
         <div>
           <h3 class="row__name">超特大 長焼き<br>200g×3本</h3>
           <p class="row__desc">専門店でもなかなか出会えない1本200gの肉厚サイズ。</p>
-          <p class="cp"><span class="cp__k">クーポン</span><span class="cp__v"><b>3,000</b>円OFF</span></p>
+          <p class="cp"><span class="cp__k">クーポン</span><span class="cp__v"><b>3<span class="cm">,</span>000</b>円OFF</span></p>
           <div class="pp">
-            <p class="pp__old"><i>通常価格</i><s>11,890</s>円</p>
+            <p class="pp__old"><i>通常価格</i><s>11<span class="cm">,</span>890</s>円</p>
             <span class="pp__arw" aria-hidden="true"></span>
-            <p class="pp__new is-cp"><i class="is-cp">クーポン利用で</i><b>8,890</b>円</p>
+            <p class="pp__new is-cp"><i class="is-cp">クーポン利用で</i><b>8<span class="cm">,</span>890</b>円</p>
           </div>
           <p class="pp__tax">税込・送料無料</p>
         </div>
@@ -754,9 +756,9 @@ section[id]{scroll-margin-top:100px}
       </div>
       <h3 class="last__name">蒲焼きカット 6枚セット</h3>
       <div class="pp">
-        <p class="pp__old"><i>通常価格</i><s>6,980</s>円</p>
+        <p class="pp__old"><i>通常価格</i><s>6<span class="cm">,</span>980</s>円</p>
         <span class="pp__arw" aria-hidden="true"></span>
-        <p class="pp__new"><i>5時間限定価格</i><b>5,400</b>円</p>
+        <p class="pp__new"><i>5時間限定価格</i><b>5<span class="cm">,</span>400</b>円</p>
       </div>
       <p class="pp__tax">税込・送料無料</p>
       <!-- コピーページで入稿予定：URL確定後に差し替え -->
@@ -785,11 +787,11 @@ section[id]{scroll-margin-top:100px}
         <img src="img/cut500.jpg" alt="うなぎ蒲焼きカット 大盛り500g" width="600" height="600" loading="lazy">
         <div>
           <h3 class="row__name">蒲焼きカット<br>大盛り 500g</h3>
-          <p class="cp"><span class="cp__k">クーポン</span><span class="cp__v"><b>1,000</b>円OFF</span></p>
+          <p class="cp"><span class="cp__k">クーポン</span><span class="cp__v"><b>1<span class="cm">,</span>000</b>円OFF</span></p>
           <div class="pp">
-            <p class="pp__old"><i>通常価格</i><s>9,180</s>円</p>
+            <p class="pp__old"><i>通常価格</i><s>9<span class="cm">,</span>180</s>円</p>
             <span class="pp__arw" aria-hidden="true"></span>
-            <p class="pp__new is-cp"><i class="is-cp">クーポン利用で</i><b>8,180</b>円〜</p>
+            <p class="pp__new is-cp"><i class="is-cp">クーポン利用で</i><b>8<span class="cm">,</span>180</b>円〜</p>
           </div>
           <p class="pp__tax">税込・送料無料</p>
         </div>
@@ -799,11 +801,11 @@ section[id]{scroll-margin-top:100px}
         <img src="img/cut1k.jpg" alt="うなぎ蒲焼きカット メガ盛り1kg" width="600" height="600" loading="lazy">
         <div>
           <h3 class="row__name">蒲焼きカット<br>メガ盛り 1kg</h3>
-          <p class="cp"><span class="cp__k">クーポン</span><span class="cp__v"><b>2,000</b>円OFF</span></p>
+          <p class="cp"><span class="cp__k">クーポン</span><span class="cp__v"><b>2<span class="cm">,</span>000</b>円OFF</span></p>
           <div class="pp">
-            <p class="pp__old"><i>通常価格</i><s>17,060</s>円</p>
+            <p class="pp__old"><i>通常価格</i><s>17<span class="cm">,</span>060</s>円</p>
             <span class="pp__arw" aria-hidden="true"></span>
-            <p class="pp__new is-cp"><i class="is-cp">クーポン利用で</i><b>15,060</b>円〜</p>
+            <p class="pp__new is-cp"><i class="is-cp">クーポン利用で</i><b>15<span class="cm">,</span>060</b>円〜</p>
           </div>
           <p class="pp__tax">税込・送料無料</p>
         </div>
@@ -815,9 +817,9 @@ section[id]{scroll-margin-top:100px}
           <h3 class="row__name">自家製ぽん酢付き<br>白焼き 120g 1尾</h3>
           <p class="cp cp--sale"><span class="cp__k">セール</span><span class="cp__v"><b>37</b>%OFF</span></p>
           <div class="pp">
-            <p class="pp__old"><i>通常価格</i><s>2,690</s>円</p>
+            <p class="pp__old"><i>通常価格</i><s>2<span class="cm">,</span>690</s>円</p>
             <span class="pp__arw" aria-hidden="true"></span>
-            <p class="pp__new"><i>セール価格</i><b>1,680</b>円</p>
+            <p class="pp__new"><i>セール価格</i><b>1<span class="cm">,</span>680</b>円</p>
           </div>
           <p class="pp__tax">税込</p>
         </div>
@@ -849,9 +851,9 @@ section[id]{scroll-margin-top:100px}
         <p class="hero-item__txt">うな重にする長焼き、少しずつ使えるカット、ひつまぶしやちらしに便利なきざみうなぎ。3種類の蒲焼きをひと箱にまとめたセットです。</p>
         <p class="cp"><span class="cp__k">クーポン</span><span class="cp__v"><b>20</b>%OFF</span></p>
         <div class="pp">
-          <p class="pp__old"><i>通常価格</i><s>5,990</s>円〜</p>
+          <p class="pp__old"><i>通常価格</i><s>5<span class="cm">,</span>990</s>円〜</p>
           <span class="pp__arw" aria-hidden="true"></span>
-          <p class="pp__new is-cp"><i class="is-cp">クーポン利用で</i><b>4,792</b>円〜</p>
+          <p class="pp__new is-cp"><i class="is-cp">クーポン利用で</i><b>4<span class="cm">,</span>792</b>円〜</p>
         </div>
         <p class="pp__tax">税込・送料無料</p>
         <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/10000130/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10000130&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
