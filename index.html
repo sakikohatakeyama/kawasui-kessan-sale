@@ -206,8 +206,8 @@ section[id]{scroll-margin-top:100px}
 .last__big{position:relative;margin-top:4px;font-family:var(--goth);font-weight:900;line-height:1}
 .last__big small{display:inline-flex;align-items:center;gap:12px;font-size:21px;letter-spacing:.12em;color:#fff}
 .last__big small::before,.last__big small::after{content:"";width:22px;height:2px;background:var(--yellow)}
-.last__big .l2{display:flex;align-items:baseline;justify-content:center;margin:14px 0 8px;font-size:min(34px,8.6vw);letter-spacing:.04em;white-space:nowrap}
-.last__big b{display:inline-block;font-family:var(--num);font-weight:800;font-size:min(96px,24vw);color:var(--yellow);line-height:.8;letter-spacing:-.03em;margin:0 .12em 0 .06em}
+.last__big .l2{display:flex;align-items:center;justify-content:center;margin:14px 0 8px;font-size:min(34px,8.6vw);letter-spacing:.04em;white-space:nowrap}
+.last__big b{display:inline-block;font-family:var(--num);font-weight:800;font-size:min(96px,24vw);color:var(--yellow);line-height:1;transform-origin:center;position:relative;top:-.04em;letter-spacing:-.03em;margin:0 .12em 0 .06em}
 .last__big em{font-style:normal;color:var(--yellow)}
 .last__date{display:inline-block;margin-top:26px;padding:10px 14px;background:var(--deep);border-radius:6px;white-space:nowrap;font-family:var(--num);font-weight:700;font-size:19px;line-height:1.3}
 .last__date small{font-family:var(--goth);font-size:12px;font-weight:700;margin:0 2px}
@@ -364,6 +364,10 @@ section[id]{scroll-margin-top:100px}
   .foot{padding:80px 48px}
   .foot__shop img{width:320px}
 }
+/* スクロールでふわっと表示 */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.3,1);transition-delay:var(--d,0s)}
+.rv.is-shown{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -561,7 +565,7 @@ section[id]{scroll-margin-top:100px}
   <!-- ===== ラスト5時間 ===== -->
   <section class="last" id="last5">
     <div class="last__head">
-    <h2 class="last__big"><small>お買い物マラソン最終日</small><span class="l2">ラスト<b>5</b>時間<em>限定！</em></span></h2>
+    <h2 class="last__big"><small>お買い物マラソン最終日</small><span class="l2">ラスト<b>5</b>時間<em>限定</em></span></h2>
     <p class="last__date">11/10<small>(火)</small>21:00 – 11/11<small>(水)</small>01:59</p>
     <p class="last__count" id="last5count"><span class="st" data-start="2026-11-10T21:00" data-end="2026-11-11T01:59"></span></p>
     </div>
@@ -724,6 +728,48 @@ section[id]{scroll-margin-top:100px}
   var fv = document.querySelector('.fv'), img = document.querySelector('.fv__ttl img'), done = false;
   function go(){ if (done) return; done = true; fv.classList.add('is-go'); }
   if (img.complete) go(); else { img.addEventListener('load', go); img.addEventListener('error', go); setTimeout(go, 2500); }
+})();
+
+// スクロールで要素をふわっと表示（同じ並びのものは少しずつ時間差で）
+(function(){
+  var groups = [
+    '.sched .sec-no, .sched .h2, .sched .lead, .pl-hint',
+    '.pl-list > li',
+    '.wave-head > *',
+    '.hero-item__img, .hero-item__body',
+    '.mara__head > *',
+    '.rows > .row',
+    '.last__date, .last__count',
+    '.last__item',
+    '.second__intro > *',
+    '.notes, .foot > *',
+    '.cd > *'
+  ];
+  var items = [];
+  // 画面下から8%の位置まで来たもの（通り過ぎたものも）を表示
+  function check(){
+    var line = innerHeight * .92;
+    items = items.filter(function(el){
+      if (el.getBoundingClientRect().top < line) { el.classList.add('is-shown'); return false; }
+      return true;
+    });
+    if (!items.length) removeEventListener('scroll', onScroll);
+  }
+  var ticking = false;
+  function onScroll(){ if (!ticking) { ticking = true; setTimeout(function(){ ticking = false; check(); }, 60); } }
+  groups.forEach(function(sel){
+    var parent = null, i = 0;
+    [].forEach.call(document.querySelectorAll(sel), function(el){
+      if (el.parentNode !== parent) { parent = el.parentNode; i = 0; }
+      el.classList.add('rv');
+      el.style.setProperty('--d', Math.min(i++, 5) * .1 + 's');
+      items.push(el);
+    });
+  });
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', onScroll);
+  check();
+  addEventListener('load', check);
 })();
 
 // ラスト5時間：画面に入ったらドーン
