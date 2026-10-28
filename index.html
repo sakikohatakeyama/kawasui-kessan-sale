@@ -410,6 +410,26 @@ section[id]{scroll-margin-top:100px}
 .third .pp__new,.third .pp__new i{color:#e9c45a;background:linear-gradient(180deg,#fff3c4 0%,#f1cf6b 30%,#c99a2e 60%,#f6dc8a 80%,#b8862b 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .third .pp__arw{border-left-color:#e0b64a}
 
+/* BF：カミングスーン */
+.bf-soon{background:#111;color:#fff;text-align:center;padding:56px 22px 64px}
+.bf-soon__ttl{font-family:"Jost",sans-serif;font-weight:500;font-size:min(52px,13vw);letter-spacing:.06em;line-height:1;color:#e9c45a;background:linear-gradient(110deg,transparent 42%,rgba(255,255,255,.9) 50%,transparent 58%) no-repeat,linear-gradient(180deg,#fff3c4 0%,#f1cf6b 35%,#c99a2e 62%,#f6dc8a 85%,#b8862b 100%);background-size:300% 100%,100% 100%;background-position:100% 0,0 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:goldShine 5s ease-in-out .5s infinite}
+.bf-soon__lead{margin-top:18px;font-weight:700;font-size:18px;line-height:1.7}
+.bf-soon__lead b{font-family:var(--num);font-weight:600;font-size:1.3em;color:#e9c45a}
+.bf-soon__lead small{font-family:var(--goth);font-size:.6em;margin:0 .15em}
+.bf-soon__cards{list-style:none;display:flex;justify-content:center;gap:12px;margin:32px auto 0;max-width:720px}
+.bf-soon__cards li{flex:1;max-width:220px;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border:2px solid #c99a2e;border-radius:12px;background:radial-gradient(circle at 50% 40%,#2a2318,#0b0a08 70%);box-shadow:inset 0 0 0 4px #111,inset 0 0 0 5px rgba(233,196,90,.4)}
+.bf-soon__cards span{font-family:"Jost",sans-serif;font-weight:600;font-size:min(64px,14vw);line-height:1;color:#e9c45a;background:linear-gradient(180deg,#fff3c4,#c99a2e 60%,#f6dc8a);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:qPulse 2.4s ease-in-out infinite}
+.bf-soon__cards li:nth-child(2) span{animation-delay:.4s}
+.bf-soon__cards li:nth-child(3) span{animation-delay:.8s}
+.bf-soon__cards i{font-style:normal;font-family:"Jost",sans-serif;font-weight:600;font-size:12px;letter-spacing:.24em;color:#c99a2e}
+@keyframes qPulse{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.12);opacity:1}}
+.bf-soon__note{margin-top:28px;font-size:14px;line-height:1.9;color:rgba(255,255,255,.8)}
+@media (prefers-reduced-motion:reduce){.bf-soon__ttl,.bf-soon__cards span{animation:none}}
+@media (min-width:900px){.bf-soon{padding:80px 48px 100px}.bf-soon__ttl{font-size:88px}.bf-soon__lead{font-size:24px}.bf-soon__cards{gap:24px}.bf-soon__note{font-size:16px}}
+.pl__img--soon{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:radial-gradient(circle at 50% 40%,#2a2318,#0b0a08 70%);border:2px solid #c99a2e}
+.pl__img--soon b{font-family:"Jost",sans-serif;font-weight:600;font-size:48px;line-height:1;color:#e9c45a}
+.pl__img--soon i{font-style:normal;font-family:"Jost",sans-serif;font-size:11px;letter-spacing:.2em;color:#c99a2e}
+
 /* ========== 注意・フッター ========== */
 .notes{background:var(--cream);padding:48px 22px 50px;font-size:13px;line-height:1.9;color:var(--muted)}
 .notes h3{font-size:15px;font-weight:900;color:var(--ink);margin-bottom:10px;letter-spacing:.1em}
@@ -734,13 +754,13 @@ section[id]{scroll-margin-top:100px}
         </a></li>
         <li><a class="pl" href="#third" style="--c:#141110;--f:var(--yellow)">
           <span class="pl__head"><b>セール第三弾<small>ブラックフライデー</small></b><span class="st" data-start="2026-11-19T20:00" data-end="2026-11-27T13:59"></span></span>
-          <span class="pl__img"><img decoding="async" src="img/set3.webp" alt="" width="600" height="600" loading="lazy"></span>
+          <span class="pl__img pl__img--soon"><b>?</b><i>SECRET</i></span>
           <span class="pl__body">
-            <span class="pl__deal"><em>20</em>%OFF</span>
-            <span class="pl__items">3種セット</span>
+            <span class="pl__deal"><em class="j">COMING SOON</em></span>
+            <span class="pl__items">11/19(木)20:00 公開</span>
             <span class="pl__date">11/19<small>(木)</small>20:00 – 11/27<small>(金)</small>13:59</span>
           </span>
-          <span class="pl__go">商品を見る<i></i></span>
+          <span class="pl__go">予告を見る<i></i></span>
         </a></li>
       </ol>
     </div>
@@ -922,6 +942,7 @@ section[id]{scroll-margin-top:100px}
       <p class="wave-head__note">決算感謝祭の締めくくり。<br class="sp">ブラックフライデーと同時開催です。</p>
     </div>
 
+    <!-- 公開時にここを商品ブロックに差し替え（3種セット20%OFFの元コードは下のコメント内）
     <article class="hero-item">
       <div class="hero-item__img">
         <span class="hero-item__cap">20%OFFクーポン</span>
@@ -930,7 +951,7 @@ section[id]{scroll-margin-top:100px}
       <div class="hero-item__body">
         <h3 class="hero-item__copy">長焼き・カット・きざみ<br>3種をひと箱で。</h3>
         <p class="hero-item__txt">うな重にする長焼き、少しずつ使えるカット、ひつまぶしやちらしに便利なきざみうなぎ。3種類の蒲焼きをひと箱にまとめたセットです。</p>
-        <!-- クーポンURLは後で差し替え --><a class="cpn" href="#" target="_blank" rel="noopener"><span class="cpn__v"><b>20</b><span class="cpn__u"><i>%OFF</i>クーポン</span></span><span class="cpn__get">獲得</span></a>
+        <!— クーポンURLは後で差し替え —><a class="cpn" href="#" target="_blank" rel="noopener"><span class="cpn__v"><b>20</b><span class="cpn__u"><i>%OFF</i>クーポン</span></span><span class="cpn__get">獲得</span></a>
         <div class="pp">
           <p class="pp__old"><i>通常価格</i><s>5<span class="cm">,</span>990</s>円〜</p>
           <span class="pp__arw" aria-hidden="true"></span>
@@ -940,6 +961,17 @@ section[id]{scroll-margin-top:100px}
         <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/10000130/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10000130&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </div>
     </article>
+    -->
+    <div class="bf-soon">
+      <p class="bf-soon__ttl">COMING SOON</p>
+      <p class="bf-soon__lead">ブラックフライデーの内容は<br class="sp"><b>11/19<small>(木)</small>20:00</b> に公開！</p>
+      <ul class="bf-soon__cards" aria-hidden="true">
+        <li><span>?</span><i>SECRET</i></li>
+        <li><span>?</span><i>SECRET</i></li>
+        <li><span>?</span><i>SECRET</i></li>
+      </ul>
+      <p class="bf-soon__note">決算感謝祭のラストを飾る、とっておきの企画をご用意しています。<br>お楽しみに！</p>
+    </div>
   </section>
 
   <!-- ===== 注意事項 ===== -->
@@ -1026,6 +1058,7 @@ section[id]{scroll-margin-top:100px}
     '.pl-list > li',
     '.wave-head > *',
     '.hero-item__img, .hero-item__body',
+    '.bf-soon > *, .bf-soon__cards > li',
     '.mara__head > *',
     '.rows > .row',
     '.last__date, .last__count',
