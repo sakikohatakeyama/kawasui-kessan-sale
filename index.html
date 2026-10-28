@@ -430,6 +430,63 @@ section[id]{scroll-margin-top:100px}
 .pl__img--soon b{font-family:"Jost",sans-serif;font-weight:600;font-size:48px;line-height:1;color:#e9c45a}
 .pl__img--soon i{font-style:normal;font-family:"Jost",sans-serif;font-size:11px;letter-spacing:.2em;color:#c99a2e}
 
+/* ========== 店長誕生日 ========== */
+.bd{position:relative;overflow:hidden;isolation:isolate;text-align:center;padding:64px 22px 64px;background:radial-gradient(ellipse at 50% 0%,#fff6ee 0,#fbe1e2 60%,#f6cfd3 100%);color:var(--ink)}
+.bd > *{position:relative;z-index:1}
+.bd__flags{position:absolute!important;left:0;right:0;top:0;height:46px;display:flex;justify-content:center;z-index:0!important;pointer-events:none}
+.bd__flags::before{content:"";position:absolute;left:-2%;right:-2%;top:6px;height:24px;border-top:2px solid #c9b9a6;border-radius:0 0 50% 50%/0 0 100% 100%}
+.bd__flags i{flex:none;width:40px;height:34px;margin:0 2px;margin-top:calc(8px + var(--y,0px));background:var(--fc);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0;animation:flag 3s ease-in-out infinite}
+.bd__flags i:nth-child(odd){animation-delay:-1.5s}
+.bd__flags i:nth-child(4n+3){box-shadow:inset 0 0 0 1px #e6d8ca}
+@keyframes flag{50%{transform:rotate(4deg)}}
+.bd__balloons{position:absolute!important;inset:0;z-index:0!important;pointer-events:none}
+.bd__bal{position:absolute;width:64px;animation:float 6s ease-in-out infinite}
+.bd__bal svg{width:100%;height:auto;display:block;filter:drop-shadow(0 6px 8px rgba(120,40,40,.18))}
+.bd__bal--1{left:3%;top:90px}
+.bd__bal--2{left:14%;top:260px;width:48px;animation-delay:-2s}
+.bd__bal--3{left:7%;bottom:30px;width:52px;animation-delay:-4s}
+.bd__bal--4{right:4%;top:80px;animation-delay:-1s}
+.bd__bal--5{right:15%;top:250px;width:50px;animation-delay:-3s}
+.bd__bal--6{right:6%;bottom:40px;width:56px;animation-delay:-5s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-16px) rotate(3deg)}}
+.bd__date{display:inline-block;position:relative;margin-top:18px;padding:10px 22px;border-radius:999px;background:#d94a6a;color:#fff;font-family:var(--num);font-weight:700;font-size:min(22px,5.6vw);white-space:nowrap}
+.bd__date small{font-family:var(--goth);font-size:.62em;margin:0 .2em 0 .12em}
+.bd__hb{margin-top:22px;font-family:"Jost",sans-serif;font-weight:500;font-style:italic;font-size:min(40px,10vw);letter-spacing:.04em;line-height:1;color:#d94a6a}
+.bd__ttl{margin-top:14px;font-family:var(--goth);font-weight:900;line-height:1.2}
+.bd__ttl small{display:block;font-size:20px;letter-spacing:.06em;color:var(--ink)}
+.bd__l2{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:12px;white-space:nowrap}
+.bd__all{flex:none;display:grid;place-items:center;width:2.4em;height:2.4em;border-radius:50%;background:var(--red);color:#fff;font-size:min(30px,5.4vw);line-height:1}
+.bd__p{font-size:min(38px,7.4vw);color:var(--red)}
+.bd__p b{font-family:var(--num);font-weight:700;font-size:2.3em;line-height:.8;margin:0 .04em;color:#e9c45a;background:linear-gradient(180deg,#fff3c4 0%,#f1cf6b 30%,#c99a2e 60%,#f6dc8a 80%,#b8862b 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 0 rgba(156,23,15,.35))}
+.bd .st{margin-top:20px}
+.bd__txt{margin-top:20px;font-size:15px;line-height:1.9}
+.bd__btn{max-width:420px;margin:26px auto 0;border-radius:999px;background:#d94a6a}
+.bd__btn:hover{background:#c23a5a}
+@media (prefers-reduced-motion:reduce){.bd__bal,.bd__flags i{animation:none}}
+@media (max-width:899px){
+  .bd{padding-top:72px}
+  .bd__l2{gap:6px}
+  .bd__bal{width:38px}.bd__bal--2,.bd__bal--5{width:30px}
+  .bd__bal--1{left:2%;top:auto;bottom:160px}.bd__bal--2{left:8%;top:auto;bottom:60px}.bd__bal--3{left:auto;right:4%;bottom:170px}
+  .bd__bal--4{right:3%;top:auto;bottom:80px}.bd__bal--5{right:14%;top:auto;bottom:20px}.bd__bal--6{display:none}
+}
+@media (min-width:900px){
+  .bd{padding:90px 48px 100px}
+  .bd__flags{height:60px}.bd__flags i{width:54px;height:44px}
+  .bd__bal{width:96px}.bd__bal--2,.bd__bal--5{width:70px}.bd__bal--3,.bd__bal--6{width:80px}
+  .bd__bal--1{left:8%;top:110px}.bd__bal--2{left:18%;top:330px}.bd__bal--3{left:10%;bottom:50px}
+  .bd__bal--4{right:8%;top:100px}.bd__bal--5{right:19%;top:320px}.bd__bal--6{right:10%;bottom:60px}
+  .bd__date{font-size:30px;padding:12px 32px}
+  .bd__hb{font-size:64px;margin-top:30px}
+  .bd__ttl small{font-size:28px}
+  .bd__all{font-size:46px}
+  .bd__p{font-size:64px}
+  .bd__txt{font-size:18px}
+}
+.pl__img--bd{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:radial-gradient(circle at 50% 40%,#fff6ee,#f6cfd3);border:2px solid #d94a6a}
+.pl__img--bd i{font-style:italic;font-family:"Jost",sans-serif;font-weight:500;font-size:clamp(16px,2vw,26px);line-height:1.1;color:#d94a6a}
+.pl__img--bd b{font-family:var(--num);font-weight:700;font-size:clamp(36px,4.6vw,64px);line-height:1;color:var(--red)}
+
 /* ========== 注意・フッター ========== */
 .notes{background:var(--cream);padding:48px 22px 50px;font-size:13px;line-height:1.9;color:var(--muted)}
 .notes h3{font-size:15px;font-weight:900;color:var(--ink);margin-bottom:10px;letter-spacing:.1em}
@@ -488,7 +545,7 @@ section[id]{scroll-margin-top:100px}
   .sched{padding:110px 0}
   .pl-hint{font-size:22px;margin-top:40px}
   .pl-hint span{font-size:15px}
-  .pl-list{grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin-top:28px}
+  .pl-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:28px;max-width:900px;margin-left:auto;margin-right:auto}
   .pl{grid-template-columns:1fr;grid-template-rows:auto auto 1fr auto;grid-template-areas:"head" "img" "body" "go";column-gap:0}
   .pl__head{padding:16px 10px;justify-content:center}
   .pl__head b{font-size:17px;letter-spacing:.02em;white-space:nowrap}
@@ -690,6 +747,7 @@ section[id]{scroll-margin-top:100px}
       <li><a href="#schedule">スケジュール</a></li>
       <li><a href="#first">セール第一弾</a></li>
       <li><a href="#marathon">お買い物<br class="sp">マラソン期間</a></li>
+      <li><a href="#birthday">店長誕生日<br class="sp"><span class="pc"> </span>P10倍</a></li>
       <li><a href="#last5">マラソン<br class="sp">ラスト5時間</a></li>
       <li><a href="#second">セール第二弾</a></li>
       <li><a class="nav__bf" href="#third">セール第三弾<br class="sp"><span class="pc"> </span>ブラックフライデー</a></li>
@@ -732,6 +790,16 @@ section[id]{scroll-margin-top:100px}
           </span>
           <span class="pl__go">商品を見る<i></i></span>
         </a></li>
+        <li><a class="pl" href="#birthday" style="--c:#d94a6a;--f:#fff">
+          <span class="pl__head"><b>店長誕生日</b><span class="st" data-start="2026-11-09T00:00" data-end="2026-11-09T23:59"></span></span>
+          <span class="pl__img pl__img--bd"><i>Happy<br>Birthday</i><b>11/9</b></span>
+          <span class="pl__body">
+            <span class="pl__deal">全品<em>P10</em>倍</span>
+            <span class="pl__items">1日限定・全商品が対象</span>
+            <span class="pl__date">11/9<small>(月)</small>0:00 – 23:59</span>
+          </span>
+          <span class="pl__go">詳しく見る<i></i></span>
+        </a></li>
         <li><a class="pl" href="#last5" style="--c:var(--red);--f:#fff">
           <span class="pl__head"><b>マラソンラスト5時間</b><span class="st" data-start="2026-11-10T21:00" data-end="2026-11-11T01:59"></span></span>
           <span class="pl__img"><img decoding="async" src="img/cut6.webp" alt="" width="600" height="600" loading="lazy"></span>
@@ -757,7 +825,7 @@ section[id]{scroll-margin-top:100px}
           <span class="pl__img pl__img--soon"><b>?</b><i>SECRET</i></span>
           <span class="pl__body">
             <span class="pl__deal"><em class="j">COMING SOON</em></span>
-            <span class="pl__items">11/19(木)20:00 公開</span>
+            <span class="pl__items">11/12(木)10:00 公開</span>
             <span class="pl__date">11/19<small>(木)</small>20:00 – 11/27<small>(金)</small>13:59</span>
           </span>
           <span class="pl__go">予告を見る<i></i></span>
@@ -842,6 +910,18 @@ section[id]{scroll-margin-top:100px}
         <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/10000913/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10000913&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </article>
     </div>
+  </section>
+
+  <!-- ===== 店長誕生日 ===== -->
+  <section class="bd" id="birthday">
+    <div class="bd__flags" aria-hidden="true"><i style="--fc:#c8201a"></i><i style="--fc:#e0b64a"></i><i style="--fc:#fff"></i><i style="--fc:#d94a6a"></i><i style="--fc:#c8201a"></i><i style="--fc:#e0b64a"></i><i style="--fc:#fff"></i><i style="--fc:#d94a6a"></i><i style="--fc:#c8201a"></i><i style="--fc:#e0b64a"></i><i style="--fc:#fff"></i><i style="--fc:#d94a6a"></i><i style="--fc:#c8201a"></i><i style="--fc:#e0b64a"></i><i style="--fc:#fff"></i><i style="--fc:#d94a6a"></i><i style="--fc:#c8201a"></i><i style="--fc:#e0b64a"></i><i style="--fc:#fff"></i><i style="--fc:#d94a6a"></i></div>
+    <div class="bd__balloons" aria-hidden="true"><span class="bd__bal bd__bal--1"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#c8201a"/><path d="M26 66 l4 9 l4 -9z" fill="#c8201a"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#ff8a80" opacity=".55" transform="rotate(-20 21 24)"/></svg></span><span class="bd__bal bd__bal--2"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#e0b64a"/><path d="M26 66 l4 9 l4 -9z" fill="#e0b64a"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#fff3c4" opacity=".55" transform="rotate(-20 21 24)"/></svg></span><span class="bd__bal bd__bal--3"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#ffffff"/><path d="M26 66 l4 9 l4 -9z" fill="#ffffff"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#ffffff" opacity=".55" transform="rotate(-20 21 24)"/></svg></span><span class="bd__bal bd__bal--4"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#d94a6a"/><path d="M26 66 l4 9 l4 -9z" fill="#d94a6a"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#ffc1cc" opacity=".55" transform="rotate(-20 21 24)"/></svg></span><span class="bd__bal bd__bal--5"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#e0b64a"/><path d="M26 66 l4 9 l4 -9z" fill="#e0b64a"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#fff3c4" opacity=".55" transform="rotate(-20 21 24)"/></svg></span><span class="bd__bal bd__bal--6"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#c8201a"/><path d="M26 66 l4 9 l4 -9z" fill="#c8201a"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#ff8a80" opacity=".55" transform="rotate(-20 21 24)"/></svg></span></div>
+    <p class="bd__date">11/9<small>(月)</small>0:00 – 23:59</p>
+    <p class="bd__hb">Happy Birthday!</p>
+    <h2 class="bd__ttl"><small>店長の誕生日を記念して</small><span class="bd__l2"><span class="bd__all">全品</span><span class="bd__p">ポイント<b>10</b>倍</span></span></h2>
+    <p><span class="st" data-start="2026-11-09T00:00" data-end="2026-11-09T23:59"></span></p>
+    <p class="bd__txt">11月9日は店長の誕生日。<br>いつもかわすいを選んでくださる皆さまへ、<br class="sp">感謝をこめて1日限定で全品ポイント10倍！</p>
+    <a class="btn bd__btn" href="https://www.rakuten.co.jp/kawasui/" target="_blank" rel="noopener">ショップの全商品を見る</a>
   </section>
 
   <!-- ===== ラスト5時間 ===== -->
@@ -964,7 +1044,7 @@ section[id]{scroll-margin-top:100px}
     -->
     <div class="bf-soon">
       <p class="bf-soon__ttl">COMING SOON</p>
-      <p class="bf-soon__lead">ブラックフライデーの内容は<br class="sp"><b>11/19<small>(木)</small>20:00</b> に公開！</p>
+      <p class="bf-soon__lead">ブラックフライデーの内容は<br class="sp"><b>11/12<small>(木)</small>10:00</b> に公開！</p>
       <ul class="bf-soon__cards" aria-hidden="true">
         <li><span>?</span><i>SECRET</i></li>
         <li><span>?</span><i>SECRET</i></li>
@@ -994,7 +1074,7 @@ section[id]{scroll-margin-top:100px}
 (function(){
   var now = Date.now();
   var jst = function(s){ return new Date(s + ':59+09:00').getTime(); };
-  var md = function(s){ var d = new Date(s + ':00+09:00'); return (d.getUTCMonth()+1) + '/' + d.getUTCDate(); };
+  var md = function(s){ return (+s.slice(5,7)) + '/' + (+s.slice(8,10)); };
   [].forEach.call(document.querySelectorAll('.st[data-start]'), function(el){
     var s = new Date(el.dataset.start + ':00+09:00').getTime(), e = jst(el.dataset.end);
     var state = now < s ? 'soon' : now > e ? 'end' : 'now';
@@ -1059,6 +1139,7 @@ section[id]{scroll-margin-top:100px}
     '.wave-head > *',
     '.hero-item__img, .hero-item__body',
     '.bf-soon > *, .bf-soon__cards > li',
+    '.bd > p, .bd > h2, .bd > a',
     '.mara__head > *',
     '.rows > .row',
     '.last__date, .last__count',
