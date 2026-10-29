@@ -174,7 +174,7 @@ section[id]{scroll-margin-top:100px}
 .hero-item__body{padding:30px 22px 0}
 .hero-item__copy{font-family:var(--goth);font-weight:900;font-size:27px;line-height:1.5;letter-spacing:.03em;text-align:center}
 .hero-item__copy em{font-style:normal;color:var(--red)}
-.hero-item__txt{margin-top:16px;font-size:15px;line-height:1.95}
+.hero-item__txt{margin-top:16px;font-size:15px;line-height:1.95;text-align:center}
 .hero-item .price{justify-content:center}
 
 /* 価格 */
@@ -457,14 +457,15 @@ section[id]{scroll-margin-top:100px}
 @media (prefers-reduced-motion:reduce){.bd__bal{animation:none}}
 @media (max-width:899px){
   .bd__bal{width:38px}.bd__bal--2,.bd__bal--5{width:30px}
-  .bd__bal--1{left:2%;top:auto;bottom:160px}.bd__bal--2{left:8%;top:auto;bottom:60px}.bd__bal--3{left:auto;right:4%;bottom:170px}
-  .bd__bal--4{right:3%;top:auto;bottom:80px}.bd__bal--5{right:14%;top:auto;bottom:20px}.bd__bal--6{display:none}
+  .bd{padding-bottom:170px}
+  .bd__bal--1{left:6%;top:auto;bottom:16px}.bd__bal--2{left:24%;top:auto;bottom:34px}.bd__bal--3{left:44%;bottom:10px}
+  .bd__bal--4{right:6%;top:auto;bottom:24px}.bd__bal--5{right:25%;top:auto;bottom:38px}.bd__bal--6{display:none}
 }
 @media (min-width:900px){
   .bd{padding:56px 48px 100px}
       .bd__bal{width:96px}.bd__bal--2,.bd__bal--5{width:70px}.bd__bal--3,.bd__bal--6{width:80px}
-  .bd__bal--1{left:8%;top:110px}.bd__bal--2{left:18%;top:330px}.bd__bal--3{left:10%;bottom:50px}
-  .bd__bal--4{right:8%;top:100px}.bd__bal--5{right:19%;top:320px}.bd__bal--6{right:10%;bottom:60px}
+  .bd__bal--1{left:6%;top:200px}.bd__bal--2{left:14%;top:470px}.bd__bal--3{left:7%;bottom:50px}
+  .bd__bal--4{right:6%;top:190px}.bd__bal--5{right:14%;top:460px}.bd__bal--6{right:7%;bottom:60px}
   .bd__hb{font-size:54px;margin-top:12px}
   .bd__ttl small{font-size:28px}
   .bd__ne{font-size:26px}
@@ -510,6 +511,7 @@ section[id]{scroll-margin-top:100px}
   .nav ul{display:grid;grid-template-columns:repeat(7,auto);justify-content:center}
   .nav a{height:100%;display:flex;align-items:center;justify-content:center;padding:10px 16px;font-size:13px;line-height:1.35;text-align:center;letter-spacing:.03em}
   .nav a .sp{display:inline}.nav a .pc{display:none}
+  .bd__bal--3,.bd__bal--6{display:none}
 }
 @media (min-width:900px){
   /* PC FV：2000×960のデザインを cqw で等倍再現（1cqw = 20px） */
@@ -850,7 +852,7 @@ section[id]{scroll-margin-top:100px}
       </div>
       <div class="hero-item__body">
         <h3 class="hero-item__copy">あの<em>伝説の福袋</em>が、<br>帰ってきました。</h3>
-        <p class="hero-item__txt">国産うなぎをお得に楽しめる、人気福袋です！</p>
+        <p class="hero-item__txt">国産うなぎをお得に楽しめる、人気福袋です！<br>決算感謝祭の期間限定販売なので、<br class="sp">手に入れるなら今がチャンス。</p>
         <p class="price"><span class="price__now">4<span class="cm">,</span>980<small>円〜</small></span><span class="price__tax">税込</span></p>
         <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/10002026/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10002026&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </div>
@@ -862,7 +864,7 @@ section[id]{scroll-margin-top:100px}
       </div>
       <div class="hero-item__body">
         <h3 class="hero-item__copy">お重に盛れば、<br>おうちがうなぎ屋に。</h3>
-        <p class="hero-item__txt">かわすいオリジナルのお重箱。おうちの蒲焼きが、お店のうな重の佇まいに変わります。贈り物との組み合わせにも。</p>
+        <p class="hero-item__txt">かわすいオリジナルのお重箱。<br>おうちの蒲焼きが、<br class="sp">お店のうな重の佇まいに変わります。<br>贈り物との組み合わせにも。</p>
         <p class="price"><span class="price__now">999<small>円</small></span><span class="price__tax">税込</span></p>
         <div class="buy"><a class="btn" href="https://item.rakuten.co.jp/kawasui/10001006/" target="_blank" rel="noopener">購入はこちら</a><a class="fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=120&amp;shop_bid=206971&amp;iid=10001006&amp;itype=1" target="_blank" rel="noopener" aria-label="お気に入りに登録" title="お気に入りに登録"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L2.9 9.4l6.3-.9z"/></svg></a></div>
       </div>
