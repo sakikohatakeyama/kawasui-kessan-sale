@@ -433,12 +433,11 @@ section[id]{scroll-margin-top:100px}
 /* ========== 店長誕生日 ========== */
 .bd{position:relative;overflow:hidden;isolation:isolate;text-align:center;padding:64px 22px 64px;background:radial-gradient(ellipse at 50% 0%,#fff6ee 0,#fbe1e2 60%,#f6cfd3 100%);color:var(--ink)}
 .bd > *{position:relative;z-index:1}
-.bd__flags{position:absolute!important;left:0;right:0;top:0;height:46px;display:flex;justify-content:center;z-index:0!important;pointer-events:none}
-.bd__flags::before{content:"";position:absolute;left:-2%;right:-2%;top:6px;height:24px;border-top:2px solid #c9b9a6;border-radius:0 0 50% 50%/0 0 100% 100%}
-.bd__flags i{flex:none;width:40px;height:34px;margin:0 2px;margin-top:calc(8px + var(--y,0px));background:var(--fc);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0;animation:flag 3s ease-in-out infinite}
-.bd__flags i:nth-child(odd){animation-delay:-1.5s}
+.bd__flags{position:absolute!important;left:0;right:0;top:0;display:grid;grid-template-columns:repeat(9,1fr);gap:6px;padding:8px 6px 0;z-index:0!important;pointer-events:none}
+.bd__flags::before{content:"";position:absolute;left:0;right:0;top:7px;border-top:2px solid #c9b9a6}
+.bd__flags i{display:block;aspect-ratio:6/5;background:var(--fc);clip-path:polygon(0 0,100% 0,50% 100%)}
+.bd__flags i:nth-child(n+10){display:none}
 .bd__flags i:nth-child(4n+3){box-shadow:inset 0 0 0 1px #e6d8ca}
-@keyframes flag{50%{transform:rotate(4deg)}}
 .bd__balloons{position:absolute!important;inset:0;z-index:0!important;pointer-events:none}
 .bd__bal{position:absolute;width:64px;animation:float 6s ease-in-out infinite}
 .bd__bal svg{width:100%;height:auto;display:block;filter:drop-shadow(0 6px 8px rgba(120,40,40,.18))}
@@ -454,33 +453,31 @@ section[id]{scroll-margin-top:100px}
 .bd__hb{margin-top:22px;font-family:"Jost",sans-serif;font-weight:500;font-style:italic;font-size:min(40px,10vw);letter-spacing:.04em;line-height:1;color:#d94a6a}
 .bd__ttl{margin-top:14px;font-family:var(--goth);font-weight:900;line-height:1.2}
 .bd__ttl small{display:block;font-size:20px;letter-spacing:.06em;color:var(--ink)}
-.bd__l2{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:12px;white-space:nowrap}
-.bd__all{flex:none;display:grid;place-items:center;width:2.4em;height:2.4em;border-radius:50%;background:var(--red);color:#fff;font-size:min(30px,5.4vw);line-height:1}
-.bd__p{font-size:min(38px,7.4vw);color:var(--red)}
-.bd__p b{font-family:var(--num);font-weight:700;font-size:2.3em;line-height:.8;margin:0 .04em;color:#e9c45a;background:linear-gradient(180deg,#fff3c4 0%,#f1cf6b 30%,#c99a2e 60%,#f6dc8a 80%,#b8862b 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 0 rgba(156,23,15,.35))}
+.bd__ne{display:block;margin-top:14px;font-size:min(20px,5.2vw);letter-spacing:.06em;color:#d94a6a}
+.bd__p{display:block;margin-top:6px;white-space:nowrap;font-size:min(38px,7.2vw);color:#d94a6a}
+.bd__p b{font-family:var(--num);font-weight:700;font-size:2.2em;line-height:.8;margin:0 .04em;color:#d94a6a}
 .bd .st{margin-top:20px}
-.bd__noentry{display:inline-block;margin-top:16px;padding:6px 18px;border:2px solid var(--red);border-radius:999px;background:#fff;color:var(--red);font-weight:900;font-size:min(18px,4.6vw);letter-spacing:.08em}
 .bd__txt{margin-top:20px;font-size:15px;line-height:1.9}
 .bd__btn{max-width:420px;margin:26px auto 0;border-radius:999px;background:#d94a6a}
 .bd__btn:hover{background:#c23a5a}
-@media (prefers-reduced-motion:reduce){.bd__bal,.bd__flags i{animation:none}}
+@media (prefers-reduced-motion:reduce){.bd__bal{animation:none}}
 @media (max-width:899px){
   .bd{padding-top:72px}
-  .bd__l2{gap:6px}
   .bd__bal{width:38px}.bd__bal--2,.bd__bal--5{width:30px}
   .bd__bal--1{left:2%;top:auto;bottom:160px}.bd__bal--2{left:8%;top:auto;bottom:60px}.bd__bal--3{left:auto;right:4%;bottom:170px}
   .bd__bal--4{right:3%;top:auto;bottom:80px}.bd__bal--5{right:14%;top:auto;bottom:20px}.bd__bal--6{display:none}
 }
 @media (min-width:900px){
   .bd{padding:90px 48px 100px}
-  .bd__flags{height:60px}.bd__flags i{width:54px;height:44px}
+  .bd__flags{grid-template-columns:repeat(16,1fr);gap:10px;padding:10px 10px 0}.bd__flags::before{top:9px}
+  .bd__flags i:nth-child(n+10){display:block}.bd__flags i:nth-child(n+17){display:none}
   .bd__bal{width:96px}.bd__bal--2,.bd__bal--5{width:70px}.bd__bal--3,.bd__bal--6{width:80px}
   .bd__bal--1{left:8%;top:110px}.bd__bal--2{left:18%;top:330px}.bd__bal--3{left:10%;bottom:50px}
   .bd__bal--4{right:8%;top:100px}.bd__bal--5{right:19%;top:320px}.bd__bal--6{right:10%;bottom:60px}
   .bd__date{font-size:30px;padding:12px 32px}
   .bd__hb{font-size:64px;margin-top:30px}
   .bd__ttl small{font-size:28px}
-  .bd__all{font-size:46px}
+  .bd__ne{font-size:26px}
   .bd__p{font-size:64px}
   .bd__txt{font-size:18px}
 }
@@ -919,8 +916,7 @@ section[id]{scroll-margin-top:100px}
     <div class="bd__balloons" aria-hidden="true"><span class="bd__bal bd__bal--1"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#c8201a"/><path d="M26 66 l4 9 l4 -9z" fill="#c8201a"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#ff8a80" opacity=".55" transform="rotate(-20 21 24)"/></svg></span><span class="bd__bal bd__bal--2"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#e0b64a"/><path d="M26 66 l4 9 l4 -9z" fill="#e0b64a"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#fff3c4" opacity=".55" transform="rotate(-20 21 24)"/></svg></span><span class="bd__bal bd__bal--3"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#ffffff"/><path d="M26 66 l4 9 l4 -9z" fill="#ffffff"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#ffffff" opacity=".55" transform="rotate(-20 21 24)"/></svg></span><span class="bd__bal bd__bal--4"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#d94a6a"/><path d="M26 66 l4 9 l4 -9z" fill="#d94a6a"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#ffc1cc" opacity=".55" transform="rotate(-20 21 24)"/></svg></span><span class="bd__bal bd__bal--5"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#e0b64a"/><path d="M26 66 l4 9 l4 -9z" fill="#e0b64a"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#fff3c4" opacity=".55" transform="rotate(-20 21 24)"/></svg></span><span class="bd__bal bd__bal--6"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#c8201a"/><path d="M26 66 l4 9 l4 -9z" fill="#c8201a"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#ff8a80" opacity=".55" transform="rotate(-20 21 24)"/></svg></span></div>
     <p class="bd__date">11/9<small>(月)</small>0:00 – 23:59</p>
     <p class="bd__hb">Happy Birthday!</p>
-    <h2 class="bd__ttl"><small>店長の誕生日を記念して</small><span class="bd__l2"><span class="bd__all">全品</span><span class="bd__p">ポイント<b>10</b>倍</span></span></h2>
-    <p class="bd__noentry">エントリー不要</p>
+    <h2 class="bd__ttl"><small>店長の誕生日を記念して</small><span class="bd__ne">＼エントリー不要／</span><span class="bd__p">店内全品ポイント<b>10</b>倍</span></h2>
     <p><span class="st" data-start="2026-11-09T00:00" data-end="2026-11-09T23:59"></span></p>
     <p class="bd__txt">11月9日は店長の誕生日。<br>いつもかわすいを選んでくださる皆さまへ、<br class="sp">感謝をこめて1日限定で全品ポイント10倍！<br>エントリー不要、<br class="sp">お買い物するだけでポイント10倍になります。</p>
     <a class="btn bd__btn" href="https://www.rakuten.co.jp/kawasui/" target="_blank" rel="noopener">ショップの全商品を見る</a>
