@@ -507,11 +507,18 @@ section[id]{scroll-margin-top:100px}
   .hd__ttl{display:block;flex:1;margin-left:24px;padding-left:24px;border-left:1px solid rgba(255,255,255,.35);font-family:var(--num);font-weight:600;font-size:16px;letter-spacing:.04em}
   .hd__cta{font-size:15px;padding:13px 26px}
   .nav{top:64px}
-  .nav a{padding:19px 26px 18px;font-size:15px}
+  .nav ul{width:auto}
+  .nav a{padding:19px 18px 18px;font-size:15px}
   .nav li:first-child a{border-left:1px solid var(--line)}
   .nav li:last-child a{border-right:1px solid var(--line)}
   section[id]{scroll-margin-top:120px}
-
+}
+@media (min-width:900px) and (max-width:1399px){
+  .nav ul{display:grid;grid-template-columns:repeat(7,auto);justify-content:center}
+  .nav a{height:100%;display:flex;align-items:center;justify-content:center;padding:10px 16px;font-size:13px;line-height:1.35;text-align:center;letter-spacing:.03em}
+  .nav a .sp{display:inline}.nav a .pc{display:none}
+}
+@media (min-width:900px){
   /* PC FV：2000×960のデザインを cqw で等倍再現（1cqw = 20px） */
   .fv{display:block;container-type:inline-size;height:48vw;padding:0}
   .fv__strip{position:absolute;left:3.3cqw;top:0;bottom:0;width:18.8cqw;height:auto;margin:0;z-index:4;background:none}
@@ -742,13 +749,13 @@ section[id]{scroll-margin-top:100px}
 
   <nav class="nav" id="gnav" aria-label="ページ内メニュー">
     <ul>
-      <li><a href="#schedule">スケジュール</a></li>
-      <li><a href="#first">セール第一弾</a></li>
-      <li><a href="#marathon">お買い物<br class="sp">マラソン期間</a></li>
-      <li><a href="#birthday">店長誕生日<br class="sp"><span class="pc"> </span>P10倍</a></li>
-      <li><a href="#last5">マラソン<br class="sp">ラスト5時間</a></li>
-      <li><a href="#second">セール第二弾</a></li>
-      <li><a class="nav__bf" href="#third">セール第三弾<br class="sp"><span class="pc"> </span>ブラックフライデー</a></li>
+      <li><a href="#schedule"><span>スケジュール</span></a></li>
+      <li><a href="#first"><span>セール第一弾</span></a></li>
+      <li><a href="#marathon"><span>お買い物<br class="sp">マラソン期間</span></a></li>
+      <li><a href="#birthday"><span>店長誕生日！<br class="sp">P10倍</span></a></li>
+      <li><a href="#last5"><span>マラソン<br class="sp">ラスト5時間</span></a></li>
+      <li><a href="#second"><span>セール第二弾</span></a></li>
+      <li><a class="nav__bf" href="#third"><span>セール第三弾<br class="sp"><span class="pc"> </span>ブラックフライデー</span></a></li>
     </ul>
   </nav>
 
