@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Jost:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{
+:root{--futura:"Futura","Futura PT","Jost","Century Gothic",sans-serif;
   --red:#c8201a;
   --red-d:#9c170f;
   --deep:#3a0d09;
@@ -445,7 +445,7 @@ section[id]{scroll-margin-top:100px}
 @keyframes float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-16px) rotate(3deg)}}
 .bd__term{background:#d94a6a}
 .bd .bd__term::after{border-top-color:#d94a6a}
-.bd__hb{margin-top:8px;font-family:var(--goth);font-weight:900;font-size:min(34px,8.6vw);letter-spacing:.04em;line-height:1;color:#d94a6a}
+.bd__hb{margin-top:8px;font-family:var(--futura);font-weight:700;font-size:min(34px,8.6vw);letter-spacing:.04em;line-height:1;color:#d94a6a}
 .bd__ttl{margin-top:14px;font-family:var(--goth);font-weight:900;line-height:1.2}
 .bd__ttl small{display:block;font-size:20px;letter-spacing:.06em;color:var(--ink)}
 .bd__ne{display:block;margin-top:14px;font-size:min(20px,5.2vw);letter-spacing:.06em;color:#d94a6a}
@@ -453,8 +453,7 @@ section[id]{scroll-margin-top:100px}
 .bd__p b{font-family:var(--num);font-weight:700;font-size:2.2em;line-height:.8;margin:0 .04em;color:#d94a6a}
 .bd .st{margin-top:20px}
 .bd__txt{margin-top:20px;font-size:15px;line-height:1.9}
-.bd__btn{max-width:420px;margin:26px auto 0;border-radius:999px;background:#d94a6a}
-.bd__btn:hover{background:#c23a5a}
+.bd__btn{max-width:420px;margin:26px auto 0;border-radius:999px}
 @media (prefers-reduced-motion:reduce){.bd__bal{animation:none}}
 @media (max-width:899px){
   .bd__bal{width:38px}.bd__bal--2,.bd__bal--5{width:30px}
@@ -476,7 +475,7 @@ section[id]{scroll-margin-top:100px}
   .bd__txt{font-size:18px}
 }
 .pl__img--bd{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:radial-gradient(circle at 50% 40%,#fff6ee,#f6cfd3);border:2px solid #d94a6a}
-.pl__img--bd i{font-style:italic;font-family:"Jost",sans-serif;font-weight:500;font-size:clamp(16px,2vw,26px);line-height:1.1;color:#d94a6a}
+.pl__img--bd i{font-style:normal;font-family:var(--futura);font-weight:700;font-size:clamp(16px,2vw,26px);line-height:1.1;color:#d94a6a}
 .pl__img--bd b{font-family:var(--num);font-weight:700;font-size:clamp(36px,4.6vw,64px);line-height:1;color:var(--red)}
 
 /* ========== 注意・フッター ========== */
@@ -789,7 +788,7 @@ section[id]{scroll-margin-top:100px}
           </span>
           <span class="pl__go">商品を見る<i></i></span>
         </a></li>
-        <li><a class="pl" href="#birthday" style="--c:#d94a6a;--f:#fff">
+        <li><a class="pl" href="#birthday" style="--c:var(--red);--f:#fff">
           <span class="pl__head"><b>店長誕生日</b><span class="st" data-start="2026-11-09T00:00" data-end="2026-11-09T23:59"></span></span>
           <span class="pl__img pl__img--bd"><i>Happy<br>Birthday</i><b>11/9</b></span>
           <span class="pl__body">
