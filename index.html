@@ -439,19 +439,18 @@ section[id]{scroll-margin-top:100px}
 .lot__entry{margin-top:18px;font-weight:700;font-size:min(17px,4.4vw);line-height:1.7}
 .lot__entry strong{display:block;font-size:1.25em;color:#ffe9a8}
 .lot{padding-top:24px}
-.lot__hero{position:relative;max-width:900px;margin:0 auto;aspect-ratio:1/1.08;container-type:inline-size;overflow:hidden;border-radius:4px}
-.lot__hero > *{position:absolute}
-.lot__rays{inset:0;background:repeating-conic-gradient(from 0deg at 55% 58%,#e23a2a 0 6deg,#c8201a 6deg 12deg)}
+.lot__hero{position:relative;max-width:900px;margin:0 auto;padding:22px 14px 16px;container-type:inline-size;overflow:hidden;border-radius:4px;background:repeating-conic-gradient(from 0deg at 50% 60%,#e23a2a 0 6deg,#c8201a 6deg 12deg)}
+.lot__cf{position:absolute;inset:0;pointer-events:none}
 .lot__cf i{position:absolute;width:3.4cqw;height:1.4cqw;background:var(--c);transform:rotate(var(--r));border-radius:1px}
-.lot__bowl{width:62cqw;height:auto;left:30cqw;top:30cqw;filter:drop-shadow(0 2cqw 3cqw rgba(60,0,0,.45))}
-.lot__h{inset:0;margin:0;font-family:var(--goth);font-weight:900;line-height:1;pointer-events:none}
-.lot__h span{position:absolute;white-space:nowrap;color:#fff;-webkit-text-stroke:2.2cqw #5a0a05;paint-order:stroke fill;text-shadow:0 1.2cqw 0 #5a0a05}
-.lot__h1{left:5cqw;top:6cqw;font-size:15cqw;transform:rotate(-6deg)}
-.lot__h2{left:3cqw;top:22cqw;font-size:16cqw;transform:rotate(-6deg)}
-.lot__h2 b{font-family:var(--num);font-weight:800;font-size:2.35em;letter-spacing:-.03em;color:#f6d36a;-webkit-text-stroke:2.6cqw #5a0a05;margin-right:.02em}
-.lot__h3{right:3cqw;bottom:13cqw;font-size:17cqw;transform:rotate(-6deg);color:#fff6c8!important}
-.lot__burst{right:3cqw;top:4cqw;display:grid;place-items:center;width:30cqw;height:30cqw;margin:0;clip-path:polygon(50% 0%,58% 12%,72% 4%,74% 19%,89% 15%,84% 30%,99% 33%,89% 45%,100% 56%,86% 63%,93% 78%,77% 78%,76% 94%,62% 86%,52% 100%,43% 87%,28% 96%,25% 80%,9% 82%,14% 67%,0% 60%,11% 48%,1% 35%,16% 30%,12% 14%,28% 18%,31% 3%,44% 12%);background:#ffe14d;color:var(--red);font-weight:900;font-size:4.6cqw;line-height:1.15;transform:rotate(10deg);text-align:center}
-.lot__label{left:0;right:0;bottom:3.4cqw;margin:0;font-weight:900;font-size:3.8cqw;letter-spacing:.08em;color:#fff;text-shadow:0 .4cqw 0 rgba(90,10,5,.6)}
+.lot__h{position:relative;margin:0;font-family:var(--goth);font-weight:900;line-height:1.05;transform:rotate(-4deg)}
+.lot__h > span{display:flex;align-items:center;justify-content:center;gap:2cqw;white-space:nowrap}
+.lot__h em{font-style:normal;color:#fff;-webkit-text-stroke:2cqw #5a0a05;paint-order:stroke fill;text-shadow:0 1.1cqw 0 #5a0a05}
+.lot__h1 em{font-size:13cqw}
+.lot__h1 b{font-family:var(--num);font-weight:800;font-size:1.9em;letter-spacing:-.03em;line-height:.9;color:#f6d36a}
+.lot__h2{margin-top:1cqw}
+.lot__h2 em{font-size:14cqw;color:#fff6c8}
+.lot__burst{flex:none;display:grid;place-items:center;width:23cqw;height:23cqw;clip-path:polygon(50% 0%,58% 12%,72% 4%,74% 19%,89% 15%,84% 30%,99% 33%,89% 45%,100% 56%,86% 63%,93% 78%,77% 78%,76% 94%,62% 86%,52% 100%,43% 87%,28% 96%,25% 80%,9% 82%,14% 67%,0% 60%,11% 48%,1% 35%,16% 30%,12% 14%,28% 18%,31% 3%,44% 12%);background:#ffe14d;color:var(--red);font-family:var(--goth);font-weight:900;font-size:3.8cqw;line-height:1.15;transform:rotate(10deg);text-align:center;-webkit-text-stroke:0}
+.lot__label{position:relative;margin:3cqw 0 0;font-weight:900;font-size:3.8cqw;letter-spacing:.08em;color:#fff;text-shadow:0 .4cqw 0 rgba(90,10,5,.6)}
 .lot__period{display:flex;align-items:center;justify-content:center;gap:10px;max-width:900px;margin:14px auto 0;padding:12px 10px;border-radius:999px;background:#fff;color:var(--red);font-family:var(--num);font-weight:700;font-size:min(20px,5vw);white-space:nowrap;box-shadow:0 6px 0 rgba(90,10,5,.35)}
 .lot__period small{font-family:var(--goth);font-size:.6em;margin:0 .15em}
 .lot__period i{font-style:normal;font-size:.7em;letter-spacing:-.2em;color:#e9a92a}
@@ -477,15 +476,13 @@ section[id]{scroll-margin-top:100px}
 .lot__p--1 .lot__num{font-size:15px;min-width:50%}
 @media (min-width:900px){
   .lot{padding:56px 48px 90px}
-  .lot__hero{aspect-ratio:900/620}
-  .lot__bowl{width:46cqw;left:31cqw;top:14cqw}
-  .lot__h1{left:4cqw;top:6cqw;font-size:10cqw}
-  .lot__h2{left:3cqw;top:17cqw;font-size:11cqw}
-  .lot__h3{right:3cqw;bottom:10cqw;font-size:12cqw}
-  .lot__h span{-webkit-text-stroke:1.5cqw #5a0a05;text-shadow:0 .9cqw 0 #5a0a05}
-  .lot__h2 b{-webkit-text-stroke:1.8cqw #5a0a05}
-  .lot__burst{width:20cqw;height:20cqw;font-size:3cqw;right:5cqw;top:4cqw}
-  .lot__label{font-size:2.4cqw}
+  .lot__hero{padding:34px 24px 28px}
+  .lot__h{display:flex;align-items:center;justify-content:center;gap:2.5cqw}
+  .lot__h em{-webkit-text-stroke:1.3cqw #5a0a05;text-shadow:0 .8cqw 0 #5a0a05}
+  .lot__h1 em,.lot__h2 em{font-size:6.8cqw}
+  .lot__h2{margin-top:0}
+  .lot__burst{width:14cqw;height:14cqw;font-size:2.3cqw}
+  .lot__label{font-size:2.2cqw;margin-top:2cqw}
   .lot__cf i{width:2.2cqw;height:.9cqw}
   .lot__period{font-size:30px;margin-top:22px;padding:14px 20px;gap:18px;max-width:760px}
   .lot__pre{font-size:18px;padding:8px 26px}
@@ -837,11 +834,8 @@ section[id]{scroll-margin-top:100px}
   <!-- ===== 抽選キャンペーン ===== -->
   <section class="lot" id="campaign">
     <div class="lot__hero">
-      <span class="lot__rays" aria-hidden="true"></span>
       <span class="lot__cf" aria-hidden="true"><i style="left:6%;top:8%;--r:25deg;--c:#f1cf6b"></i><i style="left:30%;top:3%;--r:-40deg;--c:#fff"></i><i style="left:58%;top:6%;--r:60deg;--c:#ffd0d8"></i><i style="left:92%;top:30%;--r:-20deg;--c:#f1cf6b"></i><i style="left:3%;top:52%;--r:50deg;--c:#fff"></i><i style="left:95%;top:62%;--r:15deg;--c:#fff"></i><i style="left:12%;top:86%;--r:-55deg;--c:#ffd0d8"></i><i style="left:84%;top:90%;--r:35deg;--c:#f1cf6b"></i><i style="left:46%;top:94%;--r:-10deg;--c:#fff"></i></span>
-      <img class="lot__bowl" decoding="async" src="img/lot-bowl.webp" alt="うなぎの蒲焼き" width="461" height="455" loading="lazy">
-      <p class="lot__burst">エントリー<br>不要！</p>
-      <h2 class="lot__h"><span class="lot__h1">うなぎ</span><span class="lot__h2"><b>10</b>尾</span><span class="lot__h3">当たる！？</span></h2>
+      <h2 class="lot__h"><span class="lot__h1"><em>うなぎ<b>10</b>尾</em></span><span class="lot__h2"><em>当たる！？</em><span class="lot__burst">エントリー<br>不要！</span></span></h2>
       <p class="lot__label">決算感謝祭 購入者限定キャンペーン</p>
     </div>
     <p class="lot__period"><span>11/4<small>(水)</small>20:00</span><i aria-hidden="true">▶▶</i><span>11/27<small>(金)</small>13:59</span></p>
