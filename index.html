@@ -450,7 +450,7 @@ section[id]{scroll-margin-top:100px}
 @keyframes float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-16px) rotate(3deg)}}
 .bd__date{display:inline-block;position:relative;margin-top:18px;padding:10px 22px;border-radius:999px;background:#d94a6a;color:#fff;font-family:var(--num);font-weight:700;font-size:min(22px,5.6vw);white-space:nowrap}
 .bd__date small{font-family:var(--goth);font-size:.62em;margin:0 .2em 0 .12em}
-.bd__hb{margin-top:22px;font-family:"Jost",sans-serif;font-weight:500;font-style:italic;font-size:min(40px,10vw);letter-spacing:.04em;line-height:1;color:#d94a6a}
+.bd__hb{margin-top:22px;font-family:var(--goth);font-weight:900;font-size:min(34px,8.6vw);letter-spacing:.04em;line-height:1;color:#d94a6a}
 .bd__ttl{margin-top:14px;font-family:var(--goth);font-weight:900;line-height:1.2}
 .bd__ttl small{display:block;font-size:20px;letter-spacing:.06em;color:var(--ink)}
 .bd__ne{display:block;margin-top:14px;font-size:min(20px,5.2vw);letter-spacing:.06em;color:#d94a6a}
@@ -475,10 +475,13 @@ section[id]{scroll-margin-top:100px}
   .bd__bal--1{left:8%;top:110px}.bd__bal--2{left:18%;top:330px}.bd__bal--3{left:10%;bottom:50px}
   .bd__bal--4{right:8%;top:100px}.bd__bal--5{right:19%;top:320px}.bd__bal--6{right:10%;bottom:60px}
   .bd__date{font-size:30px;padding:12px 32px}
-  .bd__hb{font-size:64px;margin-top:30px}
+  .bd__hb{font-size:54px;margin-top:30px}
   .bd__ttl small{font-size:28px}
   .bd__ne{font-size:26px}
-  .bd__p{font-size:64px}
+  .bd__p{display:inline-flex;align-items:center;gap:.12em;margin-top:10px;font-size:56px}
+  .bd__p2{display:block;text-align:left;line-height:1.15}
+  .bd__p b{font-size:3.1em;line-height:1}
+  .bd__x{font-size:1.7em;line-height:1}
   .bd__txt{font-size:18px}
 }
 .pl__img--bd{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:radial-gradient(circle at 50% 40%,#fff6ee,#f6cfd3);border:2px solid #d94a6a}
@@ -923,7 +926,7 @@ section[id]{scroll-margin-top:100px}
     <div class="bd__balloons" aria-hidden="true"><span class="bd__bal bd__bal--1"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#c8201a"/><path d="M26 66 l4 9 l4 -9z" fill="#c8201a"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#ff8a80" opacity=".55" transform="rotate(-20 21 24)"/></svg></span><span class="bd__bal bd__bal--2"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#e0b64a"/><path d="M26 66 l4 9 l4 -9z" fill="#e0b64a"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#fff3c4" opacity=".55" transform="rotate(-20 21 24)"/></svg></span><span class="bd__bal bd__bal--3"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#ffffff"/><path d="M26 66 l4 9 l4 -9z" fill="#ffffff"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#ffffff" opacity=".55" transform="rotate(-20 21 24)"/></svg></span><span class="bd__bal bd__bal--4"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#d94a6a"/><path d="M26 66 l4 9 l4 -9z" fill="#d94a6a"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#ffc1cc" opacity=".55" transform="rotate(-20 21 24)"/></svg></span><span class="bd__bal bd__bal--5"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#e0b64a"/><path d="M26 66 l4 9 l4 -9z" fill="#e0b64a"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#fff3c4" opacity=".55" transform="rotate(-20 21 24)"/></svg></span><span class="bd__bal bd__bal--6"><svg viewBox="0 0 60 120" aria-hidden="true"><path d="M30 76 C27 88 34 96 29 108 C26 114 31 118 30 120" fill="none" stroke="#c9b9a6" stroke-width="1.2"/><ellipse cx="30" cy="36" rx="24" ry="30" fill="#c8201a"/><path d="M26 66 l4 9 l4 -9z" fill="#c8201a"/><ellipse cx="21" cy="24" rx="5" ry="9" fill="#ff8a80" opacity=".55" transform="rotate(-20 21 24)"/></svg></span></div>
     <p class="bd__date">11/9<small>(月)</small>0:00 – 23:59</p>
     <p class="bd__hb">Happy Birthday!</p>
-    <h2 class="bd__ttl"><small>店長の誕生日を記念して</small><span class="bd__ne">＼エントリー不要／</span><span class="bd__p">店内全品ポイント<b>10</b>倍</span></h2>
+    <h2 class="bd__ttl"><small>店長の誕生日を記念して</small><span class="bd__ne">＼エントリー不要／</span><span class="bd__p"><span class="bd__p2">店内全品<br class="pc">ポイント</span><b>10</b><span class="bd__x">倍</span></span></h2>
     <p><span class="st" data-start="2026-11-09T00:00" data-end="2026-11-09T23:59"></span></p>
     <p class="bd__txt">11月9日は店長の誕生日。<br>いつもかわすいを選んでくださる皆さまへ、<br class="sp">感謝をこめて1日限定で全品ポイント10倍！<br>エントリー不要、<br class="sp">お買い物するだけでポイント10倍になります。</p>
     <a class="btn bd__btn" href="https://www.rakuten.co.jp/kawasui/" target="_blank" rel="noopener">ショップの全商品を見る</a>
