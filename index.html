@@ -479,6 +479,8 @@ section[id]{scroll-margin-top:100px}
 .sp-bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-auto-columns:1fr;grid-auto-flow:column;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);box-shadow:0 -4px 14px rgba(0,0,0,.15)}
 .sp-bar a{position:relative;display:flex;align-items:center;justify-content:center;height:50px;border-radius:999px;font-weight:900;font-size:15px;line-height:1.2;letter-spacing:.04em;box-shadow:0 3px 0 #00702c}
 .sp-bar a > span{display:flex;flex-direction:column;align-items:center}
+.wakaba{flex:none;width:18px;height:auto;filter:drop-shadow(0 1px 1px rgba(0,0,0,.25))}
+.sp-bar a .wakaba{width:20px;margin-right:10px}
 .sp-bar a::after{content:"";position:absolute;right:20px;top:50%;width:8px;height:8px;margin-top:-5px;border-top:2px solid #fff;border-right:2px solid #fff;transform:rotate(45deg)}
 .sp-bar a:active{transform:translateY(2px);box-shadow:0 1px 0 #00702c}
 .sp-bar a small{font-size:10px;font-weight:700;letter-spacing:.08em;opacity:.85}
@@ -495,7 +497,7 @@ body{padding-bottom:70px}
   .first-bn img{display:block;width:100%;height:auto;aspect-ratio:44/31;object-fit:cover}
   .first-bn__txt{display:block;padding:8px 6px}
   .first-bn__txt small{display:block;font-size:10px;font-weight:700;letter-spacing:.1em;color:#6b5a4e}
-  .first-bn__txt b{display:block;margin-top:1px;font-size:16px;font-weight:900;line-height:1.3;letter-spacing:.06em;color:#00a040}
+  .first-bn__txt b{display:flex;align-items:center;justify-content:center;gap:6px;text-align:left;margin-top:1px;font-size:16px;font-weight:900;line-height:1.3;letter-spacing:.06em;color:#00a040}
   .first-bn__more{display:block;padding:6px 0;background:#00a040;color:#fff;font-weight:700;font-size:11px;letter-spacing:.1em}
 }
 
@@ -1152,9 +1154,9 @@ body{padding-bottom:70px}
     <a class="btn" href="https://www.rakuten.co.jp/kawasui/" target="_blank" rel="noopener">ショップトップへ</a>
   </footer>
 
-  <a class="first-bn" href="https://www.rakuten.co.jp/kawasui/contents/first/"><img decoding="async" src="img/prize-2.webp" alt="うなぎの蒲焼き" width="600" height="600" loading="lazy"><span class="first-bn__txt"><small>うなぎ屋かわすい</small><b>初めての<br>お客様へ</b></span><span class="first-bn__more">詳しくはこちら ▶</span></a>
+  <a class="first-bn" href="https://www.rakuten.co.jp/kawasui/contents/first/"><img decoding="async" src="img/prize-2.webp" alt="うなぎの蒲焼き" width="600" height="600" loading="lazy"><span class="first-bn__txt"><small>うなぎ屋かわすい</small><b><svg class="wakaba" viewBox="0 0 20 28" aria-hidden="true"><path d="M10 6.5L1.5 1.5V18L10 26.5z" fill="#ffd400"/><path d="M10 6.5l8.5-5V18L10 26.5z" fill="#00a040"/><path d="M10 6.5L1.5 1.5V18L10 26.5l8.5-8.5V1.5z" fill="none" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg><span>初めての<br>お客様へ</span></b></span><span class="first-bn__more">詳しくはこちら ▶</span></a>
   <nav class="sp-bar" aria-label="ショートカット">
-    <a class="sp-bar__first" href="https://www.rakuten.co.jp/kawasui/contents/first/"><span><small>うなぎ屋かわすい</small>初めてのお客様へ</span></a>
+    <a class="sp-bar__first" href="https://www.rakuten.co.jp/kawasui/contents/first/"><svg class="wakaba" viewBox="0 0 20 28" aria-hidden="true"><path d="M10 6.5L1.5 1.5V18L10 26.5z" fill="#ffd400"/><path d="M10 6.5l8.5-5V18L10 26.5z" fill="#00a040"/><path d="M10 6.5L1.5 1.5V18L10 26.5l8.5-8.5V1.5z" fill="none" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg><span><small>うなぎ屋かわすい</small>初めてのお客様へ</span></a>
   </nav>
 </div>
 
