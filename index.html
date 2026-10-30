@@ -116,7 +116,9 @@ section[id]{scroll-margin-top:100px}
 .st[data-state="end"]{color:#9aa0ab}
 
 /* ========== スケジュール ========== */
-.sched .h2{display:flex;flex-direction:column;align-items:center}
+.sched .h2{display:flex;flex-direction:column;align-items:center;font-size:min(50px,13vw);line-height:1.25}
+.sched__main em{font-style:normal;font-family:var(--futura);font-weight:700;color:var(--red);letter-spacing:.02em;margin-right:.04em}
+@media (min-width:900px){.sched .h2{font-size:76px}}
 .sched__sub,.sched__main{display:block;white-space:nowrap}
 .sched__sub{font-size:.5em;letter-spacing:.055em;margin-bottom:.15em}
 .sched{padding:72px 0 76px}
@@ -857,7 +859,7 @@ body{padding-bottom:70px}
   <section class="sched" id="schedule">
     <div class="wrap">
       <div>
-        <h2 class="h2" style="padding-left:.5em"><span class="sched__sub">期間ごとにお得が変わる</span><span class="sched__main">SALEも開催</span></h2>
+        <h2 class="h2" style="padding-left:.5em"><span class="sched__sub">期間ごとにお得が変わる</span><span class="sched__main"><em>SALE</em>も開催</span></h2>
         <p class="lead">クーポンやタイムセールは期間限定。<br>開催中のセールをチェックしてください。</p>
       </div>
       <p class="pl-hint">気になるセールをタップ！<span>各セールの商品へジャンプします</span></p>
