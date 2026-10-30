@@ -565,6 +565,7 @@ body{padding-bottom:70px}
   .bd__txt{font-size:18px}
 }
 .pl__img--bd{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:radial-gradient(circle at 50% 40%,#fff6ee,#f6cfd3);border:2px solid #d94a6a}
+.pl__img--bd .pl__face{width:clamp(40px,26%,80px);height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 2px 8px rgba(150,40,60,.25)}
 .pl__img--bd i{text-align:center;font-style:normal;font-family:var(--futura);font-weight:700;font-size:clamp(16px,2vw,26px);line-height:1.1;color:#d94a6a}
 .pl__img--bd b{font-family:var(--num);font-weight:700;font-size:clamp(36px,4.6vw,64px);line-height:1;color:var(--red)}
 
@@ -792,6 +793,7 @@ body{padding-bottom:70px}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 @media (min-width:900px) and (max-width:1199px){.pl-list{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media (min-width:900px) and (max-width:1199px){.nav a{padding:10px 10px;font-size:12px;letter-spacing:.02em}}
+@media (max-width:899px){.pl__img--bd{gap:3px!important}.pl__img--bd i{display:none}.pl__img--bd .pl__face{width:46px;border-width:2px}.pl__img--bd b{font-size:28px}}
 </style>
 </head>
 <body>
@@ -901,7 +903,7 @@ body{padding-bottom:70px}
         </a></li>
         <li><a class="pl" href="#birthday" style="--c:var(--red);--f:#fff">
           <span class="pl__head"><b>店長誕生日</b><span class="st" data-start="2026-11-09T00:00" data-end="2026-11-09T23:59"></span></span>
-          <span class="pl__img pl__img--bd"><i>Happy<br>Birthday</i><b>11/9</b></span>
+          <span class="pl__img pl__img--bd"><img class="pl__face" decoding="async" src="img/tencho.webp?v=2" alt="店長" width="360" height="360" loading="lazy"><i>Happy<br>Birthday</i><b>11/9</b></span>
           <span class="pl__body">
             <span class="pl__deal">全品<em>P10</em>倍</span>
             <span class="pl__items">1日限定・全商品が対象・エントリー不要</span>
