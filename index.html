@@ -444,13 +444,13 @@ section[id]{scroll-margin-top:100px}
 .lot__ttl small{display:block;margin-top:6px;font-size:.55em;letter-spacing:.2em}
 .lot__entry{margin-top:18px;font-weight:700;font-size:min(17px,4.4vw);line-height:1.7}
 .lot__entry strong{display:block;font-size:1.25em;color:#ffe9a8}
-.lot__note{max-width:1000px;margin:22px auto 0;padding:14px 16px;border-radius:6px;background:rgba(90,10,5,.28);text-align:left;font-size:13px;line-height:1.7}
-.lot__note div{display:flex;gap:4px}
-.lot__note div + div{margin-top:4px}
-.lot__note dt{flex:none;font-weight:700;color:#ffe9a8}
+.lot__note{width:fit-content;max-width:100%;margin:24px auto 0;padding:16px 16px;border-radius:6px;background:rgba(90,10,5,.28);text-align:left;font-size:15px;line-height:1.7}
+.lot__note div{display:block}
+.lot__note div + div{margin-top:12px}
+.lot__note dt{font-weight:700;color:#ffe9a8}
 .lot__note dd{margin:0}
 .lot__note small{font-size:.85em}
-@media (min-width:900px){.lot__note{margin-top:32px;padding:18px 24px;font-size:15px}}
+@media (min-width:900px){.lot__note{margin-top:36px;padding:20px 32px;font-size:16px}}
 .lot__prizes{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:1000px;margin:28px auto 0;padding:0}
 .lot__p{overflow:hidden;border-radius:6px;background:#fff;color:var(--ink);box-shadow:0 10px 24px rgba(60,0,0,.28)}
 .lot__p--1{grid-column:1/-1;box-shadow:0 0 0 2px #e9c45a,0 10px 24px rgba(60,0,0,.28)}
@@ -867,8 +867,8 @@ body{padding-bottom:70px}
       <li class="lot__p lot__p--3"><figure class="lot__ph"><img decoding="async" src="img/prize-3.webp?v=2" alt="うなぎ長焼き" width="600" height="600" loading="lazy"><span class="lot__rank">3<small>等</small></span></figure><div class="lot__info"><p class="lot__item">長焼き 120g</p><p class="lot__qty">×3<small>尾</small></p><p class="lot__num"><b>6</b>名様</p></div></li>
     </ul>
     <dl class="lot__note">
-      <div><dt>【参加条件】</dt><dd>11/4<small>(水)</small>20:00 – 11/27<small>(金)</small>13:59の間に当店でお買い物いただいた方</dd></div>
-      <div><dt>【当選発表】</dt><dd>抽選後、12月上旬にメールをお送りいたします。</dd></div>
+      <div><dt>【参加条件】</dt><dd>11/4<small>(水)</small>20:00 – 11/27<small>(金)</small>13:59の間に<br class="sp">当店でお買い物いただいた方</dd></div>
+      <div><dt>【当選発表】</dt><dd>抽選後、12月上旬に<br class="sp">メールをお送りいたします。</dd></div>
     </dl>
   </section>
 
