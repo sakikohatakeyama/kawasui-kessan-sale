@@ -475,10 +475,10 @@ section[id]{scroll-margin-top:100px}
 
 /* ========== 初めてのお客様へ（PC左固定／SPフッター） ========== */
 .first-bn{display:none}
-.sp-bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 -4px 14px rgba(0,0,0,.18)}
+.sp-bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-auto-columns:1fr;grid-auto-flow:column;box-shadow:0 -4px 14px rgba(0,0,0,.18)}
 .sp-bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;height:58px;font-weight:900;font-size:15px;line-height:1.25;letter-spacing:.04em}
 .sp-bar a small{font-size:10px;font-weight:700;letter-spacing:.08em;opacity:.85}
-.sp-bar__first{background:#fff;color:var(--red);border-top:2px solid var(--red)}
+.sp-bar__first{background:var(--red);color:#fff}
 .sp-bar__shop{background:var(--red);color:#fff}
 body{padding-bottom:58px}
 @media (min-width:900px){
@@ -1145,7 +1145,6 @@ body{padding-bottom:58px}
   <a class="first-bn" href="https://www.rakuten.co.jp/kawasui/contents/first/" target="_blank" rel="noopener"><small>うなぎ屋かわすい</small><b>初めてのお客様へ</b></a>
   <nav class="sp-bar" aria-label="ショートカット">
     <a class="sp-bar__first" href="https://www.rakuten.co.jp/kawasui/contents/first/" target="_blank" rel="noopener"><small>うなぎ屋かわすい</small>初めてのお客様へ</a>
-    <a class="sp-bar__shop" href="https://www.rakuten.co.jp/kawasui/" target="_blank" rel="noopener"><small>楽天市場店</small>ショップトップへ</a>
   </nav>
 </div>
 
