@@ -473,6 +473,23 @@ section[id]{scroll-margin-top:100px}
   .lot__num,.lot__p--1 .lot__num{font-size:16px;min-width:60%}
 }
 
+/* ========== 初めてのお客様へ（PC左固定／SPフッター） ========== */
+.first-bn{display:none}
+.sp-bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 -4px 14px rgba(0,0,0,.18)}
+.sp-bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;height:58px;font-weight:900;font-size:15px;line-height:1.25;letter-spacing:.04em}
+.sp-bar a small{font-size:10px;font-weight:700;letter-spacing:.08em;opacity:.85}
+.sp-bar__first{background:#fff;color:var(--red);border-top:2px solid var(--red)}
+.sp-bar__shop{background:var(--red);color:#fff}
+body{padding-bottom:58px}
+@media (min-width:900px){
+  body{padding-bottom:0}
+  .sp-bar{display:none}
+  .first-bn{position:fixed;left:0;top:50%;z-index:60;display:flex;flex-direction:column;align-items:center;gap:8px;padding:18px 10px 20px;transform:translateY(-50%);border-radius:0 10px 10px 0;border:2px solid var(--red);border-left:0;background:#fff;color:var(--red);box-shadow:0 6px 18px rgba(0,0,0,.25);writing-mode:vertical-rl;transition:padding .2s,background .2s}
+  .first-bn small{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--ink)}
+  .first-bn b{font-size:17px;font-weight:900;letter-spacing:.14em}
+  .first-bn:hover{background:#fff6ee;padding-left:16px}
+}
+
 /* ========== 店長誕生日 ========== */
 .bd{position:relative;overflow:hidden;isolation:isolate;text-align:center;padding:36px 22px 64px;background:radial-gradient(ellipse at 50% 0%,#fff6ee 0,#fbe1e2 60%,#f6cfd3 100%);color:var(--ink)}
 .bd > *{position:relative;z-index:1}
@@ -1124,6 +1141,12 @@ section[id]{scroll-margin-top:100px}
     <p class="foot__shop"><img decoding="async" src="img/logo-kawasui.png" alt="うなぎ屋かわすい" width="960" height="160" loading="lazy"></p>
     <a class="btn" href="https://www.rakuten.co.jp/kawasui/" target="_blank" rel="noopener">ショップトップへ</a>
   </footer>
+
+  <a class="first-bn" href="https://www.rakuten.co.jp/kawasui/contents/first/" target="_blank" rel="noopener"><small>うなぎ屋かわすい</small><b>初めてのお客様へ</b></a>
+  <nav class="sp-bar" aria-label="ショートカット">
+    <a class="sp-bar__first" href="https://www.rakuten.co.jp/kawasui/contents/first/" target="_blank" rel="noopener"><small>うなぎ屋かわすい</small>初めてのお客様へ</a>
+    <a class="sp-bar__shop" href="https://www.rakuten.co.jp/kawasui/" target="_blank" rel="noopener"><small>楽天市場店</small>ショップトップへ</a>
+  </nav>
 </div>
 
 <script>
